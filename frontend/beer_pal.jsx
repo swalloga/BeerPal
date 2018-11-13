@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = APIUtil.login;
   window.signup = APIUtil.signup;
   window.logout = APIUtil.logout;
-  window.getState = store.getState;
+  // window.getState = store.getState;
   // END TEST
 
   ReactDOM.render(<h1>BeerPal is here, pal</h1>, root);
