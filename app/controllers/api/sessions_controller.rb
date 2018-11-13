@@ -12,6 +12,7 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+
   def destroy
     if logged_in?
       log_out!
