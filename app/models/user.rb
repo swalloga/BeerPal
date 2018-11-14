@@ -16,7 +16,6 @@
 #  updated_at      :datetime         not null
 #
 
-# QUESTION: WHY IS MY ANNOTATE BROKEN????
 class User < ApplicationRecord
   validates :username, :email, :name, :beer_allowance, :password_digest, :session_token, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
