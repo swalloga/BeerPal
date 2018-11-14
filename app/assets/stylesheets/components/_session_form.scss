@@ -1,0 +1,63 @@
+.invite {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.invite a {
+    color: #430098;
+    text-align: center;
+    text-transform: capitalize;
+}
+.invite p {
+}
+.title, .session-submit, .login-form label {
+  letter-spacing: 2px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.login-input {
+  padding: 6px 12px;
+  width: 100%;
+  overflow: hidden;
+  text-transform: none;
+}
+.title {
+  font-size: 32px;
+  color: #FE422D;
+  font-weight: normal;
+  text-align: center;
+}
+
+.session-submit {
+  width: 100%;
+  background-color: #FE422D;
+  color: #fff;
+  padding: 7px 0px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.login-form-container {
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  // height: 100%;
+}
+.login-form-box {
+  align-content: center;
+  width: 560px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.login-form {
+  padding: 0px 70px;
+}

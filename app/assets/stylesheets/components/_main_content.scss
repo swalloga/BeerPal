@@ -15,68 +15,51 @@ div {
  }
 
 .content {
-  // background-color: lightgray;
-}
-.invite {
   text-align: center;
-  text-transform: capitalize;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-.invite a {
-    color: #430098;
-    text-align: center;
-    text-transform: capitalize;
-}
-.invite p {
-}
-.title, .session-submit, .login-form label {
-  letter-spacing: 2px;
-}
-
-.form-field {
-  margin-bottom: 15px;
-}
-
-.login-input {
-  padding: 6px 12px;
-  width: 100%;
-  overflow: hidden;
-  text-transform: none;
-}
-.title {
-  font-size: 32px;
-  color: #FE422D;
-  font-weight: normal;
-  text-align: center;
-}
-
-.session-submit {
-  width: 100%;
-  background-color: #FE422D;
-  color: #fff;
-  padding: 7px 0px;
-  font-weight: 300;
-  font-size: 18px;
-}
-
-.login-form-container {
   margin: 0 auto;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  // height: 100%;
-}
-.login-form-box {
-  align-content: center;
-  width: 560px;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin: 10px;
-  padding: 30px 0px;
-  background-color: #fff;
 }
 
-.login-form {
-  padding: 0px 70px;
+.main-content-invite {
+  background-image: url("landing-page-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.main-info {
+  height: 430px;
+  padding: 40px 0px;
+  border-bottom: 10px solid #f2f0ef;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-info> div {
+  width: 30%;
+  text-align: center
+}
+
+.robot-info {
+  height: 70px;
+  padding: 20px 0px;
+  border-top: 10px solid white;
+  background: #f2f0ef;
+}
+
+.map-container {
+  height: 650px;
+  padding: 40px 0px;
+  border-top: 10px solid #00b3ec;
+}
+
+.map {
+  height: 500px;
+  border: 5px solid #00b3ec;
 }
