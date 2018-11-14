@@ -9,9 +9,12 @@ const App = () => (
   <div>
     <header>
       <GreetingContainer />
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
     </header>
+    <div className="content">
+      <AuthRoute exact path="/" component={LoginFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
+      <AuthRoute path="/signup" component={SignupFormContainer} />
+    </div>
   </div>
 );
 

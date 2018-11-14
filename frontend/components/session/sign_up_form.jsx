@@ -45,37 +45,45 @@ class SignupForm extends React.Component {
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
+            <div className="form-field">
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
+            </div>
             <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
+            <div className="form-field">
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+            </div>
             <br/>
+            <div className="form-field">
               <label>Name:
                 <input type="text"
                   value={this.state.name}
                   onChange={this.update('name')}
                   className="login-input"
-                />
+                  />
               </label>
+            </div>
             <br/>
-            <label>Email Address:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
+            <div className="form-field">
+              <label>Email Address:
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="login-input"
+                  />
+              </label>
+            </div>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
             <br/>
