@@ -7,7 +7,9 @@ class MainContent extends React.Component {
     return(
       <div className="content">
         <div className="main-content-invite">Main content invite goes here</div>
-        <h4>How beerPal works:</h4>
+        <h4>
+          <span className="section-title">How beerPal works:</span>
+        </h4>
         <div className="main-info">
           <br/>
           <div className="column1">Choose</div>
@@ -17,11 +19,12 @@ class MainContent extends React.Component {
           <div className="column2">Pop bottles(or draft)</div>
         </div>
         <div className="robot-info">they have a robot that learns preferences... will i??</div>
-        <div className="map-container">brows the map for bars here
-          <div className="map_column">
-            <div className="section-title">Find a happy hour!</div>
-            <div className="map-location">I'm in
-              <div className="city-selector">[New York!]</div>
+        <div className="map-container">
+          <span className="section-title">Bubbly and Delicious.</span>
+          <div className="map-column">
+            <div className="map-location">
+              <span>I'm in:</span>
+              <span className="city-selector">[  New York!  ]</span>
             </div>
             <div className="map">map view!</div>
           </div>
@@ -35,4 +38,4 @@ class MainContent extends React.Component {
   }
 }
 
-export default withRouter(MainContent);
+export default MainContent;

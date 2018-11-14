@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting';
 import { logout } from '../../actions/session_actions';
+import { withRouter } from 'react-router-dom';
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
+    path: ownProps.location.pathname,
   };
 };
 
@@ -14,4 +16,4 @@ const mdp = (dispatch) => {
   };
 };
 
-export default connect(msp, mdp)(Greeting);
+export default withRouter(connect(msp, mdp)(Greeting));

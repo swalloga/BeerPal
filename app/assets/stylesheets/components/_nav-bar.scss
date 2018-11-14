@@ -1,8 +1,16 @@
+.white {
+  color: #FE422D;
+}
+
+.orange {
+  background-color: #FE422D;
+  color: white;
+}
+
 .nav-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: #FE422D;
   padding: 0px 20px;
 }
 
@@ -16,9 +24,15 @@
 .nav-bar div a{
   margin: 10px;
   text-align: center;
+  border: 1px solid white;
+  font-size: 14px;
+  width: 180px;
+  padding: 12px 0px;
 }
 
 .nav-bar button{
+  width: 180px;
+  height: 40px;
   margin: 10px;
   text-align: center;
   border: none;

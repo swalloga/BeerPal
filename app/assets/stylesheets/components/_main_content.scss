@@ -13,6 +13,10 @@ div {
    text-align: center;
    justify-content: center;
  }
+ body {
+   margin: 0;
+   padding: 0;
+ }
 
 .content {
   text-align: center;
@@ -32,6 +36,11 @@ div {
   align-items: center;
 }
 
+.section-title{
+  font-size: 40px;
+  border-bottom: 4px solid #00b3ec;
+  color: #5d5a58;
+}
 .main-info {
   height: 430px;
   padding: 40px 0px;
@@ -57,9 +66,48 @@ div {
   height: 650px;
   padding: 40px 0px;
   border-top: 10px solid #00b3ec;
+  background: #bee9f7;
 }
+ .map-column {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 30px;
+   justify-content: center;
+ }
 
+ .map-location {
+   height: 80px;
+   align-content: center;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   flex-direction: row;
+ }
 .map {
   height: 500px;
+  width: 100%;
   border: 5px solid #00b3ec;
+}
+
+.spotlight-content {
+  height: 410px;
+  padding: 30px 15px;
+  background-color: #FE422D;
+}
+
+.plans-container {
+  height: 555px;
+  padding: 40px 0px;
+  border-top: 10px solid #00b3ec;
+  background: #f2f0ef;
+}
+
+.bottom-invite {
+  height: 150px;
+  padding: 40px 0px;
+  background: #00b3ec;
 }

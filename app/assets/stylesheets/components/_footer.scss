@@ -1,0 +1,22 @@
+.purple {
+  background-color: #430098;
+  color: white;
+  font-weight: 700;
+}
+
+.white-footer {
+  background-color: white;
+  border-top: 1px solid #e5e3df;
+  color: #525252;
+  text-align: center;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 20px;
+  height: 200px;
+}
