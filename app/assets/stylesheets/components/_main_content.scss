@@ -9,6 +9,10 @@ div {
  p {
    margin: 0 auto;
  }
+ h3 {
+   text-align: center;
+   justify-content: center;
+ }
 .invite {
   margin: 0 auto;
   text-align: center;
@@ -31,11 +35,12 @@ div {
   padding: 6px 12px;
   width: 100%;
   overflow: hidden;
+  text-transform: none;
 }
 .title {
   font-size: 32px;
   color: #FE422D;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
 }
 

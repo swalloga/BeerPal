@@ -18,7 +18,7 @@
 // }
 //
 
-a {
+a, h3 {
     margin: 0;
     padding: 0;
     border: 0;
@@ -45,14 +45,14 @@ ul {
 // input[type="email"],
 // input[type="text"],
 // input[type="submit"],
-// textarea,
+textarea,
 button {
 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-//
+
 button,
 input[type="submit"] {
   cursor: pointer;
