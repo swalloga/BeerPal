@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// TODO: Setup demo user?? maybe a button that logs in a demo user setup in seed?
 
 const Greeting = props => {
     if (props.currentUser) {
@@ -16,6 +17,8 @@ const Greeting = props => {
           <Link to="/login">Log In</Link>
           <br/>
           <Link to="/signup">Sign Up</Link>
+          <br/>
+          <Link to="/login">Demo Log In</Link>
         </div>
       );
     }

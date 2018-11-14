@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ // CSS Reset
+ @import "base/reset.scss";
+
+ // Components
+ @import "components/*";
+
+ * {
+   font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+   text-transform: uppercase;
+ }
