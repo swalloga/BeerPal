@@ -3,7 +3,7 @@ class Api::BeersController < ApplicationController
     @beer = Beer.new(beer_params)
     if @beer.save
       render "/"
-      # TODO: come back to this?
+      # TODO: come back to this and update redirect?
     else
       render json: @beer.errors.full_messages, status: 422
     end

@@ -3,7 +3,7 @@ class Api::CitiesController < ApplicationController
     @city = City.new(city_params)
     if @city.save
       render "/"
-      # TODO: come back to this?
+      # TODO: come back to this and update redirect?
     else
       render json: @city.errors.full_messages, status: 422
     end

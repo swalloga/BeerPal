@@ -1,6 +1,7 @@
 class BarBeers < ApplicationRecord
   validates :bar_id, :beer_id, :date presence: true
-# QUESTION: how to add uniqueness contraint on combined index??
+  validates :bar_id, uniqueness: { scope: :date }
+
   belongs_to :bar
   belongs_to :beer
 

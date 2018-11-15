@@ -1,6 +1,6 @@
 class Api::BarBeersController < ApplicationController
   def create
-    @barbeers = BarBeers.new(bar_params)
+    @barbeers = BarBeers.new(barbeers_params)
     if @barbeers.save
       render "/"
       # TODO: fix this
@@ -11,6 +11,7 @@ class Api::BarBeersController < ApplicationController
 
   private
   def barbeers_params
-    params.require(:barbeers).permit(:bar_id, :beer_id, :date)
+    # QUESTION: is bar_beers in the require correct?
+    params.require(:bar_beers).permit(:bar_id, :beer_id, :date)
   end
 end
