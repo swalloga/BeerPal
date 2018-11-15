@@ -55,6 +55,10 @@ div {
   text-align: center
 }
 
+.icon {
+  height: 120px;
+  width: 120px;
+}
 .robot-info {
   height: 70px;
   padding: 20px 0px;
@@ -71,7 +75,6 @@ div {
  .map-column {
    display: flex;
    flex-direction: column;
-   position: relative;
    padding-left: 15px;
    padding-right: 15px;
    margin: 0 30px;
