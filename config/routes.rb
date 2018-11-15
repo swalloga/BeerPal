@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :beers, only: [:create, :update, :destroy]
     resources :bars, only: [:create, :update, :destroy]
     resources :barbeers, only: [:create, :update, :destroy]
+    resources :cities, only: [:create]
   end
 end
