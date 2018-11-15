@@ -28,5 +28,6 @@ Karen = User.create!({username:"Karen", name:"Karen", password:"starwars", email
 Pam = User.create!({username:"Pam", name:"Pam", password:"starwars", email:"Pam@gmail.com", preferred_city:"Scranton", beer_allowance:8})
 Angela = User.create!({username:"Angela", name:"Angela", password:"starwars", email:"Angela@gmail.com", preferred_city:"Scranton", beer_allowance:1})
 Bandit = User.create!({username:"Bandit", name:"Bandit", password:"starwars", email:"Bandit@gmail.com", preferred_city:"Scranton", beer_allowance:2})
+Demo = User.create!({username:"Demo", name:"Demo", password:"password", email:"Demo", preferred_city:"New York", beer_allowance:0})
 
 puts "Finished"
