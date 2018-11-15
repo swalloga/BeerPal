@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_164208) do
+ActiveRecord::Schema.define(version: 2018_11_15_183940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bar_beers", force: :cascade do |t|
+    t.integer "bar_id", null: false
+    t.integer "beer_id", null: false
+    t.date "date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bar_id"], name: "index_bar_beers_on_bar_id", unique: true
+    t.index ["beer_id"], name: "index_bar_beers_on_beer_id", unique: true
+  end
 
   create_table "bars", force: :cascade do |t|
     t.string "name", null: false
