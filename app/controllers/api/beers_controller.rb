@@ -8,8 +8,24 @@ class Api::BeersController < ApplicationController
       render json: @beer.errors.full_messages, status: 422
     end
   end
-  # TODO: add update and destroy methods
+
+  def update
+    @beer = Beer.find_by(params[:id])
+    if @beer.update(beer_params)
+      render "/"
+      # TODO: fix this/redirect somewhere
+    else
+      render json: @beer.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    beer = Beer.find_by(params[:id])
+    beer.destroy
+  end
+
   private
+
   def beer_params
     params.require(:beer).permit(:name, :description, :price, :abv)
   end

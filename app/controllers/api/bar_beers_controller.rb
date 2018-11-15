@@ -3,10 +3,25 @@ class Api::BarBeersController < ApplicationController
     @barbeers = BarBeers.new(barbeers_params)
     if @barbeers.save
       render "/"
-      # TODO: fix this
+      # TODO: fix this/redirect somewhere
     else
       render json: @barbeers.errors.full_messages, status: 422
     end
+  end
+
+  def update
+    @barbeers = BarBeers.find_by(params[:id])
+    if @barbeers.update(barbeers_params)
+      render "/"
+      # TODO: fix this/redirect somewhere
+    else
+      render json: @barbeers.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    barbeers = BarBeers.find_by(params[:id])
+    barbeers.destroy
   end
 
   private

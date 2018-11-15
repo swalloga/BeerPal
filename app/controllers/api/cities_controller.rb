@@ -9,6 +9,16 @@ class Api::CitiesController < ApplicationController
     end
   end
 
+  def update
+    @city = City.find_by(params[:id])
+    if @city.update(city_params)
+      render "/"
+      # TODO: fix this/redirect somewhere
+    else
+      render json: @city.errors.full_messages, status: 422
+    end
+  end
+
 private
   def city_params
     params.require(:city).permit(:name, :latitude, :longitude)

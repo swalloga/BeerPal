@@ -8,7 +8,22 @@ class Api::BarsController < ApplicationController
       render json: @bar.errors.full_messages, status: 422
     end
   end
-  # TODO: add update and destroy methods
+
+  def update
+    @bar = Bar.find_by(params[:id])
+    if @bar.update(bar_params)
+      render "/"
+      # TODO: fix this/redirect somewhere
+    else
+      render json: @bar.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    bar = Bar.find_by(params[:id])
+    bar.destroy
+  end
+
   private
   def bar_params
     params.require(:bar).permit(:name, :address, :latitude, :longitude, :city_id)
