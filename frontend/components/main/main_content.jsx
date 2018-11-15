@@ -11,19 +11,19 @@ const MainContent = props => {
         <div className="main-info">
           <br/>
           <div className="column1">
-            <img className="choose-icon icon" src="../../../app/assets/images/pin-icon.jpg" />
+            <img className="choose-icon icon" src={window.pin_icon} />
             <h4 className="column-text">Choose</h4>
             <p className="column-text">Over 1000 local bars offering happy hour specials.</p>
           </div>
           <br/>
           <div className="column2">
-            <img className="showup-icon icon"></img>
+            <img className="showup-icon icon" src={window.pin_icon}/>
             <h4 className="column-text">Show up</h4>
             <p className="column-text">Skip the line–BeerPal covers the cost of beers.</p>
           </div>
           <br/>
           <div className="column3">
-            <img className="drink-icon icon"></img>
+            <img className="drink-icon icon" src={window.pin_icon}/>
             <h4 className="column-text">Pop bottles(or draft)!</h4>
             <p className="column-text">Enjoy your favorite beers, everyday.</p>
           </div>
