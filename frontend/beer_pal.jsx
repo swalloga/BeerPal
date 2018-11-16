@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as BarActions from './actions/bar_actions';
+import * as CityActions from './actions/city_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchAllBars = BarActions.fetchAllBars;
-  window.fetchBar = BarActions.fetchBar;
+  window.fetchAllCities = CityActions.fetchAllCities;
+  window.fetchCity = CityActions.fetchCity;
 
   // TESTING END
   const root = document.getElementById('root');
