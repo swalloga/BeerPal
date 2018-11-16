@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: bars
+#
+#  id        :bigint(8)        not null, primary key
+#  name      :string           not null
+#  address   :string           not null
+#  latitude  :float            not null
+#  longitude :float            not null
+#  city_id   :integer          not null
+#
+
 class Bar < ApplicationRecord
   validates :name, :address, :city_id, presence: true
   has_many :bar_beers,

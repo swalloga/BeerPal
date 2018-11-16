@@ -1,6 +1,8 @@
 class Api::BarBeersController < ApplicationController
   def create
     @barbeers = BarBeers.new(barbeers_params)
+    date = Date.new(params[:date])
+    barbeers.date = date
     if @barbeers.save
       render "/"
       # TODO: fix this/redirect somewhere

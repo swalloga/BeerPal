@@ -51,16 +51,16 @@ Bar.destroy_all
 
 puts "Creating Bars..."
 
-applebees = Bar.create!({name:"Applebee's" ,address:"22 W 38th Street" ,latitude:74.006, longitude:40.7128, city_id:1})
-fridays = Bar.create!({name:"Friday's" ,address:"23 W 38th Street" ,latitude:75.008, longitude:41.7122, city_id:1})
-australian = Bar.create!({name:"The Australian" ,address:"24 W 38th Street" ,latitude:76.006, longitude:42.7128, city_id:1})
-deweys = Bar.create!({name:"deweys" ,address:"25 W 38th Street" ,latitude:77.006, longitude:43.7128, city_id:2})
-rumplestiltskin = Bar.create!({name:"rumplestiltskin" ,address:"26 W 38th Street" ,latitude:78.006, longitude:44.7128, city_id:3})
-crows = Bar.create!({name:"crows" ,address:"27 W 38th Street" ,latitude:79.006, longitude:45.7128, city_id:4})
-bobs = Bar.create!({name:"bobs" ,address:"28 W 38th Street" ,latitude:80.006, longitude:46.7128, city_id:5})
-pjs = Bar.create!({name:"pjs" ,address:"29 W 38th Street" ,latitude:81.006, longitude:47.7128, city_id:6})
-blanket = Bar.create!({name:"blanket" ,address:"30 W 38th Street" ,latitude:82.006, longitude:48.7128, city_id:7})
-iron = Bar.create!({name:"iron" ,address:"31 W 38th Street" ,latitude:83.006, longitude:49.7128, city_id:8})
+applebees = Bar.create!({id:1,name:"Applebee's" ,address:"22 W 38th Street" ,latitude:74.006, longitude:40.7128, city_id:1})
+fridays = Bar.create!({id:2,name:"Friday's" ,address:"23 W 38th Street" ,latitude:75.008, longitude:41.7122, city_id:1})
+australian = Bar.create!({id:3,name:"The Australian" ,address:"24 W 38th Street" ,latitude:76.006, longitude:42.7128, city_id:1})
+deweys = Bar.create!({id:4,name:"deweys" ,address:"25 W 38th Street" ,latitude:77.006, longitude:43.7128, city_id:2})
+rumplestiltskin = Bar.create!({id:5,name:"rumplestiltskin" ,address:"26 W 38th Street" ,latitude:78.006, longitude:44.7128, city_id:3})
+crows = Bar.create!({id:6,name:"crows" ,address:"27 W 38th Street" ,latitude:79.006, longitude:45.7128, city_id:4})
+bobs = Bar.create!({id:7,name:"bobs" ,address:"28 W 38th Street" ,latitude:80.006, longitude:46.7128, city_id:5})
+pjs = Bar.create!({id:8,name:"pjs" ,address:"29 W 38th Street" ,latitude:81.006, longitude:47.7128, city_id:6})
+blanket = Bar.create!({id:9,name:"blanket" ,address:"30 W 38th Street" ,latitude:82.006, longitude:48.7128, city_id:7})
+iron = Bar.create!({id:10,name:"iron" ,address:"31 W 38th Street" ,latitude:83.006, longitude:49.7128, city_id:8})
 
 puts "bars successful"
 
@@ -68,18 +68,32 @@ Beer.destroy_all
 
 puts "Creating Beers..."
 
-guiness = Beer.create! ({name: "Guiness", description: "Stout", price: 8, abv: 4.2})
-stella = Beer.create! ({name: "Stella", description: "Stout", price: 8, abv: 4.2})
-budweiser = Beer.create! ({name: "Budweiser", description: "Stout", price: 8, abv: 4.2})
-heinken = Beer.create! ({name: "Heinken", description: "Stout", price: 8, abv: 3})
-brooklyn = Beer.create! ({name: "Brooklyn Lager", description: "Stout", price: 8, abv: 4})
-corona = Beer.create! ({name: "Corona", description: "Stout", price: 8, abv: 5})
-bluemoon = Beer.create! ({name: "Bluemoon", description: "Stout", price: 8, abv: 6})
-modelo = Beer.create! ({name: "Modelo", description: "Stout", price: 8, abv: 5})
-pbr = Beer.create! ({name: "Pbr", description: "Stout", price: 8, abv: 5})
-fat_tire = Beer.create! ({name: "Fat Tire", description: "Stout", price: 8, abv: 5})
-founders = Beer.create! ({name: "Founders", description: "Stout", price: 8, abv: 4.2})
+guiness = Beer.create! ({id: 1, name: "Guiness", description: "Stout", price: 8, abv: 4.2})
+stella = Beer.create! ({id: 2, name: "Stella", description: "Stout", price: 8, abv: 4.2})
+budweiser = Beer.create! ({id: 3, name: "Budweiser", description: "Stout", price: 8, abv: 4.2})
+heinken = Beer.create! ({id: 4, name: "Heinken", description: "Stout", price: 8, abv: 3})
+brooklyn = Beer.create! ({id: 5, name: "Brooklyn Lager", description: "Stout", price: 8, abv: 4})
+corona = Beer.create! ({id: 6, name: "Corona", description: "Stout", price: 8, abv: 5})
+bluemoon = Beer.create! ({id: 7, name: "Bluemoon", description: "Stout", price: 8, abv: 6})
+modelo = Beer.create! ({id: 8, name: "Modelo", description: "Stout", price: 8, abv: 5})
+pbr = Beer.create! ({id: 9, name: "Pbr", description: "Stout", price: 8, abv: 5})
+fat_tire = Beer.create! ({id: 10, name: "Fat Tire", description: "Stout", price: 8, abv: 5})
+founders = Beer.create! ({id: 11, name: "Founders", description: "Stout", price: 8, abv: 4.2})
 
 puts "Beers successful"
+
+BarBeer.destroy_all
+
+puts "Creating bar_beers..."
+BarBeer.create!({bar_id:1, beer_id:1, date: "2019-01-01"})
+BarBeer.create!({bar_id:2, beer_id:2, date: "2019-01-01"})
+BarBeer.create!({bar_id:3, beer_id:3, date: "2019-01-01"})
+BarBeer.create!({bar_id:4, beer_id:4, date: "2019-01-01"})
+BarBeer.create!({bar_id:5, beer_id:5, date: "2019-01-01"})
+BarBeer.create!({bar_id:6, beer_id:6, date: "2019-01-01"})
+BarBeer.create!({bar_id:7, beer_id:7, date: "2019-01-01"})
+BarBeer.create!({bar_id:8, beer_id:8, date: "2019-01-01"})
+
+puts "Bar_beers successful!"
 
 puts "Finished"
