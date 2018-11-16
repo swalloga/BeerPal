@@ -24,6 +24,14 @@ class Api::BarsController < ApplicationController
     bar.destroy
   end
 
+  def index
+    render json: Bar.all
+  end
+
+  def show
+    render json: Bar.find(params[:id])
+  end
+
   private
   def bar_params
     params.require(:bar).permit(:name, :address, :latitude, :longitude, :city_id)

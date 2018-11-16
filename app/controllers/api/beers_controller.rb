@@ -2,7 +2,7 @@ class Api::BeersController < ApplicationController
   def create
     @beer = Beer.new(beer_params)
     if @beer.save
-      render "/"
+      render json: @beer
       # TODO: come back to this and update redirect?
     else
       render json: @beer.errors.full_messages, status: 422
@@ -22,6 +22,14 @@ class Api::BeersController < ApplicationController
   def destroy
     beer = Beer.find_by(params[:id])
     beer.destroy
+  end
+
+  def index
+    render json: Beer.all
+  end
+
+  def show
+    render json: Beer.find(params[:id])
   end
 
   private

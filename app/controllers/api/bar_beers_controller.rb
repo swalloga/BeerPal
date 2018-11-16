@@ -26,6 +26,14 @@ class Api::BarBeersController < ApplicationController
     barbeers.destroy
   end
 
+  def index
+    render json: BarBeers.all
+  end
+
+  def show
+    render json: BarBeers.find(params[:id])
+  end
+
   private
   def barbeers_params
     # QUESTION: is bar_beers in the require correct?

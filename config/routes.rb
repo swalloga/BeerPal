@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :update]
     resource :session, only: [:create, :destroy]
-    resources :beers, only: [:create, :update, :destroy]
-    resources :bars, only: [:create, :update, :destroy]
-    resources :barbeers, only: [:create, :update, :destroy]
-    resources :cities, only: [:create]
+    resources :beers
+    resources :bars
+    resources :barbeers
+    resources :cities
   end
 end
