@@ -14,7 +14,7 @@ class Bar < ApplicationRecord
   validates :name, :address, :city_id, presence: true
   has_many :bar_beers,
     foreign_key: :bar_id,
-    class_name: :BarBeers
+    class_name: :BarBeer
 
    belongs_to :city,
     foreign_key: :city_id,
@@ -26,5 +26,10 @@ class Bar < ApplicationRecord
      self.latitude ||= 74.0060
      self.longitude ||= 40.7128
    end
-   # TODO: add method to find beer of the day, barbeers for this bar on this day, find beer
+
+   def beerofday(date)
+     deal = self.bar_beers.where(date: date)
+     beer = Beer.find_by(deal.beer_id)
+     beer_name = beer.name
+   end
  end

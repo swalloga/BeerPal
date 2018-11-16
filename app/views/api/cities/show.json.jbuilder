@@ -1,1 +1,1 @@
-# TODO: also is this named right?
+json.extract! city, :id, :name, :longitude, :latitude
