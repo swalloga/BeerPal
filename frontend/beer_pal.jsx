@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as BeerActions from './actions/beer_actions';
+import * as BarActions from './actions/bar_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchAllBeers = BeerActions.fetchAllBeers;
-  window.fetchBeer = BeerActions.fetchBeer;
+  window.fetchAllBars = BarActions.fetchAllBars;
+  window.fetchBar = BarActions.fetchBar;
 
   // TESTING END
   const root = document.getElementById('root');

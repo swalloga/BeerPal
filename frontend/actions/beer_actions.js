@@ -22,6 +22,7 @@ export const receiveBeerErrors = errors => {
 };
 
 // async actions
+    // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllBeers = () => dispatch => {
   return BeerAPIUtil.fetchAllBeers().then((beers) => dispatch(receiveBeers(beers)),
   err => dispatch(receiveBeerErrors(err.responseJSON)));
