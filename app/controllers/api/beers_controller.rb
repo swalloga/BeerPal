@@ -12,7 +12,7 @@ class Api::BeersController < ApplicationController
   def update
     @beer = Beer.find_by(params[:id])
     if @beer.update(beer_params)
-      render "/"
+      render json: @beer
       # TODO: fix this/redirect somewhere
     else
       render json: @beer.errors.full_messages, status: 422

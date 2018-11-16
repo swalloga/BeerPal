@@ -2,7 +2,7 @@ class Api::CitiesController < ApplicationController
   def create
     @city = City.new(city_params)
     if @city.save
-      render "/"
+      render json: @city
       # TODO: come back to this and update redirect?
     else
       render json: @city.errors.full_messages, status: 422
@@ -12,7 +12,7 @@ class Api::CitiesController < ApplicationController
   def update
     @city = City.find_by(params[:id])
     if @city.update(city_params)
-      render "/"
+      render json: @city
       # TODO: fix this/redirect somewhere
     else
       render json: @city.errors.full_messages, status: 422
