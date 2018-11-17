@@ -27,11 +27,14 @@ class Api::BarBeersController < ApplicationController
   end
 
   def index
-    render json: BarBeer.all
+    @barbeers = BarBeer.all.includes(:bar, :beer)
+    # render json: @barbeers
+    render 'api/bar_beers/index'
   end
 
   def show
-    render json: BarBeer.find(params[:id])
+    @barbeer = BarBeer.find(params[:id])
+    render json: @barbeer
   end
 
   def index_by_beer

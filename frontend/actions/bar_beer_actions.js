@@ -9,7 +9,7 @@ export const receiveBarBeers = barBeers => ({
   barBeers,
 });
 
-export const receiveBarBeers = barBeer => ({
+export const receiveBarBeer = barBeer => ({
   type: RECEIVE_BAR_BEER,
   barBeer,
 });
@@ -24,12 +24,14 @@ export const receiveBarBeerErrors = errors => {
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllBarBeers = () => dispatch => {
-  return BarBeerAPIUtil.fetchAllBarBeers().then((barBeers) => dispatch(receiveBarBeers(barBeers)),
+  return BarBeerAPIUtil.fetchAllBarBeers().then((barBeers) =>
+  dispatch(receiveBarBeers(barBeers)),
   err => dispatch(receiveBarBeerErrors(err.responseJSON)));
 };
 
 export const fetchBarBeer = (id) => dispatch => {
-  return BarBeerAPIUtil.fetchBarBeer(id).then((barBeer) => dispatch(receiveBarBeers(barBeer)),
+  return BarBeerAPIUtil.fetchBarBeer(id).then((barBeer) =>
+  dispatch(receiveBarBeer(barBeer)),
   err => {
     return dispatch(receiveBarBeerErrors(err.responseText));
   });

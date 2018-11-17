@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-// TODO: Setup demo user?? maybe a button that logs in a demo user setup in seed?
 
 const Greeting = props => {
 

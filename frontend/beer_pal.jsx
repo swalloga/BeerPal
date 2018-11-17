@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as BarBeerActions from './util/bar_beer_api_util';
+import * as BarBeerActions from './actions/bar_beer_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

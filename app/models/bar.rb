@@ -28,8 +28,9 @@ class Bar < ApplicationRecord
    end
 
    def beerofday(date)
-     deal = self.bar_beers.where(date: date)
-     beer = Beer.find_by(deal.beer_id)
-     beer_name = beer.name
+     deal = self.bar_beers.find_by(date: date)
+     beer = Beer.find_by(id: deal.beer_id)
+     return Beer.first unless beer
+     beer
    end
  end

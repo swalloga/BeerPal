@@ -1,2 +1,2 @@
 json.extract! bar, :id, :name, :address, :latitude, :longitude, :city_id
-# TODO: do i need a partial?
+ # QUESTION: : Not sure i need any views for bars in the front end 
