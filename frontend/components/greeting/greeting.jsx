@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const Greeting = props => {
-
+// TODO: change line 23 to direct back to /
   let navColor;
     if (props.path === "/") {
       navColor = "orange";
@@ -20,7 +20,7 @@ const Greeting = props => {
   } else {
       return(
         <div className={`nav-bar ${navColor}`}>
-          <h1><Link to="/">beerpal</Link></h1>
+          <h1><Link to="/happy-hours">beerpal</Link></h1>
           <div>
             <button onClick={ props.demoSignUp } >Demo Log In</button>
             <Link to="/login">Log In</Link>
