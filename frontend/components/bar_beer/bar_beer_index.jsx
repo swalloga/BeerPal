@@ -18,7 +18,7 @@ class BarBeerIndex extends React.Component {
     } else {
       return (
       <section className="barBeerIndex">
-        <ul>
+        <ul className="barBeerIndexList">
           {barBeers.map(
             barBeer => <BarBeerIndexItem key={barBeer.id} barBeer={barBeer} />
         )}
