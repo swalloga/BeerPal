@@ -9,6 +9,7 @@ const msp = state => {
     errors: state.errors,
     barBeers: state.entities.barBeers,
     currentBarBeer: state.entities.barBeer,
+    bars: state.entities.bars,
   };
 };
 

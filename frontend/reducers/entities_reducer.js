@@ -8,7 +8,7 @@ import barBeerReducer from './bar_beers_reducer';
 export default combineReducers({
   users: usersReducer,
   // beers: beersReducer,
-  // bars: barsReducer,
+  bars: barsReducer,
   // cities: citiesReducer,
   barBeers: barBeerReducer,
 });

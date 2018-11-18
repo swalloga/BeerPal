@@ -3,7 +3,19 @@ import React from 'react';
 const BarBeerIndexItem = (props) => {
 
   // the problem is here
-  return ( <li className="barBeerIndexItem">{props.barBeer.bar.name}</li>);
+  return (
+    <li className="barBeerIndexListItem">
+      <div className="barBeerIndexItem">
+        {props.barBeer.beer.name}
+        <br/>
+        {props.barBeer.beer.description}
+        <br/>
+        {props.barBeer.bar.name}
+        <br/>
+        {props.barBeer.bar.address}
+      </div>
+    </li>
+);
 };
 
 export default BarBeerIndexItem;

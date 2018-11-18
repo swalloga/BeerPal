@@ -1,0 +1,20 @@
+.barBeerIndexList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 70%;
+  justify-content:flex-start;
+}
+
+.barBeerIndexListItem{
+  height: 200px;
+  width: 150px;
+  border: 1px solid gray;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.barBeerIndexItem {
+  text-transform: none;
+}

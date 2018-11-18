@@ -20,7 +20,7 @@ const Greeting = props => {
   } else {
       return(
         <div className={`nav-bar ${navColor}`}>
-          <h1><Link to="/happy-hours">beerpal</Link></h1>
+          <h1><Link to="/happyhour">beerpal</Link></h1>
           <div>
             <button onClick={ props.demoSignUp } >Demo Log In</button>
             <Link to="/login">Log In</Link>
