@@ -10,7 +10,8 @@ export default (state={}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_ALL_BAR_BEERS:
-      return merge({}, action.barBeers);
+      newState = action.barBeers;
+      return merge({}, newState);
     case RECEIVE_BAR_BEER:
       newState = { [action.barBeer.id]: action.barBeer };
       return merge({},state, newState);
