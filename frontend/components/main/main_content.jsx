@@ -4,7 +4,18 @@ import { withRouter } from 'react-router-dom';
 const MainContent = props => {
     return(
       <div className="content">
-        <div className="main-content-invite">Main content invite goes here</div>
+        <div className="main-content-invite">
+          <h2>HAPPY HOUR BEERS, FOR $5</h2>
+          <br/>
+          <h3>Find a happy hour near you</h3>
+          <br/>
+          <form className="invite-form">
+            <input type="text" preload="your email"></input>
+            <br/><br/>
+            <input type="text" preload="zip code"></input>
+            <button>Browse Bars</button>
+          </form>
+        </div>
         <h4>
           <span className="section-title">How beerPal works:</span>
         </h4>
@@ -17,13 +28,13 @@ const MainContent = props => {
           </div>
           <br/>
           <div className="column2">
-            <img className="showup-icon icon" src={window.pin_icon}/>
+            <img className="showup-icon icon" src={window.bar_icon}/>
             <h4 className="column-text">Show up</h4>
             <p className="column-text">Skip the line–BeerPal covers the cost of beers.</p>
           </div>
           <br/>
           <div className="column3">
-            <img className="drink-icon icon" src={window.pin_icon}/>
+            <img className="drink-icon icon" src={window.beer_icon}/>
             <h4 className="column-text">Pop bottles(or draft)!</h4>
             <p className="column-text">Enjoy your favorite beers, everyday.</p>
           </div>
