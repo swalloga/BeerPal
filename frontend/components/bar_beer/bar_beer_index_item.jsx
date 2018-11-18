@@ -5,6 +5,9 @@ const BarBeerIndexItem = (props) => {
   // the problem is here
   return (
     <li className="barBeerIndexListItem">
+      <div className="fadeBox">
+        Content about deal!
+      </div>
       <div className="barBeerIndexItem">
         <div className="barBeerIndexHeader">
           <p>

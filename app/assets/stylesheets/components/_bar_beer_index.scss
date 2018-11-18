@@ -11,14 +11,14 @@
   width: 190px;
   border: 1px solid gray;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
 }
 
 .barBeerIndexItem {
   text-transform: none;
   font-weight: 600;
-  text-align: center
+  text-align: center;
 }
 
 .beer-img {
@@ -27,6 +27,7 @@
 }
 
 .barBeerIndexHeader {
+  border-radius: 5px 5px 0 0;
   color: white;
   background-color: #FE422D;
   font-size: 16px;
@@ -74,4 +75,19 @@
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
   transform: scale(1.025);
   transition: all .1s ease;
+}
+.barBeerIndexListItem:hover .fadeBox{
+  display: block;
+}
+.barBeerIndexListItem:hover .barBeerIndexItem{
+  display: none;
+}
+.fadeBox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0,0%,100%,.8);
+  background: linear-gradient(180deg,hsla(0,0%,100%,.99),hsla(0,0%,100%,.5));
+  color: #4a4a4a;
+  border-radius: 5px;
 }
