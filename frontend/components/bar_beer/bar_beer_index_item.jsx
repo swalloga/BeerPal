@@ -6,15 +6,22 @@ const BarBeerIndexItem = (props) => {
   return (
     <li className="barBeerIndexListItem">
       <div className="barBeerIndexItem">
-        {props.barBeer.beer.name}
-        <br/>
+        <div className="barBeerIndexHeader">
+          <p>
+            Happy Hour
+          </p>
+          <img className="heart-icon" src={window.heart_icon} />
+        </div>
         <img className="beer-img" src={window.guiness_img} />
-        <br/>
-        {props.barBeer.beer.description}
-        <br/>
-        {props.barBeer.bar.name}
-        <br/>
-        {props.barBeer.bar.address}
+        <p className="beer-description">
+          {props.barBeer.beer.name},  {props.barBeer.beer.description},  {props.barBeer.beer.abv}%
+        </p>
+        <p className="barName">
+          {props.barBeer.bar.name}
+        </p>
+        <p className="barAddress">
+          {props.barBeer.bar.address}
+        </p>
       </div>
     </li>
 );
