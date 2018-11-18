@@ -6,7 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import MainContentContainer from './main/main_content_container';
 import FooterContainer from './footer/footer_container';
 import BarBeerIndexContainer from './bar_beer/bar_beer_index_container';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
@@ -17,7 +17,7 @@ const App = () => (
       <AuthRoute exact path="/" component={MainContentContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute path="/happy-hours" component={BarBeerIndexContainer} />
+      <ProtectedRoute path="/happy-hours" component={BarBeerIndexContainer} />
     </div>
     <footer>
       <FooterContainer />
