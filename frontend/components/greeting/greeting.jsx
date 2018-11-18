@@ -12,7 +12,7 @@ const Greeting = props => {
     if (props.currentUser) {
       return(
         <div className={`nav-bar ${navColor}`}>
-          <h1><Link to="/">beerpal</Link></h1>
+          <h1><Link to="/happyhour">beerpal</Link></h1>
           <h3>Hey { props.currentUser.name }</h3>
           <div className="dropdown">
             <button className="dropbtn">||| Menu</button>
@@ -28,7 +28,7 @@ const Greeting = props => {
   } else {
       return(
         <div className={`nav-bar ${navColor}`}>
-          <h1><Link to="/happyhour">beerpal</Link></h1>
+          <h1><Link to="/">beerpal</Link></h1>
           <div className="loggedOut-nav">
             <button onClick={ props.demoSignUp } >Demo Log In</button>
             <Link to="/login">Log In</Link>
