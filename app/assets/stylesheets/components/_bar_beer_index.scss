@@ -7,14 +7,21 @@
 }
 
 .barBeerIndexListItem{
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 190px;
   border: 1px solid gray;
   margin: 10px;
   border-radius: 5px;
-  padding: 15px;
 }
 
 .barBeerIndexItem {
   text-transform: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center
+}
+
+.beer-img {
+  height: 175px;
+  width: 100%;
 }

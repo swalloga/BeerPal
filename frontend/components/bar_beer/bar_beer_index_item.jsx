@@ -8,6 +8,8 @@ const BarBeerIndexItem = (props) => {
       <div className="barBeerIndexItem">
         {props.barBeer.beer.name}
         <br/>
+        <img className="beer-img" src={window.guiness_img} />
+        <br/>
         {props.barBeer.beer.description}
         <br/>
         {props.barBeer.bar.name}
