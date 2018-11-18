@@ -39,7 +39,7 @@
   margin: 0 20px;
 }
 
-.nav-bar div a {
+.loggedOut-nav a {
   margin: 10px;
   text-align: center;
   border: 1px solid white;
@@ -49,17 +49,24 @@
   height: 16px;
 }
 // this may be a duplicate of the above
-.dropdown-content a, .dropdown-content button {
+.dropdown-content > a, .dropdown-content > button {
     display: block;
     text-transform: none;
     letter-spacing: normal;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px;
+    border: 1px solid white;
+    width: 150px;
+    padding: 11px 0px;
+    height: 16px;
 }
 
 .nav-bar a:hover {
   background-color: white;
   color: #FE422D;
   transition-timing-function: ease;
-  transition-duration: 150ms;
+  transition-duration: 180ms;
   font-weight: bold;
 }
 
@@ -73,12 +80,11 @@
 }
 
 .dropdown-content > button {
-  width: 178px;
+  width: 150px;
   height: 16px;
   padding: 11px 0px;
   margin: 10px;
   border: 1px solid white;
-  text-align: center;
   font-size: 14px;
   text-transform: none;
 }
@@ -86,7 +92,7 @@
 .loggedOut-nav button:hover {
   font-weight: 700;
   transition-timing-function: ease;
-  transition-duration: 150ms;
+  transition-duration: 180ms;
   color: #FE422D;
   background-color: white;
 }
@@ -94,7 +100,7 @@
 .nav-bar button:hover {
   font-weight: 700;
   transition-timing-function: ease;
-  transition-duration: 150ms;
+  transition-duration: 180ms;
 }
 
 .dropdown {
@@ -110,10 +116,14 @@
   z-index: 1;
   color: gray;
   text-transform: none;
+  border: 1px solid gray;
+  border-radius: 3px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  right: 25px;
+  top: 71.5px;
 }
 
 button, a {

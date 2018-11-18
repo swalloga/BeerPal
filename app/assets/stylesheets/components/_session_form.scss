@@ -42,6 +42,11 @@
 }
 
 .login-form-container {
+  background-image: image-url("beer-background.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin: 0 auto;
   display: flex;
   align-content: center;
