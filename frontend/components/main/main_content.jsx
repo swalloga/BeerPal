@@ -2,16 +2,23 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const MainContent = props => {
+  const inviteForm = (
+    <form className="invite-form">
+      <input type="text" placeholder="your email"></input>
+      <div>
+        <input type="text" placeholder="zip code"></input>
+        <button>Browse Bars</button>
+      </div>
+    </form>
+  );
     return(
       <div className="content">
         <div className="main-content-invite">
-          <h2>HAPPY HOUR BEERS, FOR $5</h2>
-          <h3>Find a happy hour near you</h3>
-          <form className="invite-form">
-            <input type="text" preload="your email"></input>
-            <input type="text" preload="zip code"></input>
-            <button>Browse Bars</button>
-          </form>
+          <div className="invite">
+            <h2>HAPPY HOUR BEERS, FOR $5</h2>
+            <h3>Find a happy hour near you</h3>
+            {inviteForm}
+          </div>
         </div>
         <h4>
           <span className="section-title">How beerPal works:</span>
@@ -27,7 +34,9 @@ const MainContent = props => {
           <div className="column2">
             <img className="showup-icon icon" src={window.bar_icon}/>
             <h4 className="column-text">Show up</h4>
-            <p className="column-text">Skip the line–BeerPal covers the cost of beers.</p>
+            <p className="column-text">
+              Skip the line–BeerPal covers the cost of beers.
+            </p>
           </div>
           <br/>
           <div className="column3">
@@ -49,7 +58,7 @@ const MainContent = props => {
         </div>
         <div className="spotlight-content">rotating content</div>
         <div className="plans-container">How many six packs??</div>
-        <div className="bottom-invite">Please sign up, please please</div>
+        <div className="bottom-invite">{inviteForm}</div>
       </div>
     );
   };
