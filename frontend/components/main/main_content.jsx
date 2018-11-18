@@ -6,12 +6,9 @@ const MainContent = props => {
       <div className="content">
         <div className="main-content-invite">
           <h2>HAPPY HOUR BEERS, FOR $5</h2>
-          <br/>
           <h3>Find a happy hour near you</h3>
-          <br/>
           <form className="invite-form">
             <input type="text" preload="your email"></input>
-            <br/><br/>
             <input type="text" preload="zip code"></input>
             <button>Browse Bars</button>
           </form>
