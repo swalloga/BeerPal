@@ -14,7 +14,7 @@ class BarBeerIndex extends React.Component {
   render() {
     const barBeers= Object.values(this.props.barBeers);
     if (barBeers.length === 0) {
-      return (<h4>hold up... wait</h4>);
+      return (<div></div>);
     } else {
       return (
       <section className="barBeerIndex">

@@ -1,10 +1,22 @@
+// to remove later, this is the hello user message
+.nav-bar h3 {
+  margin: auto 0;
+}
+
+// color of nav bar depends on path-- see greeting.jsx
 .white {
   color: #FE422D;
+  background-color: white;
 }
 
 .orange {
   background-color: #FE422D;
   color: white;
+}
+
+// Freeze nav bar at the top and keep content from overflowing
+.body{
+  margin-top: 71.5px;
 }
 
 .nav-bar {
@@ -13,32 +25,98 @@
   justify-content: space-between;
   padding: 0px 20px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+  position: fixed;
+  top: 0px;;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.nav-bar div {
+.loggedOut-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 20px;
 }
 
-.nav-bar div a{
+.nav-bar div a {
   margin: 10px;
   text-align: center;
   border: 1px solid white;
   font-size: 14px;
-  width: 180px;
-  padding: 12px 0px;
+  width: 178px;
+  padding: 11px 0px;
+  height: 16px;
+}
+// this may be a duplicate of the above
+.dropdown-content a {
+    display: block;
+    text-transform: none;
 }
 
-.nav-bar button{
+.nav-bar a:hover {
+  background-color: white;
+  color: #FE422D;
+  transition-timing-function: ease;
+  transition-duration: 150ms;
+  font-weight: bold;
+}
+
+.loggedOut-nav button, .dropbtn{
   width: 180px;
   height: 40px;
   margin: 10px;
   text-align: center;
   border: none;
+  font-size: 14px;
+  color: black;
 }
 
-.nav-bar h3 {
-  margin: auto 0;
+.dropdown-content > button {
+  width: 178px;
+  height: 16px;
+  padding: 11px 0px;
+  margin: 10px;
+  border: 1px solid white;
+  text-align: center;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.loggedOut-nav button:hover {
+  font-weight: 700;
+  transition-timing-function: ease;
+  transition-duration: 150ms;
+  color: #FE422D;
+  background-color: white;
+}
+
+.nav-bar button:hover {
+  font-weight: 700;
+  transition-timing-function: ease;
+  transition-duration: 150ms;
+  color: #FE422D;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: gray;
+  text-transform: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button, a {
+  border-radius: 3px;
 }
