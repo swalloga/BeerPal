@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchAllDeals = DealActions.fetchAllDeals;
-  window.fetchDealsByDate = DealActions.fetchDealsByDate;
   window.fetchDeal = DealActions.fetchDeal;
   window.fetchDealByBar = DealActions.fetchDealByBar;
   window.fetchAllBars = BarActions.fetchAllBars;

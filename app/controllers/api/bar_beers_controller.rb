@@ -5,7 +5,6 @@ class Api::BarBeersController < ApplicationController
     barbeers.date = date
     if @barbeer.save
       render json: @barbeer
-      # TODO: fix this/redirect somewhere
     else
       render json: @barbeer.errors.full_messages, status: 422
     end
@@ -26,7 +25,8 @@ class Api::BarBeersController < ApplicationController
   end
 
   def index
-    # TODO: change BarBeer.all to be BarBeer.allbydate
+    # TODO:
+    # @barbeers = BarBeer.find_by_date()
     @barbeers = BarBeer.all.includes(:bar, :beer, :city)
     render 'api/bar_beers/index'
   end
@@ -54,7 +54,6 @@ class Api::BarBeersController < ApplicationController
 
   private
   def barbeers_params
-    # QUESTION: is bar_beers in the require correct?
     params.require(:bar_beer).permit(:bar_id, :beer_id, :date)
   end
 end

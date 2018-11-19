@@ -1,1 +1,1 @@
-json.extract! city, :id, :name, :longitude, :latitude
+json.partial! "api/cities/city", city: @city

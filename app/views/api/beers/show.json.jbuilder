@@ -1,2 +1,1 @@
-json.extract! :id, :name, :description, :price, :abv, :image_url
-# TODO: add a partial
+json.partial! "api/beers/beer", beer: @beer

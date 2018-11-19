@@ -3,7 +3,6 @@ class Api::BarsController < ApplicationController
     @bar = Bar.new(bar_params)
     if @bar.save
       render json: @bar
-      # TODO: fix this/redirect somewhere?
     else
       render json: @bar.errors.full_messages, status: 422
     end
@@ -13,7 +12,6 @@ class Api::BarsController < ApplicationController
     @bar = Bar.find_by(params[:id])
     if @bar.update(bar_params)
       render json: @bar
-      # TODO: fix this/redirect somewhere
     else
       render json: @bar.errors.full_messages, status: 422
     end
@@ -25,11 +23,13 @@ class Api::BarsController < ApplicationController
   end
 
   def index
-    render json: Bar.all
+    @bars = Bar.all
+    render json: @bars
   end
 
   def show
-    render json: Bar.find(params[:id])
+    @bar = Bar.find(params[:id])
+    render json: @bar
   end
 
   private

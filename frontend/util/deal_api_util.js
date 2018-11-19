@@ -25,10 +25,3 @@ export const fetchDealByBar = (barId) =>{
         url: `/api/bars/${barId}/bar_beers`
       });
   };
-
-  // export const fetchDealsByDate = (date) =>{
-  //     return $.ajax({
-  //         method: 'GET',
-  //         url: `/api/bars/bar_beers`
-  //       });
-  //   };

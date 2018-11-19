@@ -20,12 +20,12 @@ class BarBeer < ApplicationRecord
     through: :bar,
     source: :city
 
-# TODO: fix this method
-  # def self.find_by_date(date = "2019-01-01")
-  #   all = BarBeer.all
-  #   # debugger
-  #   formatted_date = Date.new(date)
-  #   all.select{ |barbeer| barbeer.date == date }
-  # end
+
+  def self.find_by_date(date = "")
+    return BarBeer.all if date == ""
+    all = BarBeer.all
+    formatted_date = Date.new(date)
+    all.select{ |barbeer| barbeer.date == formatted_date }
+  end
 
  end

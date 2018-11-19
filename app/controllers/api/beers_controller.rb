@@ -3,7 +3,6 @@ class Api::BeersController < ApplicationController
     @beer = Beer.new(beer_params)
     if @beer.save
       render json: @beer
-      # TODO: come back to this and update redirect?
     else
       render json: @beer.errors.full_messages, status: 422
     end
@@ -13,7 +12,6 @@ class Api::BeersController < ApplicationController
     @beer = Beer.find_by(params[:id])
     if @beer.update(beer_params)
       render json: @beer
-      # TODO: fix this/redirect somewhere
     else
       render json: @beer.errors.full_messages, status: 422
     end
@@ -25,11 +23,13 @@ class Api::BeersController < ApplicationController
   end
 
   def index
-    render json: Beer.all
+    @beers = Beer.all
+    render json: @beers
   end
 
   def show
-    render json: Beer.find(params[:id])
+    @beer = Beer.find(params[:id])
+    render json: @beer
   end
 
   private
