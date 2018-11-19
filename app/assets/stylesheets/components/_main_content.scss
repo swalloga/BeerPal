@@ -84,26 +84,53 @@ body {
 .section-title{
   font-size: 40px;
   border-bottom: 4px solid #00b3ec;
-  color: #5d5a58;
+  color: #333;
+  font-weight: 400;
+}
+
+.content > h4 {
+  margin-top: 40px;
+}
+
+.column-text {
+  color: #5D5A58;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1.2px;
+  width: 100%;
 }
 .main-info {
-  height: 430px;
-  padding: 40px 0px;
+  height: 364px;
+  padding: 40px;
   border-bottom: 10px solid #f2f0ef;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-info> div {
-  width: 30%;
-  text-align: center
+.main-info > div {
+  width: 250px;
+  text-align: center;
+}
+
+.main-info > div > h4 {
+  color: #FF4338;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-info > div > p {
+  text-transform: none;
 }
 
 .icon {
   height: 120px;
   width: 120px;
 }
+
 .robot-info {
   height: 70px;
   padding: 20px 0px;
