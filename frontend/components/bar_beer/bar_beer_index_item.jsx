@@ -1,7 +1,9 @@
 import React from 'react';
 const BarBeerIndexItem = (props) => {
+  const bar = props.bar || {name:"" ,address:""};
+  const beer = props.beer || {name:"" ,description:"", abv:""};
   let beerPic;
-  switch (props.barBeer.beer.image_url) {
+  switch (props.beer.image_url) {
     case "guiness.png":
       beerPic = window.guiness_img;
       break;
@@ -40,13 +42,13 @@ const BarBeerIndexItem = (props) => {
         </div>
         <img className="beer-img" src={beerPic} />
         <p className="beer-description">
-          {props.barBeer.beer.name},  {props.barBeer.beer.description},  {props.barBeer.beer.abv}%
+          {beer.name},  {beer.description},  {beer.abv}%
         </p>
         <p className="barName">
-          {props.barBeer.bar.name}
+          {bar.name}
         </p>
         <p className="barAddress">
-          {props.barBeer.bar.address}
+          {bar.address}
         </p>
       </div>
     </li>

@@ -4,10 +4,21 @@ export const RECEIVE_BAR_BEER = 'RECEIVE_BAR_BEER';
 export const RECEIVE_BAR_BEER_ERRORS = 'RECEIVE_BAR_BEER_ERRORS';
 
 // sync actions
-export const receiveBarBeers = barBeers => ({
+export const receiveBarBeers = payload => ({
   type: RECEIVE_ALL_BAR_BEERS,
-  barBeers,
+  barBeers: payload.barBeers,
+  bars: payload.bars,
+  beers: payload.beers,
 });
+
+export const receiveBarBeersByDate = (barBeers, date = "2019-01-01") => {
+  barBeers = Object.values(barBeers).filter(
+    (barBeer) => barBeer.date === date );
+  return {
+    type: RECEIVE_ALL_BAR_BEERS,
+    barBeers,
+  };
+};
 
 export const receiveBarBeer = barBeer => ({
   type: RECEIVE_BAR_BEER,
@@ -21,11 +32,12 @@ export const receiveBarBeerErrors = errors => {
   });
 };
 
+
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllBarBeers = () => dispatch => {
-  return BarBeerAPIUtil.fetchAllBarBeers().then((barBeers) =>
-  dispatch(receiveBarBeers(barBeers)),
+  return BarBeerAPIUtil.fetchAllBarBeers().then((payload) =>
+  dispatch(receiveBarBeers(payload)),
   err => dispatch(receiveBarBeerErrors(err.responseJSON)));
 };
 
@@ -37,12 +49,21 @@ export const fetchBarBeer = (id) => dispatch => {
   });
 };
 
+// TODO: update fetch barbeersbydate
+export const fetchBarBeersByDate = (date) => dispatch => {
+  return BarBeerAPIUtil.fetchAllBarBeers().then(
+    (barBeers) => dispatch(receiveBarBeersByDate(barBeers, date)),
+    err => dispatch(receiveBarBeerErrors(err.responseJSON)));
+};
+
 export const fetchBarBeersByBeer = (beerId) => dispatch => {
-  return BarBeerAPIUtil.fetchBarBeersByBeer(beerId).then((barBeers) => dispatch(receiveBarBeers(barBeers)),
+  return BarBeerAPIUtil.fetchBarBeersByBeer(beerId).then(
+    (barBeers) => dispatch(receiveBarBeers(barBeers)),
   err => dispatch(receiveBarBeerErrors(err.responseJSON)));
 };
 
 export const fetchBarBeerByBar = (barId) => dispatch => {
-  return BarBeerAPIUtil.fetchBarBeerByBar(barId).then((barBeers) => dispatch(receiveBarBeers(barBeers)),
+  return BarBeerAPIUtil.fetchBarBeerByBar(barId).then(
+    (barBeers) => dispatch(receiveBarBeers(barBeers)),
   err => dispatch(receiveBarBeerErrors(err.responseJSON)));
 };

@@ -26,4 +26,9 @@ export const fetchBarBeerByBar = (barId) =>{
       });
   };
 
-  // TODO: add an action for fetch barbeers by date
+  // export const fetchBarBeersByDate = (date) =>{
+  //     return $.ajax({
+  //         method: 'GET',
+  //         url: `/api/bars/bar_beers`
+  //       });
+  //   };

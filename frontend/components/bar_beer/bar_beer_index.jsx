@@ -8,11 +8,16 @@ class BarBeerIndex extends React.Component {
   }
 
   componentDidMount() {
+    // TODO:
+    // fetch bar beers by Date
+    // pass in relevant date here with date- default to seed data
     this.props.fetchAllBarBeers();
+    // this.props.fetchBarBeersByDate();
   }
 
   render() {
     const barBeers= Object.values(this.props.barBeers);
+    let bar, beer;
     if (barBeers.length === 0) {
       return (<div></div>);
     } else {
@@ -20,7 +25,9 @@ class BarBeerIndex extends React.Component {
       <section className="barBeerIndex">
         <ul className="barBeerIndexList">
           {barBeers.map(
-            barBeer => <BarBeerIndexItem key={barBeer.id} barBeer={barBeer} />
+            barBeer => <BarBeerIndexItem key={barBeer.id} barBeer={barBeer.barBeer}
+            bar = {barBeer.bar}
+            beer = {barBeer.beer} />
         )}
       </ul>
     </section>

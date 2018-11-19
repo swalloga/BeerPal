@@ -1,34 +1,33 @@
 class Api::BarBeersController < ApplicationController
   def create
-    @barbeers = BarBeer.new(barbeers_params)
+    @barbeer = BarBeer.new(barbeers_params)
     date = Date.new(params[:date])
     barbeers.date = date
-    if @barbeers.save
-      render json: @barbeers
+    if @barbeer.save
+      render json: @barbeer
       # TODO: fix this/redirect somewhere
     else
-      render json: @barbeers.errors.full_messages, status: 422
+      render json: @barbeer.errors.full_messages, status: 422
     end
   end
 
   def update
-    @barbeers = BarBeer.find_by(params[:id])
-    if @barbeers.update(barbeers_params)
-      render json: @barbeers
-      # TODO: fix this/redirect somewhere
+    @barbeer = BarBeer.find_by(params[:id])
+    if @barbeer.update(barbeers_params)
+      render json: @barbeer
     else
-      render json: @barbeers.errors.full_messages, status: 422
+      render json: @barbeer.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    barbeers = BarBeer.find_by(params[:id])
-    barbeers.destroy
+    barbeer = BarBeer.find_by(params[:id])
+    barbeer.destroy
   end
 
   def index
+    # TODO: change BarBeer.all to be BarBeer.allbydate
     @barbeers = BarBeer.all.includes(:bar, :beer)
-    # render json: @barbeers
     render 'api/bar_beers/index'
   end
 
@@ -56,6 +55,6 @@ class Api::BarBeersController < ApplicationController
   private
   def barbeers_params
     # QUESTION: is bar_beers in the require correct?
-    params.require(:bar_beers).permit(:bar_id, :beer_id, :date)
+    params.require(:bar_beer).permit(:bar_id, :beer_id, :date)
   end
 end

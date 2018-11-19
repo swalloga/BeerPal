@@ -1,11 +1,25 @@
-@barbeers.each do |barbeer|
-  json.set! barbeer.id do
-    json.extract! barbeer, :bar_id, :beer_id
-    json.bar barbeer.bar, :name, :address, :latitude, :longitude
-    json.beer barbeer.beer, :name, :description, :price, :abv, :image_url
+json.barBeers do
+  @barbeers.each do |barbeer|
+    json.set! barbeer.id do
+      json.partial! 'api/bar_beers/bar_beer', barbeer: barbeer
+    end
   end
 end
 
-#COMMENTED OUT AND REPLACED WITH above
-# QUESTION: should i get rid of the bar and beer keys and consolidate?
-# json.partial! 'api/bar_beers/bar_beer', collection: @barbeers, as: :barbeer
+json.bars do
+  @barbeers.each do |barbeer|
+    bar = barbeer.bar
+    json.set! bar.id do
+      json.extract! bar, :id, :name, :address, :latitude, :longitude, :city_id
+    end
+  end
+end
+
+json.beers do
+  @barbeers.each do |barbeer|
+    beer = barbeer.beer
+    json.set! beer.id do
+      json.extract! beer, :id, :name, :description, :price, :abv, :image_url
+    end
+  end
+end

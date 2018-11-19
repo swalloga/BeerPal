@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import * as BarBeerActions from './actions/bar_beer_actions';
+import * as BarActions from './actions/bar_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,8 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchAllBarBeers = BarBeerActions.fetchAllBarBeers;
+  window.fetchBarBeersByDate = BarBeerActions.fetchBarBeersByDate;
   window.fetchBarBeer = BarBeerActions.fetchBarBeer;
   window.fetchBarBeerByBar = BarBeerActions.fetchBarBeerByBar;
+  window.fetchAllBars = BarActions.fetchAllBars;
 
   // TESTING END
   const root = document.getElementById('root');

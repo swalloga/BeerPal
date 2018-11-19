@@ -17,4 +17,12 @@ class BarBeer < ApplicationRecord
   belongs_to :bar
   belongs_to :beer
 
+# TODO: fix this method
+  # def self.find_by_date(date = "2019-01-01")
+  #   all = BarBeer.all
+  #   # debugger
+  #   formatted_date = Date.new(date)
+  #   all.select{ |barbeer| barbeer.date == date }
+  # end
+
  end

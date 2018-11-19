@@ -7,9 +7,8 @@ import barBeerReducer from './bar_beers_reducer';
 
 export default combineReducers({
   users: usersReducer,
-  // beers: beersReducer,
+  beers: beersReducer,
   bars: barsReducer,
-  // cities: citiesReducer,
+  cities: citiesReducer,
   barBeers: barBeerReducer,
 });
-// QUESTION: i dont think i need the beers, bars and cities reducers in state. do i need them at all?
