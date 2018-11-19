@@ -21,11 +21,11 @@ class BarBeer < ApplicationRecord
     source: :city
 
 
-  def self.find_by_date(date = "")
-    return BarBeer.all if date == ""
-    all = BarBeer.all
-    formatted_date = Date.new(date)
-    all.select{ |barbeer| barbeer.date == formatted_date }
+  def self.find_current_deals(date, city_id = City.first.id)
+    return BarBeer.joins(:bar).where(bars:{city_id: city_id}).includes(:bar, :beer) unless date
+    formatted_date = date.to_date
+    BarBeer.joins(:bar).where(bars:{city_id: city_id},date:formatted_date).includes(:bar, :beer)
+    # QUESTION: is the bar at the end of the above statement extra?
   end
 
  end

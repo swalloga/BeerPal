@@ -8,11 +8,9 @@ class DealIndex extends React.Component {
   }
 
   componentDidMount() {
-    // TODO:
-    // fetch bar beers by Date
-    // pass in relevant date here with date- default to seed data
-    this.props.fetchAllDeals();
-    // this.props.fetchBarBeersByDate();
+    let date = '1-1-2019';
+    let cityId = 1;
+    this.props.fetchDeals(date, cityId);
   }
 
   render() {
@@ -28,7 +26,7 @@ class DealIndex extends React.Component {
             deal => <DealIndexItem key={deal.id} deal={deal}
             bar = {this.props.bars[deal.bar_id]}
             beer = {this.props.beers[deal.beer_id]}
-            city = {deal.city} />
+             />
         )}
       </ul>
     </section>

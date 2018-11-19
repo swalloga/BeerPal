@@ -25,10 +25,8 @@ class Api::BarBeersController < ApplicationController
   end
 
   def index
-    # TODO:
-    # @barbeers = BarBeer.find_by_date()
-    @barbeers = BarBeer.all.includes(:bar, :beer, :city)
-    render 'api/bar_beers/index'
+    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id])
+    render :index
   end
 
   def show
@@ -36,17 +34,17 @@ class Api::BarBeersController < ApplicationController
     render json: @barbeer
   end
 
-  def index_by_beer
-    @barbeers = BarBeer.all.where(beer_id: params[:beer_id]).includes(:beer, :bar)
-    render json: @barbeers
-    # TODO: maybe adjust this to filter for date?
-  end
-
-  def index_by_bar
-    @barbeers = BarBeer.all.where(bar_id: params[:bar_id]).includes(:beer, :bar)
-    render json: @barbeers
-    # TODO: maybe adjust this to filter for date?
-  end
+  # def index_by_beer
+  #   @barbeers = BarBeer.all.where(beer_id: params[:beer_id]).includes(:beer, :bar)
+  #   render json: @barbeers
+  #   # TODO: maybe adjust this to filter for date?
+  # end
+  #
+  # def index_by_bar
+  #   @barbeers = BarBeer.all.where(bar_id: params[:bar_id]).includes(:beer, :bar)
+  #   render json: @barbeers
+  #   # TODO: maybe adjust this to filter for date?
+  # end
 
   # def index_by_date
   #   # TODO: come back and write this at some point

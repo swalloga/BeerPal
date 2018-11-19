@@ -4,7 +4,7 @@ import {
   RECEIVE_CITY,
   RECEIVE_CITY_ERRORS
 } from '../actions/city_actions';
-import { RECEIVE_ALL_DEALS } from '../actions/deal_actions';
+import { RECEIVE_DEALS } from '../actions/deal_actions';
 
 export default (state={}, action) => {
   Object.freeze(state);
@@ -15,9 +15,6 @@ export default (state={}, action) => {
     case RECEIVE_CITY:
       newState = { [action.city.id]: action.city };
       return merge({},state, newState);
-    case RECEIVE_ALL_DEALS:
-      newState = action.cities;
-      return merge({}, state, newState);
     case RECEIVE_CITY_ERRORS:
       return { errors: action.errors };
     default:

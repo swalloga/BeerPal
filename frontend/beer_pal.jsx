@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchAllDeals = DealActions.fetchAllDeals;
+  window.fetchDeals = DealActions.fetchDeals;
   window.fetchDeal = DealActions.fetchDeal;
   window.fetchDealByBar = DealActions.fetchDealByBar;
   window.fetchAllBars = BarActions.fetchAllBars;

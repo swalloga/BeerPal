@@ -1,7 +1,11 @@
-export const fetchAllDeals = () => {
+export const fetchDeals = (date, city_id) => {
   return $.ajax({
       method: 'GET',
-      url: '/api/bar_beers'
+      url: '/api/bar_beers',
+      data: {
+        date,
+        city_id,
+      }
     });
 };
 

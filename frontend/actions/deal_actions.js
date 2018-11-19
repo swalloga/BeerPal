@@ -1,22 +1,21 @@
 import * as DealAPIUtil from '../util/deal_api_util';
-export const RECEIVE_ALL_DEALS = 'RECEIVE_ALL_DEALS';
+export const RECEIVE_DEALS = 'RECEIVE_DEALS';
 export const RECEIVE_DEAL = 'RECEIVE_DEAL';
 export const RECEIVE_DEAL_ERRORS = 'RECEIVE_DEAL_ERRORS';
 
 // sync actions
 export const receiveDeals = payload => ({
-  type: RECEIVE_ALL_DEALS,
+  type: RECEIVE_DEALS,
   deals: payload.deals,
   bars: payload.bars,
   beers: payload.beers,
-  cities: payload.cities,
 });
 
 export const receiveDealsByDate = (deals, date = "2019-01-01") => {
   deals = Object.values(deals).filter(
     (deal) => deal.date === date );
   return {
-    type: RECEIVE_ALL_DEALS,
+    type: RECEIVE_DEALS,
     deals,
   };
 };
@@ -33,12 +32,11 @@ export const receiveDealErrors = errors => {
   });
 };
 
-
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
-export const fetchAllDeals = () => dispatch => {
-  return DealAPIUtil.fetchAllDeals().then((payload) =>
-  dispatch(receiveDeals(payload)),
+export const fetchDeals = (date, cityId) => dispatch => {
+  return DealAPIUtil.fetchDeals(date, cityId).then(
+    (payload) => dispatch(receiveDeals(payload)),
   err => dispatch(receiveDealErrors(err.responseJSON)));
 };
 
@@ -48,13 +46,6 @@ export const fetchDeal = (id) => dispatch => {
   err => {
     return dispatch(receiveDealErrors(err.responseText));
   });
-};
-
-// TODO: update fetch dealsbydate
-export const fetchDealsByDate = (date) => dispatch => {
-  return DealAPIUtil.fetchAllDeals().then(
-    (deals) => dispatch(receiveDealsByDate(deals, date)),
-    err => dispatch(receiveDealErrors(err.responseJSON)));
 };
 
 export const fetchDealsByBeer = (beerId) => dispatch => {

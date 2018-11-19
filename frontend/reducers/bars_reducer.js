@@ -4,7 +4,7 @@ import {
   RECEIVE_BAR,
   RECEIVE_BAR_ERRORS
 } from '../actions/bar_actions';
-import { RECEIVE_ALL_DEALS } from '../actions/deal_actions';
+import { RECEIVE_DEALS } from '../actions/deal_actions';
 
 export default (state={}, action) => {
   Object.freeze(state);
@@ -15,7 +15,7 @@ export default (state={}, action) => {
     case RECEIVE_BAR:
       newState = { [action.bar.id]: action.bar };
       return merge({},state, newState);
-    case RECEIVE_ALL_DEALS:
+    case RECEIVE_DEALS:
       newState = action.bars;
       return merge({}, state, newState);
     case RECEIVE_BAR_ERRORS:
