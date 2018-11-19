@@ -3,7 +3,7 @@ class Api::BarsController < ApplicationController
     @bar = Bar.new(bar_params)
     if @bar.save
       render json: @bar
-      # TODO: fix this
+      # TODO: fix this/redirect somewhere?
     else
       render json: @bar.errors.full_messages, status: 422
     end

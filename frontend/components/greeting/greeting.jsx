@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const Greeting = props => {
-// TODO: change line 23 to direct back to /
   let navColor;
     if ((props.path === "/")||(props.path === "/happyhour")) {
       navColor = "orange";
@@ -20,10 +19,22 @@ const Greeting = props => {
               <span>Menu</span>
             </button>
             <div className="dropdown-content">
-              <Link to="/happyhour">Happy Hour</Link>
-              <Link to="/my-account">My Account</Link>
-              <Link to="/favorites">Favorites</Link>
-              <button onClick={ props.logout }>Logout</button>
+              <div className="nav-HH">
+                <img className="icon" src={window.hh_icon} />
+                <Link to="/happyhour">Happy Hour</Link>
+              </div>
+              <div className="nav-account">
+                <img className="icon" src={window.account_icon} />
+                <Link to="/my-account">My Account</Link>
+              </div>
+              <div className="nav-favorites">
+                <img className="icon" src={window.heart_icon_g} />
+                <Link to="/favorites">Favorites</Link>
+              </div>
+              <div className="nav-logout">
+                <img id="logout-icon" className="icon" src={window.logout_icon} />
+                <button onClick={ props.logout }>Logout</button>
+              </div>
             </div>
           </div>
         </div>

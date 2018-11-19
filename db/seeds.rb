@@ -69,20 +69,19 @@ Beer.destroy_all
 puts "Creating Beers..."
 
 guiness = Beer.create! ({id: 1, name: "Guiness", description: "Stout", price: 8, abv: 4.2, image_url: "guiness.png"})
-stella = Beer.create! ({id: 2, name: "Stella", description: "Lager", price: 8, abv: 4.2, image_url: "guiness.png"})
-budweiser = Beer.create! ({id: 3, name: "Budweiser", description: "Lager", price: 8, abv: 4.2, image_url: "guiness.png"})
-heinken = Beer.create! ({id: 4, name: "Heinken", description: "Lager", price: 8, abv: 3, image_url: "guiness.png"})
-brooklyn = Beer.create! ({id: 5, name: "Brooklyn Lager", description: "Lager", price: 8, abv: 4, image_url: "guiness.png"})
-corona = Beer.create! ({id: 6, name: "Corona", description: "Lager", price: 8, abv: 5, image_url: "guiness.png"})
-bluemoon = Beer.create! ({id: 7, name: "Bluemoon", description: "Wheat", price: 8, abv: 6, image_url: "guiness.png"})
-modelo = Beer.create! ({id: 8, name: "Modelo", description: "Lager", price: 8, abv: 5, image_url: "guiness.png"})
-pbr = Beer.create! ({id: 9, name: "Pbr", description: "Pilsner", price: 8, abv: 5, image_url: "guiness.png"})
-fat_tire = Beer.create! ({id: 10, name: "Fat Tire", description: "Lager", price: 8, abv: 5, image_url: "guiness.png"})
-founders = Beer.create! ({id: 11, name: "Founders", description: "IPA", price: 8, abv: 4.2, image_url: "guiness.png"})
-budlight = Beer.create! ({id: 12, name: "Budlight", description: "Lager", price: 8, abv: 4.2, image_url: "guiness.png"})
+stella = Beer.create! ({id: 2, name: "Stella", description: "Lager", price: 8, abv: 4.2, image_url: "stella.png"})
+budweiser = Beer.create! ({id: 3, name: "Budweiser", description: "Lager", price: 8, abv: 4.2, image_url: "budweiser.jpg"})
+heinken = Beer.create! ({id: 4, name: "Heinken", description: "Lager", price: 8, abv: 3, image_url: "heineken.jpg"})
+brooklyn = Beer.create! ({id: 5, name: "Brooklyn Lager", description: "Lager", price: 8, abv: 4, image_url: "brooklyn.jpg"})
+corona = Beer.create! ({id: 6, name: "Corona", description: "Lager", price: 8, abv: 5, image_url: "corona.jpg"})
+bluemoon = Beer.create! ({id: 7, name: "Bluemoon", description: "Wheat", price: 8, abv: 5.4, image_url: "bluemoon.jpg"})
+modelo = Beer.create! ({id: 8, name: "Modelo", description: "Lager", price: 8, abv: 5, image_url: "modelo.jpg"})
+pbr = Beer.create! ({id: 9, name: "Pbr", description: "Pilsner", price: 8, abv: 5, image_url: "pbr.jpg"})
+fat_tire = Beer.create! ({id: 10, name: "Fat Tire", description: "Lager", price: 8, abv: 5, image_url: "fattire.jpg"})
+founders = Beer.create! ({id: 11, name: "Founders", description: "IPA", price: 8, abv: 4.2, image_url: "founders.jpg"})
+budlight = Beer.create! ({id: 12, name: "Budlight", description: "Lager", price: 8, abv: 4.2, image_url: "budlight.jpg"})
 
 puts "Beers successful"
-
 
 BarBeer.destroy_all
 

@@ -29,6 +29,7 @@
   top: 0px;;
   width: 100%;
   margin-bottom: 15px;
+  z-index: 6;
 }
 
 .loggedOut-nav {
@@ -48,19 +49,6 @@
   padding: 11px 0px;
   height: 16px;
 }
-// this may be a duplicate of the above
-.dropdown-content > a, .dropdown-content > button {
-    display: block;
-    text-transform: none;
-    letter-spacing: normal;
-    text-align: left;
-    font-size: 14px;
-    margin: 10px;
-    border: 1px solid white;
-    width: 150px;
-    padding: 11px 0px;
-    height: 16px;
-}
 
 .nav-bar a:hover {
   background-color: white;
@@ -79,14 +67,18 @@
   font-size: 14px;
 }
 
-.dropdown-content > button {
-  width: 150px;
-  height: 16px;
+.nav-logout {
   padding: 11px 0px;
-  margin: 10px;
-  border: 1px solid white;
+  border-top: 1px solid #c0bcbb;
   font-size: 14px;
+}
+
+.nav-logout > button {
   text-transform: none;
+}
+
+.nav-logout:hover {
+  color: #FE422D;
 }
 
 .loggedOut-nav button:hover {
@@ -116,8 +108,22 @@
   z-index: 1;
   color: gray;
   text-transform: none;
-  border: 1px solid gray;
+  border: 1px solid #c0bcbb;
   border-radius: 3px;
+}
+
+.dropdown-content > div {
+    display: flex;
+    letter-spacing: normal;
+    font-size: 14px;
+    width: 150px;
+    padding: 11px 0px;
+    height: 16px;
+    justify-content: center;
+}
+.dropdown-content > div > a {
+  text-transform: none;
+  align-content:flex-start;
 }
 
 .dropdown:hover .dropdown-content {
@@ -131,8 +137,8 @@ button, a {
 }
 
 .menu-icon {
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 26px;
   align-self: center;
 }
 
@@ -144,4 +150,15 @@ button, a {
 .dropbtn span {
   margin: 10px;
   padding-bottom: 10px;
+}
+
+.dropdown-content .icon {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+}
+
+#logout-icon {
+  height: 18px;
+  width: 20px;
 }
