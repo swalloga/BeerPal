@@ -27,7 +27,7 @@ class Api::BarBeersController < ApplicationController
 
   def index
     # TODO: change BarBeer.all to be BarBeer.allbydate
-    @barbeers = BarBeer.all.includes(:bar, :beer)
+    @barbeers = BarBeer.all.includes(:bar, :beer, :city)
     render 'api/bar_beers/index'
   end
 

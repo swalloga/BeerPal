@@ -23,3 +23,12 @@ json.beers do
     end
   end
 end
+
+json.cities do
+  @barbeers.each do |barbeer|
+    city = barbeer.city
+    json.set! city.id do
+      json.extract! city, :id, :name, :longitude, :latitude
+    end
+  end
+end

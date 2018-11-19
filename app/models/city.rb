@@ -15,4 +15,8 @@ class City < ApplicationRecord
   has_many :bars,
     foreign_key: :city_id,
     class_name: :City
+  has_many :bar_beers,
+    through: :bars,
+    source: :bar_beers
+
 end
