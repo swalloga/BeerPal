@@ -9,6 +9,7 @@ export const receiveDeals = payload => ({
   deals: payload.deals,
   bars: payload.bars,
   beers: payload.beers,
+  cities: payload.cities,
 });
 
 export const receiveDealsByDate = (deals, date = "2019-01-01") => {

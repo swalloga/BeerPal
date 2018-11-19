@@ -10,6 +10,7 @@ const msp = state => {
     deals: state.entities.deals,
     bars: state.entities.bars,
     beers: state.entities.beers,
+    cities: state.entities.cities,
     currentDeal: state.entities.deal,
   };
 };

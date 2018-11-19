@@ -27,7 +27,8 @@ class DealIndex extends React.Component {
           {deals.map(
             deal => <DealIndexItem key={deal.id} deal={deal}
             bar = {this.props.bars[deal.bar_id]}
-            beer = {this.props.beers[deal.beer_id]} />
+            beer = {this.props.beers[deal.beer_id]}
+            city = {deal.city} />
         )}
       </ul>
     </section>

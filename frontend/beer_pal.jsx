@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as DealActions from './actions/deal_actions';
+import * as DealActions from './util/deal_api_util';
 import * as BarActions from './actions/bar_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
