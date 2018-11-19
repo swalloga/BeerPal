@@ -1,32 +1,32 @@
-export const fetchAllBarBeers = () => {
+export const fetchAllDeals = () => {
   return $.ajax({
       method: 'GET',
       url: '/api/bar_beers'
     });
 };
 
-export const fetchBarBeer = (id) => {
+export const fetchDeal = (id) => {
   return $.ajax({
       method: 'GET',
       url: `/api/bar_beers/${id}`
     });
 };
 
-export const fetchBarBeersByBeer = (beerId) => {
+export const fetchDealsByBeer = (beerId) => {
   return $.ajax({
       method: 'GET',
       url: `/api/beers/${beerId}/bar_beers`
     });
 };
 
-export const fetchBarBeerByBar = (barId) =>{
+export const fetchDealByBar = (barId) =>{
     return $.ajax({
         method: 'GET',
         url: `/api/bars/${barId}/bar_beers`
       });
   };
 
-  // export const fetchBarBeersByDate = (date) =>{
+  // export const fetchDealsByDate = (date) =>{
   //     return $.ajax({
   //         method: 'GET',
   //         url: `/api/bars/bar_beers`

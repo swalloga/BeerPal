@@ -1,4 +1,4 @@
-.barBeerIndexList {
+.DealIndexList {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -6,7 +6,7 @@
   justify-content:flex-start;
 }
 
-.barBeerIndexListItem{
+.DealIndexListItem{
   height: 250px;
   width: 190px;
   border: 1px solid gray;
@@ -15,7 +15,7 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
 }
 
-.barBeerIndexItem {
+.DealIndexItem {
   text-transform: none;
   font-weight: 600;
   text-align: center;
@@ -26,7 +26,7 @@
   width: 100%;
 }
 
-.barBeerIndexHeader {
+.DealIndexHeader {
   border-radius: 5px 5px 0 0;
   color: white;
   background-color: #FE422D;
@@ -39,7 +39,7 @@
   letter-spacing: 1px;
 }
 
-.barBeerIndexItem > div> p {
+.DealIndexItem > div> p {
   text-align: center;
 }
 .beer-description, .barName, .barAddress{
@@ -72,15 +72,15 @@
   border-radius: 0 0 6px 6px;
 }
 
-.barBeerIndexListItem:hover {
+.DealIndexListItem:hover {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
   transform: scale(1.025);
   transition: all .1s ease;
 }
-.barBeerIndexListItem:hover .fadeBox{
+.DealIndexListItem:hover .fadeBox{
   display: block;
 }
-.barBeerIndexListItem:hover .barBeerIndexItem{
+.DealIndexListItem:hover .DealIndexItem{
   display: none;
 }
 .fadeBox {

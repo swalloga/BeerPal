@@ -1,9 +1,9 @@
 import React from 'react';
-const BarBeerIndexItem = (props) => {
+const DealIndexItem = (props) => {
   const bar = props.bar || {name:"" ,address:""};
   const beer = props.beer || {name:"" ,description:"", abv:""};
   let beerPic;
-  switch (props.beer.image_url) {
+  switch (beer.image_url) {
     case "guiness.png":
       beerPic = window.guiness_img;
       break;
@@ -20,7 +20,7 @@ const BarBeerIndexItem = (props) => {
       beerPic = window.beer_icon;
   }
   return (
-    <li className="barBeerIndexListItem">
+    <li className="DealIndexListItem">
       <div className="fadeBox">
         <div id="hover-detail">
           <img className="heart-icon-o" src={window.heart_icon_o} />
@@ -33,8 +33,8 @@ const BarBeerIndexItem = (props) => {
           <p>Form to reserve</p>
         </div>
       </div>
-      <div className="barBeerIndexItem">
-        <div className="barBeerIndexHeader">
+      <div className="DealIndexItem">
+        <div className="DealIndexHeader">
           <p>
             Happy Hour
           </p>
@@ -55,4 +55,4 @@ const BarBeerIndexItem = (props) => {
   );
 };
 
-export default BarBeerIndexItem;
+export default DealIndexItem;

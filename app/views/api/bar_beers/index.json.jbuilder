@@ -1,4 +1,4 @@
-json.barBeers do
+json.deals do
   @barbeers.each do |barbeer|
     json.set! barbeer.id do
       json.partial! 'api/bar_beers/bar_beer', barbeer: barbeer
