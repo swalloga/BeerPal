@@ -16,7 +16,7 @@ const Greeting = props => {
           <div className="dropdown">
             <button className="dropbtn">
               <img className="menu-icon icon" src={window.menu_icon} />
-              <span>Menu</span>
+              <p>Menu</p>
             </button>
             <div className="dropdown-content">
               <div className="nav-HH">

@@ -1,7 +1,6 @@
 .purple {
   background-color: #430098;
   color: white;
-  font-weight: 700;
 }
 
 .white-footer {
@@ -10,8 +9,9 @@
   color: #525252;
   text-align: center;
 }
-
-
+.white-footer > .footer-social{
+  display: none;
+}
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -19,4 +19,26 @@
   align-items: center;
   padding: 0px 20px;
   height: 200px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.footer-link-list > li {
+  margin: 0 15px;
+}
+
+.footer-social {
+  margin-bottom: 30px;
+}
+
+#social-icon {
+  height: 27px;
 }
