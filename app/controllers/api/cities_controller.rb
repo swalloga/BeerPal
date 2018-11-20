@@ -2,6 +2,7 @@ class Api::CitiesController < ApplicationController
 
   def index
     @cities = City.all
+    @default_city = City.first
     render :index
   end
 

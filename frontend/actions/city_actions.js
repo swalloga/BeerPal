@@ -5,9 +5,10 @@ export const RECEIVE_CITY_ERRORS = 'RECEIVE_CITY_ERRORS';
 export const SET_CURRENT_CITY = 'SET_CURRENT_CITY';
 
 // sync actions
-export const receiveCities = cities => ({
+export const receiveCities = payload => ({
   type: RECEIVE_ALL_CITIES,
-  cities,
+  cities: payload.cities,
+  defaultCity: payload.default_city
 });
 
 export const receiveCity = city => ({
@@ -31,7 +32,7 @@ export const setCurrentCity = (currentCityId = 1) =>{
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllCities = () => dispatch => {
-  return CityAPIUtil.fetchAllCities().then((cities) => dispatch(receiveCities(cities)),
+  return CityAPIUtil.fetchAllCities().then((payload) => dispatch(receiveCities(payload)),
   err => dispatch(receiveCityErrors(err.responseJSON)));
 };
 

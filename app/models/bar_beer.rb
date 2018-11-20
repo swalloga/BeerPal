@@ -21,7 +21,8 @@ class BarBeer < ApplicationRecord
     source: :city
 
 
-  def self.find_current_deals(date, city_id = City.first.id)
+  def self.find_current_deals(date, city_id)
+    city_id ||= City.first.id
     return BarBeer.joins(:bar).where(bars:{city_id: city_id}).includes(:bar, :beer) unless date
     formatted_date = date.to_date
     BarBeer.joins(:bar).where(bars:{city_id: city_id},date:formatted_date).includes(:bar, :beer)

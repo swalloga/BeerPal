@@ -1,0 +1,27 @@
+#map-container {
+  height: 500px;
+  width: 500px;
+}
+
+.user-pane {
+  display: flex;
+  flex-direction: row;
+}
+.map-side {
+  display: inline-block;
+}
+
+.deal-side {
+  display: inline-block;
+  max-width: 70%;
+}
+
+.filter-bar {
+  background-color: #dfd9d8;
+  padding: 20px 0;
+  height: 30px; //temp height
+}
+
+.browse-pane {
+  display: block;
+}

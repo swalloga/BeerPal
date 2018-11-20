@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+// TODO: fix menu icon on white nav bar
 const Greeting = props => {
   let navColor;
-    if ((props.path === "/")||(props.path === "/happyhour")) {
+    if (props.path === "/") {
       navColor = "orange";
     } else {
       navColor ="white";

@@ -11,15 +11,6 @@ export const receiveDeals = payload => ({
   beers: payload.beers,
 });
 
-export const receiveDealsByDate = (deals, date = "2019-01-01") => {
-  deals = Object.values(deals).filter(
-    (deal) => deal.date === date );
-  return {
-    type: RECEIVE_DEALS,
-    deals,
-  };
-};
-
 export const receiveDeal = deal => ({
   type: RECEIVE_DEAL,
   deal,
@@ -46,16 +37,4 @@ export const fetchDeal = (id) => dispatch => {
   err => {
     return dispatch(receiveDealErrors(err.responseText));
   });
-};
-
-export const fetchDealsByBeer = (beerId) => dispatch => {
-  return DealAPIUtil.fetchDealsByBeer(beerId).then(
-    (deals) => dispatch(receiveDeals(deals)),
-  err => dispatch(receiveDealErrors(err.responseJSON)));
-};
-
-export const fetchDealByBar = (barId) => dispatch => {
-  return DealAPIUtil.fetchDealByBar(barId).then(
-    (deals) => dispatch(receiveDeals(deals)),
-  err => dispatch(receiveDealErrors(err.responseJSON)));
 };

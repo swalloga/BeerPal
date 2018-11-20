@@ -24,7 +24,6 @@ const MainContent = props => {
           <span className="section-title">How beerPal works:</span>
         </h4>
         <div className="main-info">
-          <br/>
           <div className="column1">
             <img className="choose-icon icon" src={window.pin_icon} />
             <h4 className="column-text">Choose</h4>

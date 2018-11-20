@@ -6,6 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import MainContentContainer from './main/main_content_container';
 import FooterContainer from './footer/footer_container';
 import DealIndexContainer from './deal/deal_index_container';
+import SearchContainer from './search/search';//come back to this
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -17,7 +18,7 @@ const App = () => (
       <AuthRoute exact path="/" component={MainContentContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute path="/happyhour" component={DealIndexContainer} />
+      <ProtectedRoute path="/happyhour" component={SearchContainer} />
     </div>
     <footer>
       <FooterContainer />

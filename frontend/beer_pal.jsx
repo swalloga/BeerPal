@@ -5,6 +5,7 @@ import Root from './components/root';
 
 import * as DealActions from './util/deal_api_util';
 import * as BarActions from './actions/bar_actions';
+import * as CityActions from './actions/city_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -25,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchDeals = DealActions.fetchDeals;
   window.fetchDeal = DealActions.fetchDeal;
-  window.fetchDealByBar = DealActions.fetchDealByBar;
   window.fetchAllBars = BarActions.fetchAllBars;
+  window.fetchAllCities =CityActions.fetchAllCities;
   // TESTING END
   const root = document.getElementById('root');
 

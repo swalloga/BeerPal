@@ -7,15 +7,12 @@ class DealIndex extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
-    this.props.fetchAllCities();
-    this.props.setCurrentCity();
-  }
-
+  // this.props.setCurrentCity();
   componentDidMount() {
+    this.props.fetchAllCities();
     this.setState({ui: {currentCityId:''}});
     let date = '1-1-2019';
-    let cityId = this.props.currentCityId || 1;
+    let cityId = this.props.currentCityId;
     this.props.fetchDeals(date, cityId);
   }
 
