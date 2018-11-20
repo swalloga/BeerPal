@@ -9,7 +9,7 @@ class Api::BeersController < ApplicationController
   end
 
   def update
-    @beer = Beer.find_by(params[:id])
+    @beer = Beer.find_by(id: params[:id])
     if @beer.update(beer_params)
       render json: @beer
     else
@@ -18,7 +18,7 @@ class Api::BeersController < ApplicationController
   end
 
   def destroy
-    beer = Beer.find_by(params[:id])
+    beer = Beer.find_by(id: params[:id])
     beer.destroy
   end
 
@@ -28,7 +28,7 @@ class Api::BeersController < ApplicationController
   end
 
   def show
-    @beer = Beer.find(params[:id])
+    @beer = Beer.find(id: params[:id])
     render json: @beer
   end
 

@@ -4,7 +4,7 @@ class Api::BarBeersController < ApplicationController
     date = Date.new(params[:date])
     barbeers.date = date
     if @barbeer.save
-      render json: @barbeer
+      render 'api/barbeers/show'
     else
       render json: @barbeer.errors.full_messages, status: 422
     end
@@ -13,7 +13,7 @@ class Api::BarBeersController < ApplicationController
   def update
     @barbeer = BarBeer.find_by(params[:id])
     if @barbeer.update(barbeers_params)
-      render json: @barbeer
+      render 'api/barbeers/show'
     else
       render json: @barbeer.errors.full_messages, status: 422
     end
@@ -30,8 +30,8 @@ class Api::BarBeersController < ApplicationController
   end
 
   def show
-    @barbeer = BarBeer.find(params[:id])
-    render json: @barbeer
+    @barbeer = BarBeer.find(id: params[:id])
+      render 'api/barbeers/show'
   end
 
   # def index_by_beer
@@ -44,10 +44,6 @@ class Api::BarBeersController < ApplicationController
   #   @barbeers = BarBeer.all.where(bar_id: params[:bar_id]).includes(:beer, :bar)
   #   render json: @barbeers
   #   # TODO: maybe adjust this to filter for date?
-  # end
-
-  # def index_by_date
-  #   # TODO: come back and write this at some point
   # end
 
   private

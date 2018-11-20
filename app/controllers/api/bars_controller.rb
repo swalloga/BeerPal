@@ -2,34 +2,34 @@ class Api::BarsController < ApplicationController
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
-      render json: @bar
+      render 'api/bars/show'
     else
       render json: @bar.errors.full_messages, status: 422
     end
   end
 
   def update
-    @bar = Bar.find_by(params[:id])
+    @bar = Bar.find_by(id: params[:id])
     if @bar.update(bar_params)
-      render json: @bar
+      render 'api/bars/show'
     else
       render json: @bar.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    bar = Bar.find_by(params[:id])
+    bar = Bar.find_by(id: params[:id])
     bar.destroy
   end
 
   def index
     @bars = Bar.all
-    render json: @bars
+    render :index
   end
 
   def show
-    @bar = Bar.find(params[:id])
-    render json: @bar
+    @bar = Bar.find(id: params[:id])
+      render 'api/bars/show'
   end
 
   private
