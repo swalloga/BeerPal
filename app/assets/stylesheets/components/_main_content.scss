@@ -132,10 +132,48 @@ body {
 }
 
 .robot-info {
-  height: 70px;
+  height: 150px;
   padding: 20px 0px;
   border-top: 10px solid white;
   background: #f2f0ef;
+  display: flex;
+  justify-content:center;
+}
+
+.robot-img {
+  height: 150px;
+  width: 120px;
+}
+
+.robot-orange {
+  height: 160px;
+  width: 160px;
+  margin: 0 30px;
+}
+
+.robot-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.robot-text h3{
+  text-align: left;
+  color: #FF4338;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.robot-text p {
+  text-align: left;
+  color: #5D5A58;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+  margin: 10px auto;
+  line-height: 1.5;
 }
 
 .map-container {
@@ -187,14 +225,9 @@ body {
   background: #57C6E8;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .bottom-invite-form {
   width: 495px;
-}
-
-.robot-img {
-  height: 150px;
-  width: 120px;
 }

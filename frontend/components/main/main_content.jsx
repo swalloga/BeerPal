@@ -45,7 +45,15 @@ const MainContent = props => {
             <p className="column-text">Enjoy your favorite beers, everyday.</p>
           </div>
         </div>
-        <div className="robot-info">they have a robot that learns preferences... will i??</div>
+        <div className="robot-info">
+          <img className="robot-orange icon" src={window.orangerobot_img} />
+          <div className="robot-text">
+            <h3 className="robot-pal">HI, I’M PAL, YOUR BEER BUDDY</h3>
+            <p>
+              I’ll learn your preferences and make happy hour the best time of your day!
+            </p>
+          </div>
+        </div>
         <div className="map-container">
           <span className="section-title">Bubbly and Delicious.</span>
           <div className="map-column">
