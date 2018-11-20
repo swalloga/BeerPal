@@ -8,9 +8,8 @@ class BarMap extends React.Component {
   }
 
   initMap() {
-    // TODO: UPDATE MAP TO CENTER ON CURRENT CITY
     const mapOptions = {
-      center: { lat: 40.7514, lng: -73.9839 }, // this is SF
+      center: { lat: this.props.currentCityLat, lng: this.props.currentCityLon },
       zoom: 14
     };
     const map = this.refs.map;
@@ -38,6 +37,12 @@ class BarMap extends React.Component {
 
   componentDidMount() {
     this.initMap();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentCityId !== this.props.currentCityId) {
+      this.initMap();
+    }
   }
 
   render() {

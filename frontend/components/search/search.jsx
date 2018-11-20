@@ -2,7 +2,7 @@ import React from 'react';
 
 import FilterBar from './filter';
 import DealIndexContainer from '../deal/deal_index_container';
-import BarMap from '../map/map';
+import BarMapContainer from '../map/map_container';
 
 
 const Search = () => (
@@ -15,7 +15,7 @@ const Search = () => (
         <DealIndexContainer />
       </div>
       <div className="map-side">
-        <BarMap/>
+        <BarMapContainer/>
       </div>
     </div>
   </div>

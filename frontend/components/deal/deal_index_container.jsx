@@ -5,7 +5,7 @@ import DealIndexComponent from './deal_index';
 import { fetchDeals } from '../../actions/deal_actions';
 import { fetchAllCities, setCurrentCity } from '../../actions/city_actions';
 
-const msp = state => {
+const msp = (state, ownProps) => {
   return {
     errors: state.errors,
     deals: state.entities.deals,

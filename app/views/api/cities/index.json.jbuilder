@@ -5,6 +5,6 @@ json.cities do
     end
   end
 end
-  json.default_city do
+  json.defaultCity do
     json.partial! 'api/cities/city', city: @default_city
   end

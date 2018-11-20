@@ -8,7 +8,7 @@ export const SET_CURRENT_CITY = 'SET_CURRENT_CITY';
 export const receiveCities = payload => ({
   type: RECEIVE_ALL_CITIES,
   cities: payload.cities,
-  defaultCity: payload.default_city
+  defaultCity: payload.defaultCity
 });
 
 export const receiveCity = city => ({

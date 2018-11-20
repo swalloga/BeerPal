@@ -1,14 +1,16 @@
 #map-container {
-  height: 500px;
-  width: 500px;
+  width: 267px;
+  height: 704px;
 }
 
 .user-pane {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .map-side {
   display: inline-block;
+  max-width: 25%;
 }
 
 .deal-side {

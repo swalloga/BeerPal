@@ -36,14 +36,15 @@ City.destroy_all
 
 puts "Creating Cities..."
 
-newyork =  City.create! ({id: 1, name: "New York" , latitude:74.006, longitude:40.7128})
-chicago =  City.create! ({id: 2, name: "Chicago" , latitude:75.006, longitude:41.7128})
-scranton =  City.create! ({id: 3, name: "Scranton" , latitude:76.006, longitude:42.7128})
-sanfran =  City.create! ({id: 4, name: "San Francisco" , latitude:77.006, longitude:43.7128})
-houston =  City.create! ({id: 5, name: "Houston" , latitude:78.006, longitude:44.7128})
-dallas =  City.create! ({id: 6, name: "Dallas" , latitude:79.006, longitude:45.7128})
-philly =  City.create! ({id: 7, name: "Philadelphia" , latitude:80.006, longitude:46.7128})
-seattle =  City.create! ({id: 8, name: "Seattle" , latitude:81.006, longitude:47.7128})
+newyork =  City.create! ({id: 1, name: "New York" , latitude:40.7514, longitude:-73.9839})
+chicago =  City.create! ({id: 2, name: "Chicago" , latitude:41.8781, longitude:-87.6298})
+scranton =  City.create! ({id: 3, name: "Scranton" , latitude:41.409, longitude:-75.6624})
+sanfran =  City.create! ({id: 4, name: "San Francisco" , latitude:37.7749, longitude:-122.4194})
+houston =  City.create! ({id: 5, name: "Houston" , latitude:29.7604, longitude:-95.3698})
+dallas =  City.create! ({id: 6, name: "Dallas" , latitude:32.7767, longitude:-96.797})
+philly =  City.create! ({id: 7, name: "Philadelphia" , latitude:39.9526, longitude:-75.1652})
+seattle =  City.create! ({id: 8, name: "Seattle" , latitude:47.6062, longitude:-122.3321})
+pawnee =  City.create! ({id: 9, name: "Pawnee" , latitude:39.7684, longitude:86.1581})
 
 puts "cities successful"
 
