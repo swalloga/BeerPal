@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchDeal = DealActions.fetchDeal;
   window.fetchDealByBar = DealActions.fetchDealByBar;
   window.fetchAllBars = BarActions.fetchAllBars;
-
   // TESTING END
   const root = document.getElementById('root');
 

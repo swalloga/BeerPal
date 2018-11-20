@@ -11,3 +11,11 @@ export const fetchCity = (id) => {
       url: `/api/cities/${id}`
     });
 };
+
+// export const setCurrentCity = (currentCityId) => {
+//   return $.ajax({
+//     method: 'POST',
+//     url: ``,
+//     data: { currentCityId }
+//   });
+// };

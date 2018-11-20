@@ -2,6 +2,7 @@ import * as CityAPIUtil from '../util/city_api_util';
 export const RECEIVE_ALL_CITIES = 'RECEIVE_ALL_CITIES';
 export const RECEIVE_CITY = 'RECEIVE_CITY';
 export const RECEIVE_CITY_ERRORS = 'RECEIVE_CITY_ERRORS';
+export const SET_CURRENT_CITY = 'SET_CURRENT_CITY';
 
 // sync actions
 export const receiveCities = cities => ({
@@ -21,6 +22,12 @@ export const receiveCityErrors = errors => {
   });
 };
 
+export const setCurrentCity = (currentCityId = 1) =>{
+  return ({
+    type: SET_CURRENT_CITY,
+    currentCityId
+  });
+};
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllCities = () => dispatch => {

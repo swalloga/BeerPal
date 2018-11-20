@@ -58,7 +58,10 @@ const MainContent = props => {
         </div>
         <div className="spotlight-content">rotating content</div>
         <div className="plans-container">How many six packs??</div>
-        <div className="bottom-invite">{inviteForm}</div>
+        <div className="bottom-invite">
+          <div className="bottom-invite-form">{inviteForm}</div>
+          <img className="robot-img icon" src={window.bluerobot_img} />
+        </div>
       </div>
     );
   };
