@@ -15,7 +15,7 @@ class DealIndex extends React.Component {
   componentDidMount() {
     this.setState({ui: {currentCityId:''}});
     let date = '1-1-2019';
-    let cityId = this.props.currentCityId || 3;
+    let cityId = this.props.currentCityId || 1;
     this.props.fetchDeals(date, cityId);
   }
 
