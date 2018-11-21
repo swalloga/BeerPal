@@ -15,7 +15,7 @@
 
 .deal-side {
   display: inline-block;
-  max-width: 70%;
+  max-width: calc(75% - 20px;);
 }
 
 .browse-pane {

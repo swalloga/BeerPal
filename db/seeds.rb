@@ -44,7 +44,7 @@ houston =  City.create! ({id: 5, name: "Houston" , latitude:29.7604, longitude:-
 dallas =  City.create! ({id: 6, name: "Dallas" , latitude:32.7767, longitude:-96.797})
 philly =  City.create! ({id: 7, name: "Philadelphia" , latitude:39.9526, longitude:-75.1652})
 seattle =  City.create! ({id: 8, name: "Seattle" , latitude:47.6062, longitude:-122.3321})
-pawnee =  City.create! ({id: 9, name: "Pawnee" , latitude:39.7684, longitude:86.1581})
+
 
 puts "cities successful"
 
@@ -52,16 +52,16 @@ Bar.destroy_all
 
 puts "Creating Bars..."
 
-applebees = Bar.create!({id:1,name:"Applebee's" ,address:"22 W 38th Street" ,latitude:74.006, longitude:40.7128, city_id:1})
-fridays = Bar.create!({id:2,name:"Friday's" ,address:"23 W 38th Street" ,latitude:75.008, longitude:41.7122, city_id:1})
-australian = Bar.create!({id:3,name:"The Australian" ,address:"24 W 38th Street" ,latitude:76.006, longitude:42.7128, city_id:1})
-deweys = Bar.create!({id:4,name:"deweys" ,address:"25 W 38th Street" ,latitude:77.006, longitude:43.7128, city_id:2})
-rumplestiltskin = Bar.create!({id:5,name:"rumplestiltskin" ,address:"26 W 38th Street" ,latitude:78.006, longitude:44.7128, city_id:3})
-crows = Bar.create!({id:6,name:"crows" ,address:"27 W 38th Street" ,latitude:79.006, longitude:45.7128, city_id:4})
-bobs = Bar.create!({id:7,name:"bobs" ,address:"28 W 38th Street" ,latitude:80.006, longitude:46.7128, city_id:5})
-pjs = Bar.create!({id:8,name:"pjs" ,address:"29 W 38th Street" ,latitude:81.006, longitude:47.7128, city_id:6})
-blanket = Bar.create!({id:9,name:"blanket" ,address:"30 W 38th Street" ,latitude:82.006, longitude:48.7128, city_id:7})
-iron = Bar.create!({id:10,name:"iron" ,address:"31 W 38th Street" ,latitude:83.006, longitude:49.7128, city_id:8})
+barcade = Bar.create!({id:1,name:"Barcade" ,address:"148 W 24th St" ,latitude:40.744202, longitude:-73.994423, city_id:1})
+breslin = Bar.create!({id:2,name:"The Breslin" ,address:"16 W 29th St" ,latitude:40.74578, longitude:-73.98814, city_id:1})
+australian = Bar.create!({id:3,name:"The Australian" ,address:"20 W 38th St" ,latitude:40.75121, longitude:-73.98392, city_id:1})
+deweys = Bar.create!({id:4,name:"Dewey's Pub" ,address:"135 W 30th St" ,latitude:40.7482, longitude:-73.99121, city_id:1})
+cindy = Bar.create!({id:5,name:"Cindy's" ,address:"12 S Michigan Ave" ,latitude:41.881649, longitude:-87.625023, city_id:2})
+elephant = Bar.create!({id:6,name:"Elephant & Castle" ,address:"111 W Adams St" ,latitude:41.87934, longitude:-87.63094, city_id:2})
+comedy = Bar.create!({id:7,name:"The Comedy Bar" ,address:"500 N LaSalle D" ,latitude:41.9122, longitude:-87.63309, city_id:2})
+emporium = Bar.create!({id:8,name:"Emporium" ,address:"1366 N Milwaukee Ave" ,latitude:41.906658, longitude:-87.67186, city_id:2})
+vella = Bar.create!({id:9,name:"Vella Wine Bar" ,address:"1480 2nd Ave" ,latitude:40.77203, longitude:-73.95566, city_id:2})
+blindtiger = Bar.create!({id:10,name:"Blind Tiger" ,address:"281 Bleecker St" ,latitude:40.73189, longitude:-74.00315, city_id:1})
 
 puts "bars successful"
 
@@ -95,7 +95,8 @@ BarBeer.create!({bar_id:5, beer_id:5, date: "2019-01-01"})
 BarBeer.create!({bar_id:6, beer_id:6, date: "2019-01-01"})
 BarBeer.create!({bar_id:7, beer_id:7, date: "2019-01-01"})
 BarBeer.create!({bar_id:8, beer_id:8, date: "2019-01-01"})
-
+BarBeer.create!({bar_id:9, beer_id:2, date: "2019-01-01"})
+BarBeer.create!({bar_id:10, beer_id:3, date: "2019-01-01"})
 puts "Bar_beers successful!"
 
 puts "Finished"

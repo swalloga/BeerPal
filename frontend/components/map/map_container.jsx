@@ -5,16 +5,18 @@ import { withRouter } from 'react-router-dom';
 const msp = (state) => {
   const { cities } = state.entities;
   const { currentCityId } = state.ui;
-  const { deals } = state.entities.deals || " ";
-  const currentCityLat = cities[currentCityId] ? cities[currentCityId].latitude : '';
-  const currentCityLon = cities[currentCityId] ? cities[currentCityId].longitude : '';
+  const { deals } = state.entities || " ";
+  const { bars } = state.entities || " ";
+  const currentCityLat = cities[currentCityId] ? cities[currentCityId].latitude : 0;
+  const currentCityLon = cities[currentCityId] ? cities[currentCityId].longitude : 0;
 
   return {
     cities: Object.values(cities),
     currentCityId,
     currentCityLat,
     currentCityLon,
-    deals
+    deals,
+    bars
   };
 };
 

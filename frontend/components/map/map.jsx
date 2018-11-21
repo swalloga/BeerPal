@@ -45,7 +45,7 @@ class BarMap extends React.Component {
     if (prevProps.currentCityId !== this.props.currentCityId) {
       this.initMap();
     } else if (prevProps.deals !== this.props.deals) {
-      this.MarketManager.updateMarkers(this.props.deals);
+      this.MarkerManager.updateMarkers(this.props.deals, this.props.bars);
     }
   }
 
