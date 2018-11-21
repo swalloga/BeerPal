@@ -53,5 +53,5 @@ export const generateDemoUser = () => {
   let username = Math.random().toString(36).substring(7);
   let email = username.concat('@email.com');
 
-  return({username, email, name:"Demo", password: "starwars"});
+  return({username, email, name:"Demo User", password: "starwars"});
 };
