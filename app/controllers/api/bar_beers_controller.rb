@@ -34,17 +34,17 @@ class Api::BarBeersController < ApplicationController
       render 'api/barbeers/show'
   end
 
-  # def index_by_beer
-  #   @barbeers = BarBeer.all.where(beer_id: params[:beer_id]).includes(:beer, :bar)
-  #   render json: @barbeers
-  #   # TODO: maybe adjust this to filter for date?
-  # end
-  #
-  # def index_by_bar
-  #   @barbeers = BarBeer.all.where(bar_id: params[:bar_id]).includes(:beer, :bar)
-  #   render json: @barbeers
-  #   # TODO: maybe adjust this to filter for date?
-  # end
+  def index_by_beer
+    beer_id = Beer.find_by(name: params[:name])
+    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id]).where(beer_id: beer_id).includes(:beer, :bar)
+    render json: @barbeers
+  end
+
+  def index_by_bar
+    bar_id = Beer.find_by(name: params[:name])
+    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id]).where(bar_id: params[:bar_id]).includes(:beer, :bar)
+    render json: @barbeers
+  end
 
   private
   def barbeers_params

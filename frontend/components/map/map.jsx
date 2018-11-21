@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
+import MarkerManager from '../../util/marker_manager';
 
 class BarMap extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class BarMap extends React.Component {
     };
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
 
     // TESTING MARKERS
     let marker = new google.maps.Marker({
@@ -38,16 +40,18 @@ class BarMap extends React.Component {
   componentDidMount() {
     this.initMap();
   }
-
+// TODO: come back and add markers to the map
   componentDidUpdate(prevProps) {
     if (prevProps.currentCityId !== this.props.currentCityId) {
       this.initMap();
+    } else if (prevProps.deals !== this.props.deals) {
+      this.MarketManager.updateMarkers(this.props.deals);
     }
   }
 
   render() {
     return(
-      <div>
+      <div className="happyhour-map">
         <div id='map-container' ref='map' >
         </div>
       </div>

@@ -23,9 +23,8 @@ class CityDropdown extends React.Component{
 
   componentDidUpdate(prevProps) {
     if (prevProps.currentCityId !== this.props.currentCityId) {
-      const toggleState = !this.state.listOpen;
       this.setState({
-        listOpen: toggleState
+        listOpen: false
       });
     }
   }

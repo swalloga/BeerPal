@@ -1,11 +1,9 @@
 import React from 'react';
-
 import FilterBar from './filter';
 import DealIndexContainer from '../deal/deal_index_container';
 import BarMapContainer from '../map/map_container';
 
-
-const Search = () => (
+const Search = (props) => (
   <div className="browse-pane">
     <div className="filter-wrapper">
       <FilterBar />
@@ -15,7 +13,7 @@ const Search = () => (
         <DealIndexContainer />
       </div>
       <div className="map-side">
-        <BarMapContainer/>
+        <BarMapContainer deals={props.deals} />
       </div>
     </div>
   </div>

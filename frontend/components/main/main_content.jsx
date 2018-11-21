@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import MapContainer from '../map/map_container';
+import CityDropdownContainer from '../search/city_dropdown_container';
 
 const MainContent = props => {
   const inviteForm = (
@@ -58,9 +60,13 @@ const MainContent = props => {
           <div className="map-column">
             <div className="map-location">
               <span>I'm in:</span>
-              <span className="city-selector">[  New York!  ]</span>
+              <span className="city-selector">
+                < CityDropdownContainer />
+              </span>
             </div>
-            <p className="map">map view!</p>
+            <div className="map">
+                <MapContainer />
+                </div>
           </div>
         </div>
         <div className="spotlight-content">rotating content</div>
