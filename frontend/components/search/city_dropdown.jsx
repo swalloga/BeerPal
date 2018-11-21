@@ -12,6 +12,8 @@ const CityDropdownItem = (props) => {
 class CityDropdown extends React.Component{
   constructor(props) {
     super(props);
+    this.state = { listOpen: false };
+    this.toggleList = this.toggleList.bind(this);
   }
 
   componentDidMount() {
@@ -19,16 +21,12 @@ class CityDropdown extends React.Component{
     this.props.fetchAllCities();
   }
 
-  handleButtonClick(){
+  toggleList(e){
+    e.preventDefault();
+    const toggleState = !this.state.listOpen;
     this.setState({
-      listOpen: false
+      listOpen: toggleState
     });
-  }
-
-  toggleList(){
-    this.setState(prevState => ({
-      listOpen: !prevState.listOpen
-    }));
   }
 
   render() {
@@ -36,18 +34,29 @@ class CityDropdown extends React.Component{
     if (cities.length === 0) {
       return (<div></div>);
     } else {
-      return(
-        <div className="city-dropdown">
+      if (!this.state.listOpen) {
+        return(
           <div className="city-filter-header">
-            <p>{this.props.currentCityName}</p>
-            <button id="dropdown-button" onClick={() => this.handleButtonClick()}>△</button>
+            <button id="dropdown-button" onClick={this.toggleList}>
+              <label>{this.props.currentCityName}</label>
+            </button>
           </div>
-          <ul className="city-filter-list">
-            {cities.map( city => <CityDropdownItem key={city.id} city={city}
-              setCurrentCity={this.props.setCurrentCity}/> )}
-          </ul>
-        </div>
-      );
+        );
+      } else {
+        return(
+          <div className="city-dropdown">
+            <div className="city-filter-header">
+              <button id="dropdown-button" onClick={this.toggleList}>
+                <label>{this.props.currentCityName}</label>
+              </button>
+            </div>
+            <ul className="city-filter-list">
+              {cities.map( city => <CityDropdownItem key={city.id} city={city}
+                setCurrentCity={this.props.setCurrentCity}/> )}
+              </ul>
+            </div>
+        );
+      }
     }
   }
 }

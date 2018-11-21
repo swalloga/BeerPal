@@ -1,14 +1,60 @@
-.city-dropdown {
-  position: relative;
-  z-index: 100;
-  padding: 30px;
-  background-color: lightblue;
+.filter-bar {
+  background-color: #dfd9d8;
+  padding: 20px;
+  height: 30px;
 }
 
-.city-filter-header{
+.city-filter {
+  width: 240px;
+  flex: 0 0 240px;
+}
 
+.city-dropdown {
+  background-color: #fff;
+  border-top: 0;
+  border: 1px solid #c0bcbb;
+  color: #57c6e8;
+  max-height: calc(100vh - 75px - 160px - 100px);
+  overflow-x: auto;
+  padding: 0;
+  text-align: left;
+  top: 35px;
+  width: 240px;
+  z-index: 38;
+}
+
+.city-dropdown-item {
+  padding: 10px 0px;
+  width: calc(100% - 80px);
+  font-weight: 600;
+}
+// TODO: maybe get rid of this?
+.city-dropdown-item:hover {
+  color: black;
+}
+.city-filter-header{
+  background: #fff;
+  border: 1px solid #c0bcbb;
+  color: #57c6e8;
+  height: 25px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  letter-spacing: .5px;
+  font-weight: 700;
 }
 
 .city-filter-list {
+  margin: 0;
+}
 
+#dropdown-button {
+  padding: 4px 7px;
+  width: 100%;
 }
