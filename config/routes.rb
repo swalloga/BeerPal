@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     end
     resources :bar_beers
     resources :cities
+    resources :reservations
   end
 end
