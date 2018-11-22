@@ -25,7 +25,7 @@ class Api::BarBeersController < ApplicationController
   end
 
   def index
-    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id])
+    @barbeers = BarBeer.find_current_deals(params[:city_id])
     render :index
   end
 

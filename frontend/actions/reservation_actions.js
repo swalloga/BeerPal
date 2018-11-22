@@ -19,9 +19,9 @@ export const receiveReservation = reservation => ({
   reservation,
 });
 
-export const removeReservation = reservation => ({
+export const removeReservation = reservationId => ({
   type: REMOVE_RESERVATION,
-  reservation
+  reservationId
 });
 
 export const receiveReservationErrors = errors => {
@@ -65,7 +65,7 @@ export const updateReservation = (reservation) => dispatch => {
 
 export const deleteReservation = (reservationId) => dispatch => {
   return ReservationAPIUtil.deleteReservation(reservationId)
-  .then((reservation) => dispatch(removeReservation(reservation)),
+  .then(() => dispatch(removeReservation(reservationId)),
   err => {
     return dispatch(receiveReservationErrors(err.responseJSON));
   });

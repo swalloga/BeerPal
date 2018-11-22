@@ -11,36 +11,17 @@ class BarMap extends React.Component {
   initMap() {
     const mapOptions = {
       center: { lat: this.props.currentCityLat, lng: this.props.currentCityLon },
-      zoom: 14
+      zoom: 13
     };
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-
-    // TESTING MARKERS
-    let marker = new google.maps.Marker({
-      map: this.map,
-      draggable: true,
-      animation: google.maps.Animation.DROP,
-      position: { lat: 40.7514, lng: -73.9839 }
-    });
-
-    marker.setMap(this.map);
-
-    marker.addListener('mouseover', toggleBounce);
-    function toggleBounce() {
-      if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-      } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-      }
-    }
   }
 
   componentDidMount() {
     this.initMap();
   }
-// TODO: come back and add markers to the map
+
   componentDidUpdate(prevProps) {
     if (prevProps.currentCityId !== this.props.currentCityId) {
       this.initMap();

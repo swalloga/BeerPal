@@ -25,8 +25,8 @@ export const receiveDealErrors = errors => {
 
 // async actions
     // TODO: come back and fix errors. right now they're very ugly
-export const fetchDeals = (date, cityId) => dispatch => {
-  return DealAPIUtil.fetchDeals(date, cityId).then(
+export const fetchDeals = (cityId) => dispatch => {
+  return DealAPIUtil.fetchDeals(cityId).then(
     (payload) => dispatch(receiveDeals(payload)),
   err => dispatch(receiveDealErrors(err.responseJSON)));
 };

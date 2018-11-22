@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       session: { id: window.currentUser.id }
     };
+    if (window.reservationForToday) {
+      preloadedState.ui = {reservationForToday: window.reservationForToday.id};
+      preloadedState.entities.reservations = {[window.reservationForToday.id]: window.reservationForToday}
+    }
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {

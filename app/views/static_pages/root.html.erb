@@ -5,7 +5,15 @@
       user: current_user
     ).html_safe %>
   </script>
+  <% if current_user.find_reservation_by_date(Date.today) %>
+  <% reservationForToday =  current_user.find_reservation_by_date(Date.today) %>
+  <script type="text/javascript">
+    window.reservationForToday = <%= render('api/reservations/reservation.json.jbuilder',
+    reservation: reservationForToday).html_safe %>
+  </script>
+  <% end %>
 <% end %>
+
 <!-- LANDING PAGE IMAGES -->
 <script>
   window.menu_icon = "<%= asset_path('menu-icon.png')%>"

@@ -25,11 +25,11 @@ class Reservation < ApplicationRecord
   has_one :beer,
     through: :bar_beer,
     source: :beer
-    
+
   def ensure_unique_reservation
     user = User.find(user_id)
     raise "Invalid entry" unless bar_beer
-    if user.reservations_by_date(bar_beer.date) > 0
+    if user.find_reservation_by_date(bar_beer.date)
       errors.add(:unique_reservations, "limit one deal per day")
     end
   end

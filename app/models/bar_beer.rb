@@ -24,8 +24,10 @@ class BarBeer < ApplicationRecord
     foreign_key: :bar_beer_id,
     class_name: :Reservation
 
-  def self.find_current_deals(date, city_id)
+  def self.find_current_deals(city_id)
     city_id ||= City.first.id
+    # date ||= Date.today
+    date= BarBeer.first.date
     return BarBeer.joins(:bar).where(bars:{city_id: city_id}).includes(:bar, :beer) unless date
     formatted_date = date.to_date
     BarBeer.joins(:bar).where(bars:{city_id: city_id},date:formatted_date).includes(:bar, :beer)

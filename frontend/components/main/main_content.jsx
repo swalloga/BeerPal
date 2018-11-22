@@ -3,16 +3,26 @@ import { withRouter } from 'react-router-dom';
 import MapContainer from '../map/map_container';
 import CityDropdownContainer from '../search/city_dropdown_container';
 
-const MainContent = props => {
-  const inviteForm = (
-    <form className="invite-form">
-      <input type="text" placeholder="your email"></input>
-      <div>
-        <input type="text" placeholder="zip code"></input>
-        <button>Browse Bars</button>
-      </div>
-    </form>
-  );
+class MainContent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchDeals();
+  }
+  
+  render(){
+    const inviteForm = (
+      <form className="invite-form">
+        <input type="text" placeholder="your email"></input>
+        <div>
+          <input type="text" placeholder="zip code"></input>
+          <button>Browse Bars</button>
+        </div>
+      </form>
+    );
+
     return(
       <div className="content">
         <div className="main-content-invite">
@@ -62,24 +72,23 @@ const MainContent = props => {
               <span>I'm in:</span>
               <span className="city-selector">
                 < CityDropdownContainer />
-              </span>
-            </div>
-            <div className="map">
-                <MapContainer />
-                </div>
+            </span>
+          </div>
+          <div className="map">
+            <MapContainer />
           </div>
         </div>
-        <div className="spotlight-content">
-        </div>
-        <div className="plans-container"></div>
-        <div className="bottom-invite">
-          <div className="bottom-invite-form">{inviteForm}</div>
-          <img className="robot-img icon" src={window.bluerobot_img} />
-        </div>
       </div>
-    );
+      <div className="spotlight-content">
+      </div>
+      <div className="plans-container"></div>
+      <div className="bottom-invite">
+        <div className="bottom-invite-form">{inviteForm}</div>
+        <img className="robot-img icon" src={window.bluerobot_img} />
+      </div>
+    </div>
+  );
+  }
   };
 
 export default MainContent;
-// <img class="mySlides1 w3-animate-right" src={window.rotating_beer1_img} />
-// <img class="mySlides2 w3-animate-right" src={window.rotating_beer2_img} />

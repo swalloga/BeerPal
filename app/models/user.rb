@@ -26,8 +26,9 @@ class User < ApplicationRecord
 
   has_many :reservations
 
-  def reservations_by_date(date)
-    Reservation.joins(:bar_beer).where({user_id: id}).count
+  def find_reservation_by_date(date)
+    date = Reservation.first.bar_beer.date
+    Reservation.joins(:bar_beer).where(bar_beers:{date: date}).find_by({user_id: id})
   end
 
   def get_res_info

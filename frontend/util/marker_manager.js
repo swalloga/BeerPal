@@ -7,14 +7,11 @@ class MarkerManager {
 
   updateMarkers(deals, bars){
     const dealsArray = Object.values(deals);
-    // const dealesObj = {};
-    // dealsArray.forEach(deal => dealesObj[deal.id] = deal);
 
     dealsArray
       .filter(deal => !this.markers[deal.id])
       .forEach(newdeal => this.createMarkerFromdeal(newdeal, bars[newdeal.bar_id], this.handleClick));
 
-      // .filter(dealId => !dealesObj[dealId])
     Object.keys(this.markers)
       .filter(dealId => !deals[dealId])
       .forEach((dealId) => this.removeMarker(this.markers[dealId]));
@@ -27,6 +24,7 @@ class MarkerManager {
     const marker = new google.maps.Marker({
       position,
       map: this.map,
+      animation: google.maps.Animation.DROP,
       dealId: deal.id
     });
 
