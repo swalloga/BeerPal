@@ -19,7 +19,10 @@ class BarBeer < ApplicationRecord
   has_one :city,
     through: :bar,
     source: :city
-  has_many :reservations
+  has_many :reservations,
+    primary_key: :id,
+    foreign_key: :bar_beer_id,
+    class_name: :Reservation
 
   def self.find_current_deals(date, city_id)
     city_id ||= City.first.id

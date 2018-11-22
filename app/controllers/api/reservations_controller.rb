@@ -1,9 +1,11 @@
 class Api::ReservationsController < ApplicationController
 
+  before_action :ensure_logged_in
+
   def create
-    @reservation = Reservation.new(reservation_params)
+    @reservation = current_user.reservations.new(reservation_params)
     if @reservation.save
-      render :index
+      render json: @reservation
     else
       render json: @reservation.errors.full_messages, status: 422
     end
@@ -14,19 +16,20 @@ class Api::ReservationsController < ApplicationController
     render :show
   end
 
-# TODO: update this to filter for current_user
   def index
-    @reservations = Reservation.all
-    # @reservations = current_user.reservations
+    @reservations = current_user.reservations
     render :index
   end
 
   def update
     @reservation = current_user.reservations.find_by(id: params[:id])
-    if @reservation.update(reservation_params)
-      render :show
-    else
+    debugger
+    if @reservation && @reservation.update(reservation_params)
+        render :show
+    elsif @reservation
       render json: @reservation.errors.full_messages, status: 422
+    else
+      render json: ['Invalid reservation'], status: 422
     end
   end
 
@@ -35,14 +38,13 @@ class Api::ReservationsController < ApplicationController
     if @reservation
       @reservation.destroy!
     else
-      flash.now[:errors] = @reservation.errors.full_messages
+      render json: ['Reservation does not exist'], status: 422
     end
-    render :index
   end
 
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :bar_beer_id)
+    params.require(:reservation).permit(:bar_beer_id)
   end
 end

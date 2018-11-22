@@ -26,6 +26,10 @@ class User < ApplicationRecord
 
   has_many :reservations
 
+  def reservations_by_date(date)
+    Reservation.joins(:bar_beer).where({user_id: id}).count
+  end
+
   def self.find_by_credentials(username,password)
     @user = User.find_by(username: username)
     if @user && @user.is_password?(password)

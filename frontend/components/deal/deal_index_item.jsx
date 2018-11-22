@@ -1,4 +1,6 @@
 import React from 'react';
+import ReservationForm from '../reservation/reservation_form';
+
 const DealIndexItem = (props) => {
   const bar = props.bar || {name:"" ,address:""};
   const beer = props.beer || {name:"" ,description:"", abv:""};
@@ -19,18 +21,20 @@ const DealIndexItem = (props) => {
     default:
       beerPic = window.beer_icon;
   }
+
   return (
     <li className="DealIndexListItem">
       <div className="fadeBox">
         <div id="hover-detail">
           <img className="heart-icon-o" src={window.heart_icon_o} />
-          <h3>
-            Deal details here
-          </h3>
-          <h4>
-            Average ratings...
-          </h4>
-          <p>Form to reserve</p>
+          <div className="deal-beer-name">{beer.name}</div>
+          <div className="deal-beer-description">{beer.description},  {beer.abv}%</div>
+          <ReservationForm
+            deal={props.deal}
+            createReservation={props.createReservation}
+            deleteReservation={props.deleteReservation}
+            reservations={props.reservations}
+             />
         </div>
       </div>
       <div className="DealIndexItem">

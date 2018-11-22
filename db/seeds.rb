@@ -99,4 +99,10 @@ BarBeer.create!({bar_id:9, beer_id:2, date: "2019-01-01"})
 BarBeer.create!({bar_id:10, beer_id:3, date: "2019-01-01"})
 puts "Bar_beers successful!"
 
+puts "Deleting all Reservations"
+
+Reservation.destroy_all
+
+puts "Reservations successful"
+
 puts "Finished"

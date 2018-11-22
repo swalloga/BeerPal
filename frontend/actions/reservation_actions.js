@@ -1,0 +1,68 @@
+import * as ReservationAPIUtil from '../util/reservation_api_util';
+export const RECEIVE_RESERVATIONS = 'RECEIVE_RESERVATIONS';
+export const RECEIVE_RESERVATION = 'RECEIVE_RESERVATION';
+export const RECEIVE_RESERVATION_ERRORS = 'RECEIVE_RESERVATION_ERRORS';
+export const REMOVE_RESERVATION = 'REMOVE_RESERVATION';
+
+// sync actions
+export const receiveReservations = reservations => ({
+  type: RECEIVE_RESERVATIONS,
+  reservations,
+});
+
+export const receiveReservation = reservation => ({
+  type: RECEIVE_RESERVATION,
+  reservation,
+});
+
+export const removeReservation = reservation => ({
+  type: REMOVE_RESERVATION,
+  reservation
+});
+
+export const receiveReservationErrors = errors => {
+  return ({
+  type: RECEIVE_RESERVATION_ERRORS,
+  errors
+  });
+};
+
+// async actions
+    // TODO: come back and fix errors. right now they're very ugly
+export const fetchReservations = () => dispatch => {
+  return ReservationAPIUtil.fetchReservations()
+  .then((reservations) => dispatch(receiveReservations(reservations)),
+  err => dispatch(receiveReservationErrors(err.responseJSON)));
+};
+
+export const fetchReservation = (id) => dispatch => {
+  return ReservationAPIUtil.fetchReservation(id)
+  .then((reservation) => dispatch(receiveReservation(reservation)),
+  err => {
+    return dispatch(receiveReservationErrors(err.responseText));
+  });
+};
+
+export const createReservation = (reservation) => dispatch => {
+  return ReservationAPIUtil.createReservation(reservation)
+  .then((reservation) => dispatch(receiveReservation(reservation)),
+  err => {
+    return dispatch(receiveReservationErrors(err.responseJSON));
+  });
+};
+
+export const updateReservation = (reservation) => dispatch => {
+  return ReservationAPIUtil.updateReservation(reservation)
+  .then((reservation) => dispatch(receiveReservation(reservation)),
+  err => {
+    return dispatch(receiveReservationErrors(err.responseJSON));
+  });
+};
+
+export const deleteReservation = (reservationId) => dispatch => {
+  return ReservationAPIUtil.deleteReservation(reservationId)
+  .then((reservation) => dispatch(removeReservation(reservation)),
+  err => {
+    return dispatch(receiveReservationErrors(err.responseJSON));
+  });
+};

@@ -35,6 +35,8 @@ class DealIndex extends React.Component {
             deal => <DealIndexItem key={deal.id} deal={deal}
             bar = {this.props.bars[deal.bar_id]}
             beer = {this.props.beers[deal.beer_id]}
+            createReservation = {this.props.createReservation}
+            deleteReservation = {this.props.deleteReservation}
              />
             )}
           </ul>
