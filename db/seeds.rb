@@ -28,7 +28,6 @@ Karen = User.create!({username:"Karen", name:"Karen", password:"starwars", email
 Pam = User.create!({username:"Pam", name:"Pam", password:"starwars", email:"Pam@gmail.com", preferred_city:"Scranton", beer_allowance:8})
 Angela = User.create!({username:"Angela", name:"Angela", password:"starwars", email:"Angela@gmail.com", preferred_city:"Scranton", beer_allowance:1})
 Bandit = User.create!({username:"Bandit", name:"Bandit", password:"starwars", email:"Bandit@gmail.com", preferred_city:"Scranton", beer_allowance:2})
-Demo = User.create!({username:"Demo", name:"Demo", password:"password", email:"Demo", preferred_city:"New York", beer_allowance:0})
 
 puts "users successful"
 
@@ -62,6 +61,11 @@ comedy = Bar.create!({id:7,name:"The Comedy Bar" ,address:"500 N LaSalle D" ,lat
 emporium = Bar.create!({id:8,name:"Emporium" ,address:"1366 N Milwaukee Ave" ,latitude:41.906658, longitude:-87.67186, city_id:2})
 vella = Bar.create!({id:9,name:"Vella Wine Bar" ,address:"1480 2nd Ave" ,latitude:40.77203, longitude:-73.95566, city_id:2})
 blindtiger = Bar.create!({id:10,name:"Blind Tiger" ,address:"281 Bleecker St" ,latitude:40.73189, longitude:-74.00315, city_id:1})
+stout = Bar.create!({id:11,name:"Stout FIDI" ,address:"90 John St" ,latitude:40.70788, longitude:-74.00659, city_id:1})
+deadrabbit = Bar.create!({id:12,name:"The Dead Rabbit Grocery and Grog" ,address:"30 Water St" ,latitude:40.70788, longitude:-74.00659, city_id:1})
+twothirtyfifth = Bar.create!({id:13,name:"230 Fifth Rooftop Bar" ,address:"30 Water St" ,latitude:40.743938, longitude:-73.987984, city_id:1})
+employeesonly = Bar.create!({id:14,name:"Employees Only" ,address:"510 Hudson St" ,latitude:40.73344, longitude:-74.006073, city_id:1})
+japas = Bar.create!({id:15,name:"Japas 38" ,address:"9 E 38th St" ,latitude:40.7508, longitude:-73.98157, city_id:1})
 
 puts "bars successful"
 
@@ -95,8 +99,13 @@ BarBeer.create!({bar_id:5, beer_id:5, date: "2019-01-01"})
 BarBeer.create!({bar_id:6, beer_id:6, date: "2019-01-01"})
 BarBeer.create!({bar_id:7, beer_id:7, date: "2019-01-01"})
 BarBeer.create!({bar_id:8, beer_id:8, date: "2019-01-01"})
-BarBeer.create!({bar_id:9, beer_id:2, date: "2019-01-01"})
-BarBeer.create!({bar_id:10, beer_id:3, date: "2019-01-01"})
+BarBeer.create!({bar_id:9, beer_id:1, date: "2019-01-01"})
+BarBeer.create!({bar_id:10, beer_id:2, date: "2019-01-01"})
+BarBeer.create!({bar_id:11, beer_id:3, date: "2019-01-01"})
+BarBeer.create!({bar_id:12, beer_id:4, date: "2019-01-01"})
+BarBeer.create!({bar_id:13, beer_id:5, date: "2019-01-01"})
+BarBeer.create!({bar_id:14, beer_id:6, date: "2019-01-01"})
+BarBeer.create!({bar_id:15, beer_id:7, date: "2019-01-01"})
 puts "Bar_beers successful!"
 
 puts "Deleting all Reservations"

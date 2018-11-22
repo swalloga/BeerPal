@@ -137,18 +137,34 @@
   justify-content: flex-end;
 }
 
-.deal-beer-name {
+.deal-beer-name{
   font-size: 16px;
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: 500;
   padding-right: 25px;
 }
 
 .deal-beer-description {
   margin-top: 8px;
   max-height: 80px;
-  height: 80px;
   color: #4a4a4a;
   font-size: 14px;
   text-transform: none;
+}
+
+.deal-details, .bar-details {
+  padding: 20px 25px 16px;
+}
+
+.bar-description, .bar-name {
+  color: #4a4a4a;
+  text-transform: none;
+}
+
+.bar-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.bar-description {
+  font-size: 12px;
 }

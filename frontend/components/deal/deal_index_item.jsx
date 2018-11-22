@@ -18,6 +18,12 @@ const DealIndexItem = (props) => {
     case "bluemoon.jpg":
       beerPic = window.bluemoon_img;
       break;
+    case "heineken.jpg":
+      beerPic = window.heineken_img;
+      break;
+    case "brooklyn.jpg":
+      beerPic = window.brooklyn_img;
+      break;
     default:
       beerPic = window.beer_icon;
   }
@@ -27,8 +33,14 @@ const DealIndexItem = (props) => {
       <div className="fadeBox">
         <div id="hover-detail">
           <img className="heart-icon-o" src={window.heart_icon_o} />
-          <div className="deal-beer-name">{beer.name}</div>
-          <div className="deal-beer-description">{beer.description},  {beer.abv}%</div>
+          <div className="deal-details">
+            <div className="deal-beer-name">{beer.name}</div>
+            <div className="deal-beer-description">{beer.description},  {beer.abv}%</div>
+          </div>
+          <div className="bar-details">
+            <div className="bar-name">{bar.name}</div>
+            <div className="bar-description">{bar.address}</div>
+          </div>
           <ReservationForm
             deal={props.deal}
             createReservation={props.createReservation}
