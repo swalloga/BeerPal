@@ -11,7 +11,7 @@ export default (state={}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_RESERVATIONS:
-      newState = action.reservations;
+      newState = action.data.reservations;
       return merge({}, newState);
     case RECEIVE_RESERVATION:
       newState = { [action.reservation.id]: action.reservation };

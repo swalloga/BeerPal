@@ -5,9 +5,13 @@ export const RECEIVE_RESERVATION_ERRORS = 'RECEIVE_RESERVATION_ERRORS';
 export const REMOVE_RESERVATION = 'REMOVE_RESERVATION';
 
 // sync actions
-export const receiveReservations = reservations => ({
+export const receiveReservations = payload => ({
   type: RECEIVE_RESERVATIONS,
-  reservations,
+  data: {
+    reservations: payload.reservations,
+    bars: payload.bars,
+    beers: payload.beers,
+  },
 });
 
 export const receiveReservation = reservation => ({
@@ -31,7 +35,7 @@ export const receiveReservationErrors = errors => {
     // TODO: come back and fix errors. right now they're very ugly
 export const fetchReservations = () => dispatch => {
   return ReservationAPIUtil.fetchReservations()
-  .then((reservations) => dispatch(receiveReservations(reservations)),
+  .then((payload) => dispatch(receiveReservations(payload)),
   err => dispatch(receiveReservationErrors(err.responseJSON)));
 };
 

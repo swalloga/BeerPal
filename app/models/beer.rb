@@ -18,7 +18,7 @@ class Beer < ApplicationRecord
   validates :name, uniqueness: true
   has_many :bar_beers,
     foreign_key: :beer_id,
-    class_name: :BarBeers
+    class_name: :BarBeer
 
   has_many :bars,
     through: :bar_beers,

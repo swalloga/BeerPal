@@ -69,8 +69,9 @@ const MainContent = props => {
                 </div>
           </div>
         </div>
-        <div className="spotlight-content">rotating content</div>
-        <div className="plans-container">How many six packs??</div>
+        <div className="spotlight-content">
+        </div>
+        <div className="plans-container"></div>
         <div className="bottom-invite">
           <div className="bottom-invite-form">{inviteForm}</div>
           <img className="robot-img icon" src={window.bluerobot_img} />
@@ -80,3 +81,5 @@ const MainContent = props => {
   };
 
 export default MainContent;
+// <img class="mySlides1 w3-animate-right" src={window.rotating_beer1_img} />
+// <img class="mySlides2 w3-animate-right" src={window.rotating_beer2_img} />

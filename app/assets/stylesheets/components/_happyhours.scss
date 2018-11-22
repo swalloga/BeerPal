@@ -1,0 +1,54 @@
+.weekday-container {
+  width: 100%;
+  height: 35px;
+  color: white;
+  background-color: #fe422d;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.filter-bar {
+  background-color: #dfd9d8;
+  padding: 20px;
+  height: 30px;
+  display: flex;
+  display: row;
+  justify-content: space-between;
+}
+
+.filter-bar input {
+  padding: 4px 7px;
+  width: 80%;
+  border: none;
+  text-transform: none;
+}
+
+.filter-bar button {
+  width: 10px;
+}
+
+.bar-search, .beer-search {
+  background: #fff;
+  border: 1px solid #c0bcbb;
+  height: 25px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-align: left;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: .5px;
+  font-weight: 700;
+  width: 100%;
+  margin: 0 20px;
+}
+.bar-search {
+  margin-right: 25%;
+}

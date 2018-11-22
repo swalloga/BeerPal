@@ -19,6 +19,13 @@ class Reservation < ApplicationRecord
     foreign_key: :bar_beer_id,
     class_name: :BarBeer
 
+  has_one :bar,
+    through: :bar_beer,
+    source: :bar
+  has_one :beer,
+    through: :bar_beer,
+    source: :beer
+    
   def ensure_unique_reservation
     user = User.find(user_id)
     raise "Invalid entry" unless bar_beer
