@@ -16,6 +16,7 @@ const msp = (state, ownProps) => {
     cities: state.entities.cities,
     currentCityId: state.ui.currentCityId,
     reservations: reservations,
+    reservationForToday: state.ui.reservationForToday
   };
 };
 

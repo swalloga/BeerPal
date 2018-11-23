@@ -10,25 +10,24 @@ User.destroy_all
 
 puts "Creating Users..."
 
-Liz = User.create!({username:"LizLemon", name:"Liz", password:"starwars", email:"liz@gmail.com", preferred_city:"New York", beer_allowance:1})
-Tracey = User.create!({username:"TracyJ", name:"Tracey", password:"starwars", email:"TracyJ@gmail.com", preferred_city:"New York", beer_allowance:2})
-Jim = User.create!({username:"Jimothy", name:"Jim", password:"starwars", email:"Jimothy@gmail.com", preferred_city:"Scranton", beer_allowance:3})
-Michael = User.create!({username:"PrisonMike", name:"Michael", password:"starwars", email:"PrisonMike@gmail.com", preferred_city:"Scranton", beer_allowance:4})
-Dwight = User.create!({username:"Beetsrbest", name:"Dwight", password:"starwars", email:"Beetsrbest@gmail.com", preferred_city:"Scranton", beer_allowance:5})
-Leslie = User.create!({username:"LeslieK", name:"Leslie", password:"starwars", email:"LeslieK@gmail.com", preferred_city:"Chicago", beer_allowance:6})
-Sebastian = User.create!({username:"Lilsebastian", name:"Sebastian", password:"starwars", email:"Lilsebastian@gmail.com", preferred_city:"Chicago", beer_allowance:7})
-Ron = User.create!({username:"RonSwanson", name:"Ron", password:"starwars", email:"RonSwanson@gmail.com", preferred_city:"Chicago", beer_allowance:8})
-Mindy = User.create!({username:"MindyK", name:"Mindy", password:"starwars", email:"MindyK@gmail.com", preferred_city:"New York", beer_allowance:1})
-Morgan = User.create!({username:"Morgan", name:"Morgan", password:"starwars", email:"Morgan@gmail.com", preferred_city:"New York", beer_allowance:2})
-Tamra = User.create!({username:"Tamra", name:"Tamra", password:"starwars", email:"Tamra@gmail.com", preferred_city:"New York", beer_allowance:3})
-Sarah = User.create!({username:"Sarah", name:"Sarah", password:"starwars", email:"Sarah@gmail.com", preferred_city:"New York", beer_allowance:4})
-Drake = User.create!({username:"Drake", name:"Drake", password:"starwars", email:"Drake@gmail.com", preferred_city:"New York", beer_allowance:5})
-Justin = User.create!({username:"Justin", name:"Justin", password:"starwars", email:"Justin@gmail.com", preferred_city:"New York", beer_allowance:6})
-Karen = User.create!({username:"Karen", name:"Karen", password:"starwars", email:"Karen@gmail.com", preferred_city:"Scranton", beer_allowance:7})
-Pam = User.create!({username:"Pam", name:"Pam", password:"starwars", email:"Pam@gmail.com", preferred_city:"Scranton", beer_allowance:8})
-Angela = User.create!({username:"Angela", name:"Angela", password:"starwars", email:"Angela@gmail.com", preferred_city:"Scranton", beer_allowance:1})
-Bandit = User.create!({username:"Bandit", name:"Bandit", password:"starwars", email:"Bandit@gmail.com", preferred_city:"Scranton", beer_allowance:2})
-
+{username:, id: 1, "LizLemon", name:"Liz", password:"starwars", email:"liz@gmail.com", preferred_city:"New York", beer_allowance:1}
+{username:, id: 2, "TracyJ", name:"Tracey", password:"starwars", email:"TracyJ@gmail.com", preferred_city:"New York", beer_allowance:2}
+{username:, id: 3, "Jimothy", name:"Jim", password:"starwars", email:"Jimothy@gmail.com", preferred_city:"Scranton", beer_allowance:3}
+{username:, id: 4, "PrisonMike", name:"Michael", password:"starwars", email:"PrisonMike@gmail.com", preferred_city:"Scranton", beer_allowance:4}
+{username:, id: 5, "Beetsrbest", name:"Dwight", password:"starwars", email:"Beetsrbest@gmail.com", preferred_city:"Scranton", beer_allowance:5}
+{username:, id: 6, "LeslieK", name:"Leslie", password:"starwars", email:"LeslieK@gmail.com", preferred_city:"Chicago", beer_allowance:6}
+{username:, id: 7, "Lilsebastian", name:"Sebastian", password:"starwars", email:"Lilsebastian@gmail.com", preferred_city:"Chicago", beer_allowance:7}
+{username:, id: 8, "RonSwanson", name:"Ron", password:"starwars", email:"RonSwanson@gmail.com", preferred_city:"Chicago", beer_allowance:8}
+{username:, id: 9, "MindyK", name:"Mindy", password:"starwars", email:"MindyK@gmail.com", preferred_city:"New York", beer_allowance:1}
+{username:, id: 10, "Morgan", name:"Morgan", password:"starwars", email:"Morgan@gmail.com", preferred_city:"New York", beer_allowance:2}
+{username:, id: 11, "Tamra", name:"Tamra", password:"starwars", email:"Tamra@gmail.com", preferred_city:"New York", beer_allowance:3}
+{username:, id: 12, "Sarah", name:"Sarah", password:"starwars", email:"Sarah@gmail.com", preferred_city:"New York", beer_allowance:4}
+{username:, id: 13, "Drake", name:"Drake", password:"starwars", email:"Drake@gmail.com", preferred_city:"New York", beer_allowance:5}
+{username:, id: 14, "Justin", name:"Justin", password:"starwars", email:"Justin@gmail.com", preferred_city:"New York", beer_allowance:6}
+{username:, id: 15, "Karen", name:"Karen", password:"starwars", email:"Karen@gmail.com", preferred_city:"Scranton", beer_allowance:7}
+{username:, id: 16, "Pam", name:"Pam", password:"starwars", email:"Pam@gmail.com", preferred_city:"Scranton", beer_allowance:8}
+{username:, id: 17, "Angela", name:"Angela", password:"starwars", email:"Angela@gmail.com", preferred_city:"Scranton", beer_allowance:1}
+{username:, id: 18, "Bandit", name:"Bandit", password:"starwars", email:"Bandit@gmail.com", preferred_city:"Scranton", beer_allowance:2}
 puts "users successful"
 
 City.destroy_all
@@ -91,26 +90,48 @@ puts "Beers successful"
 BarBeer.destroy_all
 
 puts "Creating bar_beers..."
-BarBeer.create!({bar_id:1, beer_id:1, date: "2019-01-01"})
-BarBeer.create!({bar_id:2, beer_id:2, date: "2019-01-01"})
-BarBeer.create!({bar_id:3, beer_id:3, date: "2019-01-01"})
-BarBeer.create!({bar_id:4, beer_id:4, date: "2019-01-01"})
-BarBeer.create!({bar_id:5, beer_id:5, date: "2019-01-01"})
-BarBeer.create!({bar_id:6, beer_id:6, date: "2019-01-01"})
-BarBeer.create!({bar_id:7, beer_id:7, date: "2019-01-01"})
-BarBeer.create!({bar_id:8, beer_id:8, date: "2019-01-01"})
-BarBeer.create!({bar_id:9, beer_id:1, date: "2019-01-01"})
-BarBeer.create!({bar_id:10, beer_id:2, date: "2019-01-01"})
-BarBeer.create!({bar_id:11, beer_id:3, date: "2019-01-01"})
-BarBeer.create!({bar_id:12, beer_id:4, date: "2019-01-01"})
-BarBeer.create!({bar_id:13, beer_id:5, date: "2019-01-01"})
-BarBeer.create!({bar_id:14, beer_id:6, date: "2019-01-01"})
-BarBeer.create!({bar_id:15, beer_id:7, date: "2019-01-01"})
+BarBeer.create!({id: 1, bar_id:1, beer_id:1, date: "2019-01-01"})
+BarBeer.create!({id: 2, bar_id:2, beer_id:2, date: "2019-01-01"})
+BarBeer.create!({id: 3, bar_id:3, beer_id:3, date: "2019-01-01"})
+BarBeer.create!({id: 4, bar_id:4, beer_id:4, date: "2019-01-01"})
+BarBeer.create!({id: 5, bar_id:5, beer_id:5, date: "2019-01-01"})
+BarBeer.create!({id: 6, bar_id:6, beer_id:6, date: "2019-01-01"})
+BarBeer.create!({id: 7, bar_id:7, beer_id:7, date: "2019-01-01"})
+BarBeer.create!({id: 8, bar_id:8, beer_id:8, date: "2019-01-01"})
+BarBeer.create!({id: 9, bar_id:9, beer_id:1, date: "2019-01-01"})
+BarBeer.create!({id: 10, bar_id:10, beer_id:2, date: "2019-01-01"})
+BarBeer.create!({id: 11, bar_id:11, beer_id:3, date: "2019-01-01"})
+BarBeer.create!({id: 12, bar_id:12, beer_id:4, date: "2019-01-01"})
+BarBeer.create!({id: 13, bar_id:13, beer_id:5, date: "2019-01-01"})
+BarBeer.create!({id: 14, bar_id:14, beer_id:6, date: "2019-01-01"})
+BarBeer.create!({id: 15, bar_id:15, beer_id:7, date: "2019-01-01"})
+BarBeer.create!({id: 16, bar_id:1, beer_id:1, date: "2018-01-01"})
+BarBeer.create!({id: 17, bar_id:2, beer_id:2, date: "2018-04-01"})
+BarBeer.create!({id: 18, bar_id:3, beer_id:3, date: "2018-08-01"})
+BarBeer.create!({id: 19, bar_id:4, beer_id:4, date: "2019-10-01"})
 puts "Bar_beers successful!"
 
 puts "Deleting all Reservations"
 
 Reservation.destroy_all
+
+puts "Creating Reservations..."
+
+Reservation.create!({user_id:1, bar_beer_id:1})
+Reservation.create!({user_id:2, bar_beer_id:2})
+Reservation.create!({user_id:3, bar_beer_id:3})
+Reservation.create!({user_id:4, bar_beer_id:4})
+Reservation.create!({user_id:5, bar_beer_id:5})
+Reservation.create!({user_id:6, bar_beer_id:6})
+Reservation.create!({user_id:7, bar_beer_id:7})
+Reservation.create!({user_id:8, bar_beer_id:8})
+Reservation.create!({user_id:9, bar_beer_id:9})
+Reservation.create!({user_id:10, bar_beer_id:10})
+Reservation.create!({user_id:12, bar_beer_id:10})
+Reservation.create!({user_id:12, bar_beer_id:16})
+Reservation.create!({user_id:12, bar_beer_id:17})
+Reservation.create!({user_id:12, bar_beer_id:18})
+Reservation.create!({user_id:12, bar_beer_id:19})
 
 puts "Reservations successful"
 

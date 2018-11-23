@@ -6,11 +6,10 @@ export default (state= null, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_RESERVATION:
-      newState = action.reservation.id;
-      return merge({}, newState);
+      return action.reservation.id;
     case REMOVE_RESERVATION:
       newState = null;
-      return merge({}, newState);
+      return newState;
 
     default:
       return state;

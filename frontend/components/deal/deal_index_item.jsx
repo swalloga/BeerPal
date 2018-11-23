@@ -46,6 +46,7 @@ const DealIndexItem = (props) => {
             createReservation={props.createReservation}
             deleteReservation={props.deleteReservation}
             reservations={props.reservations}
+            reservationForToday={props.reservationForToday}
              />
         </div>
       </div>

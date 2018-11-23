@@ -13,9 +13,9 @@ class ReservationForm extends React.Component {
   render(){
     const reservations = this.props.reservations || [];
     const currentRes = reservations.filter((res) => res[bar_beer_id] === this.props.deal.id);
-    // 
-    // if (this.props.deal.id === this.props.) {
-    //
+    const buttonVal = "Reserve";
+    // if (this.props.deal.id === this.props.reservations[this.props.reservationForToday]) {
+    //   buttonVal = "Cancel";
     // }
 
     return(
