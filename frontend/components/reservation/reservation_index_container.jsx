@@ -11,6 +11,7 @@ const msp = (state) => {
     reservations,
     bars,
     beers,
+    reservationForToday: state.ui.reservationForToday
   };
 };
 

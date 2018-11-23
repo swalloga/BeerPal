@@ -1,4 +1,4 @@
-.my-reservations, .happy-hour-list{
+.my-reservations, .happy-hour-list, .my-account-info{
   margin: 0 auto;
   width: 70%;
   padding: 30px 0;
@@ -14,13 +14,67 @@
   color: #fff;
   letter-spacing: 0;
   margin-top: 10px;
-  padding: 10px 0;
+  padding: 10px;
   text-transform: uppercase;
-  width: calc(100% - 50px);
+  width: 100%;
   text-align: center;
   font-weight: 700;
 }
 
 .reservation-history {
   padding: 40px;
+}
+
+.beer-img-res {
+  height: 75px;
+  width: 75px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+}
+
+.ReservationIndexItem {
+  height: 120px;
+  width: 100%;
+  border-top: 1px solid gray;
+  margin: 10px;
+  padding: 5px 10%;
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.res-detail {
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.happy-hour-list {
+  padding: 0;
+}
+
+#my-res-header {
+  color: #FE422D;
+  text-align: center;
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.my-account-details {
+  text-align: center;
+  font-size: 20px;
+  color: grayscale(gray);
+  padding: 0 15px 15px;
+  border-radius: 0 0 6px 6px;
+}
+
+#name-info, #beersleft-info, #plan-info {
+  text-transform: none;
+  padding: 10px 0;
+}
+
+.my-account-page {
+  margin-bottom: 60px;
 }
