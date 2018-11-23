@@ -1,5 +1,6 @@
 import { merge } from 'lodash';
 import { RECEIVE_RESERVATION, REMOVE_RESERVATION } from '../actions/reservation_actions';
+import { LOGOUT_CURRENT_USER, RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 export default (state= null, action) => {
   Object.freeze(state);
@@ -10,7 +11,12 @@ export default (state= null, action) => {
     case REMOVE_RESERVATION:
       newState = null;
       return newState;
-
+    case LOGOUT_CURRENT_USER:
+      newState = null;
+      return newState;
+    case RECEIVE_CURRENT_USER:
+      newState = action.reservationForToday.id;
+      return newState;
     default:
       return state;
   }

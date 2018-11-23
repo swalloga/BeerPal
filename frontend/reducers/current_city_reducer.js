@@ -1,7 +1,7 @@
 import { merge } from 'lodash';
 import { SET_CURRENT_CITY, RECEIVE_ALL_CITIES } from '../actions/city_actions';
 
-const currentCityReducer = (state = {}, action) => {
+const currentCityReducer = (state = null, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type) {
