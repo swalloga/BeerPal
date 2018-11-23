@@ -14,6 +14,7 @@ class ReservationIndexComponent extends React.Component {
 
   render() {
     const reservations = Object.values(this.props.reservations);
+    const currentUser = this.props.users[this.props.currentUserId];
     return(
       <div className="my-account-page">
         <div className="my-account-info">
@@ -21,9 +22,9 @@ class ReservationIndexComponent extends React.Component {
             My Account Info
           </h3>
           <div className="my-account-details">
-            <p id="name-info">Name:</p>
-            <p id="beersleft-info"># of beers left:</p>
-            <p id="plan-info">Pick up another six pack.</p>
+            <p id="name-info">Name: {currentUser.name}</p>
+            <p id="beersleft-info"># of beers left: {currentUser.beer_allowance}</p>
+            <button id="plan-info">Pick up another six pack.</button>
           </div>
         </div>
 

@@ -4,7 +4,7 @@ const ReservationIndexItem = (props) => {
   const bar = props.bar || {name:"" ,address:""};
   const beer = props.beer || {name:"" ,description:"", abv:""};
   const currentDate = new Date(props.reservations[props.reservationForToday].date);
-  let resDate = new Date(props.reservation.date);
+  let resDate = (props.reservation === null) ? null : new Date(props.reservation.date);
   let beerPic;
   switch (beer.image_url) {
     case "guiness.png":

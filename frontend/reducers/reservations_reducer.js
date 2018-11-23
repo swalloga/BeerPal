@@ -20,8 +20,6 @@ export default (state={}, action) => {
       newState = merge({}, state);
       delete newState[action.reservationId];
       return newState;
-    case RECEIVE_RESERVATION_ERRORS:
-      return { errors: action.errors };
     default:
       return state;
   }

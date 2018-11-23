@@ -11,7 +11,9 @@ const msp = (state) => {
     reservations,
     bars,
     beers,
-    reservationForToday: state.ui.reservationForToday
+    reservationForToday: state.ui.reservationForToday,
+    users: state.entities.users,
+    currentUserId: state.session.id
   };
 };
 
