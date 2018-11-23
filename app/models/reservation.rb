@@ -11,7 +11,7 @@
 #
 class Reservation < ApplicationRecord
   validates :bar_beer_id, :user_id, presence: true
-  validate :ensure_unique_reservation
+  # validate :ensure_unique_reservation
 
   belongs_to :user
   belongs_to :bar_beer,
@@ -26,12 +26,12 @@ class Reservation < ApplicationRecord
     through: :bar_beer,
     source: :beer
 
-  def ensure_unique_reservation
-    user = User.find(user_id)
-    raise "Invalid entry" unless bar_beer
-    if user.find_reservation_by_date(bar_beer.date)
-      errors.add(:unique_reservations, "limit one deal per day")
-    end
-  end
+  # def ensure_unique_reservation
+  #   user = User.find(user_id)
+  #   raise "Invalid entry" unless bar_beer
+  #   if user.find_reservation_by_date(bar_beer.date)
+  #     errors.add(:unique_reservations, "limit one deal per day")
+  #   end
+  # end
 
 end
