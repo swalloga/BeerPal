@@ -12,13 +12,11 @@ export const FilterBar = (props) => {
       <div className="beer-search">
         <form className="search-form">
           <input type="text" placeholder="search by beer"></input>
-            <button>O</button>
         </form>
       </div>
       <div className="bar-search">
         <form className="search-form">
           <input type="text" placeholder="search by bar"></input>
-            <button>O</button>
         </form>
       </div>
     </div>
@@ -26,3 +24,4 @@ export const FilterBar = (props) => {
 };
 
 export default FilterBar;
+// <button><img className="mag-icon" src={window.mag_icon} /></button>

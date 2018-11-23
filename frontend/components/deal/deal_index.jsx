@@ -6,7 +6,7 @@ class DealIndex extends React.Component {
   constructor(props) {
     super(props);
   }
-// null date is placeholder
+
   componentDidMount() {
     this.props.fetchAllCities();
     let cityId = this.props.currentCityId;

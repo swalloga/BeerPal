@@ -12,7 +12,12 @@ class ReservationForm extends React.Component {
 // </div>
   render(){
     const reservations = this.props.reservations || [];
-    const currentRes = reservations.filter((res) => res[bar_beer_id] === this.props.deal.id)
+    const currentRes = reservations.filter((res) => res[bar_beer_id] === this.props.deal.id);
+    // 
+    // if (this.props.deal.id === this.props.) {
+    //
+    // }
+
     return(
       <div className="reservation-modal">
         <div className="create-reservation">

@@ -9,9 +9,11 @@ class MainContent extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchDeals();
+    this.props.fetchAllCities();
+    let cityId = this.props.currentCityId;
+    this.props.fetchDeals(cityId);
   }
-  
+
   render(){
     const inviteForm = (
       <form className="invite-form">
