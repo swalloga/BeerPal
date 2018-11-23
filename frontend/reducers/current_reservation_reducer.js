@@ -15,7 +15,7 @@ export default (state= null, action) => {
       newState = null;
       return newState;
     case RECEIVE_CURRENT_USER:
-      newState = action.reservationForToday.id;
+      newState = action.reservationForToday ? action.reservationForToday.id : null;
       return newState;
     default:
       return state;
