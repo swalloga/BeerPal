@@ -3,8 +3,14 @@ import React from 'react';
 const ReservationIndexItem = (props) => {
   const bar = props.bar || {name:"" ,address:""};
   const beer = props.beer || {name:"" ,description:"", abv:""};
-  const currentDate = new Date(props.reservations[props.reservationForToday].date);
-  let resDate = (props.reservationForToday === null) ? null : new Date(props.reservation.date);
+  // TODO: fix current Date. if a user has historical reservations and you delete the reservation for the current day, current Date tried to create a new date out of a null value and causes a TypeError
+  // const currentDate = new Date(props.reservations[props.reservationForToday].date);
+  let currentDate = new Date('01-01-2019');
+  currentDate = new Date(currentDate.getTime() - currentDate.getTimezoneOffset() * 60000);
+  let resDate = (props.reservation === null) ? null : new Date(props.reservation.date);
+
+  console.log(currentDate);
+  console.log(resDate);
   let beerPic;
   switch (beer.image_url) {
     case "guiness.png":
