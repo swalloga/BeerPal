@@ -22,7 +22,8 @@
 * Change the selected city to see the deals and map component update accordingly.
 * Create or cancel reservations for the next day.
 * View my account page, which includes a history of reserved happy hours.
-![deal index]('./app/assets/images/deal-index.png')
+
+ ![deal index]('https://github.com/swalloga/BeerPal/blob/master/app/assets/images/deal-index.png')
 
  ## Upcoming Features
 * Search for beers based on beer name or bar name.
