@@ -17,12 +17,12 @@
 
  A few of the things you can do with BeerPal:
 
- * Preview map with available deals in the selected city(which defaults to New York) without having to create an account or logging in.
+ * Preview map with available deals in the selected city(which defaults to New York) without having to create an account or log in.
 * See all available happy hour deals in the selected city.
 * Change the selected city to see the deals and map component update accordingly.
 * Create or cancel reservations for the next day.
 * View my account page, which includes a history of reserved happy hours.
-
+![deal index]('./app/assets/images/deal-index.png')
 
  ## Upcoming Features
 * Search for beers based on beer name or bar name.

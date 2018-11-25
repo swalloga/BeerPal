@@ -32,7 +32,6 @@ export const receiveReservationErrors = errors => {
 };
 
 // async actions
-    // TODO: come back and fix errors. right now they're very ugly
 export const fetchReservations = () => dispatch => {
   return ReservationAPIUtil.fetchReservations()
   .then((payload) => dispatch(receiveReservations(payload)),

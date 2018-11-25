@@ -22,7 +22,6 @@ export const receiveBarErrors = errors => {
 };
 
 // async actions
-    // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllBars = () => dispatch => {
   return BarAPIUtil.fetchAllBars().then((bars) => dispatch(receiveBars(bars)),
   err => dispatch(receiveBarErrors(err.responseJSON)));

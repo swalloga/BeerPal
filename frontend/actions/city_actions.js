@@ -30,7 +30,6 @@ export const setCurrentCity = (currentCityId = 1) =>{
   });
 };
 // async actions
-    // TODO: come back and fix errors. right now they're very ugly
 export const fetchAllCities = () => dispatch => {
   return CityAPIUtil.fetchAllCities().then((payload) => dispatch(receiveCities(payload)),
   err => dispatch(receiveCityErrors(err.responseJSON)));

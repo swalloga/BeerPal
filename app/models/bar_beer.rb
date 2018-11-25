@@ -31,7 +31,6 @@ class BarBeer < ApplicationRecord
     return BarBeer.joins(:bar).where(bars:{city_id: city_id}).includes(:bar, :beer) unless date
     formatted_date = date.to_date
     BarBeer.joins(:bar).where(bars:{city_id: city_id},date:formatted_date).includes(:bar, :beer)
-    # QUESTION: is the bar at the end of the above statement extra?
   end
 
  end
