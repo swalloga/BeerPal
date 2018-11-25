@@ -23,7 +23,6 @@ class Api::ReservationsController < ApplicationController
 
   def update
     @reservation = current_user.reservations.find_by(id: params[:id])
-    debugger
     if @reservation && @reservation.update(reservation_params)
         render :show
     elsif @reservation

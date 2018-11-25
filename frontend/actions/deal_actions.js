@@ -4,12 +4,14 @@ export const RECEIVE_DEAL = 'RECEIVE_DEAL';
 export const RECEIVE_DEAL_ERRORS = 'RECEIVE_DEAL_ERRORS';
 
 // sync actions
-export const receiveDeals = payload => ({
-  type: RECEIVE_DEALS,
-  deals: payload.deals,
-  bars: payload.bars,
-  beers: payload.beers,
-});
+export const receiveDeals = payload => {
+  return{
+    type: RECEIVE_DEALS,
+    deals: payload.deals,
+    bars: payload.bars,
+    beers: payload.beers,
+  };
+};
 
 export const receiveDeal = deal => ({
   type: RECEIVE_DEAL,
@@ -36,4 +38,10 @@ export const fetchDeal = (id) => dispatch => {
   err => {
     return dispatch(receiveDealErrors(err.responseText));
   });
+};
+
+export const fetchDealsByBeerSearch = (beerName, cityId) => dispatch => {
+  return DealAPIUtil.fetchDealsByBeerSearch(beerName, cityId).then(
+    (payload) => dispatch(receiveDeals(payload)),
+    err => dispatch(receiveDealErrors(err.responseJSON)));
 };

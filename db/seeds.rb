@@ -72,7 +72,7 @@ Beer.destroy_all
 
 puts "Creating Beers..."
 
-guiness = Beer.create! ({id: 1, name: "Guiness", description: "Stout", price: 8, abv: 4.2, image_url: "guiness.png"})
+guinness = Beer.create! ({id: 1, name: "Guinness", description: "Stout", price: 8, abv: 4.2, image_url: "guinness.png"})
 stella = Beer.create! ({id: 2, name: "Stella", description: "Lager", price: 8, abv: 4.2, image_url: "stella.png"})
 budweiser = Beer.create! ({id: 3, name: "Budweiser", description: "Lager", price: 8, abv: 4.2, image_url: "budweiser.jpg"})
 heinken = Beer.create! ({id: 4, name: "Heinken", description: "Lager", price: 8, abv: 3, image_url: "heineken.jpg"})
@@ -111,28 +111,28 @@ BarBeer.create!({id: 18, bar_id:3, beer_id:3, date: "2018-08-01"})
 BarBeer.create!({id: 19, bar_id:4, beer_id:4, date: "2019-10-01"})
 puts "Bar_beers successful!"
 
-puts "Deleting all Reservations"
+# puts "Deleting all Reservations"
 
-Reservation.destroy_all
-
-puts "Creating Reservations..."
-
-Reservation.create!({user_id:1, bar_beer_id:1})
-Reservation.create!({user_id:2, bar_beer_id:2})
-Reservation.create!({user_id:3, bar_beer_id:3})
-Reservation.create!({user_id:4, bar_beer_id:4})
-Reservation.create!({user_id:5, bar_beer_id:5})
-Reservation.create!({user_id:6, bar_beer_id:6})
-Reservation.create!({user_id:7, bar_beer_id:7})
-Reservation.create!({user_id:8, bar_beer_id:8})
-Reservation.create!({user_id:9, bar_beer_id:9})
-Reservation.create!({user_id:10, bar_beer_id:10})
-Reservation.create!({user_id:12, bar_beer_id:10})
-Reservation.create!({user_id:12, bar_beer_id:16})
-Reservation.create!({user_id:12, bar_beer_id:17})
-Reservation.create!({user_id:12, bar_beer_id:18})
-Reservation.create!({user_id:12, bar_beer_id:19})
-
-puts "Reservations successful"
+# Reservation.destroy_all
+#
+# puts "Creating Reservations..."
+#
+# Reservation.create!({user_id:1, bar_beer_id:1})
+# Reservation.create!({user_id:2, bar_beer_id:2})
+# Reservation.create!({user_id:3, bar_beer_id:3})
+# Reservation.create!({user_id:4, bar_beer_id:4})
+# Reservation.create!({user_id:5, bar_beer_id:5})
+# Reservation.create!({user_id:6, bar_beer_id:6})
+# Reservation.create!({user_id:7, bar_beer_id:7})
+# Reservation.create!({user_id:8, bar_beer_id:8})
+# Reservation.create!({user_id:9, bar_beer_id:9})
+# Reservation.create!({user_id:10, bar_beer_id:10})
+# Reservation.create!({user_id:12, bar_beer_id:10})
+# Reservation.create!({user_id:12, bar_beer_id:16})
+# Reservation.create!({user_id:12, bar_beer_id:17})
+# Reservation.create!({user_id:12, bar_beer_id:18})
+# Reservation.create!({user_id:12, bar_beer_id:19})
+#
+# puts "Reservations successful"
 
 puts "Finished"

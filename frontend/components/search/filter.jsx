@@ -1,5 +1,6 @@
 import React from 'react';
 import CityDropdownContainer from './city_dropdown_container';
+import SearchFieldContainer from './search_field_container';
 import { withRouter } from 'react-router-dom';
 
 export const FilterBar = (props) => {
@@ -10,13 +11,15 @@ export const FilterBar = (props) => {
         <CityDropdownContainer />
       </div>
       <div className="beer-search">
-        <form className="search-form">
-          <input type="text" placeholder="search by beer"></input>
-        </form>
+        <SearchFieldContainer />
       </div>
       <div className="bar-search">
         <form className="search-form">
-          <input type="text" placeholder="search by bar"></input>
+          <input
+            type="text"
+            className="bar-search-field"
+            placeholder="search by bar"
+            ></input>
         </form>
       </div>
     </div>

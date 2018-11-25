@@ -31,23 +31,23 @@ class Api::BarBeersController < ApplicationController
 
   def show
     @barbeer = BarBeer.find(id: params[:id])
-      render 'api/barbeers/show'
+      render 'api/bar_beers/show'
   end
 
   def index_by_beer
     beer_id = Beer.find_by(name: params[:name])
-    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id]).where(beer_id: beer_id).includes(:beer, :bar)
-    render json: @barbeers
+    @barbeers = BarBeer.find_current_deals(params[:city_id]).where(beer_id: beer_id).includes(:beer, :bar)
+    render 'api/bar_beers/index'
   end
 
   def index_by_bar
-    bar_id = Beer.find_by(name: params[:name])
-    @barbeers = BarBeer.find_current_deals(params[:date], params[:city_id]).where(bar_id: params[:bar_id]).includes(:beer, :bar)
-    render json: @barbeers
+    bar_id = Bar.find_by(name: params[:name])
+    @barbeers = BarBeer.find_current_deals(params[:city_id]).where(bar_id: params[:bar_id]).includes(:beer, :bar)
+    render :index
   end
 
   private
   def barbeers_params
-    params.require(:bar_beer).permit(:bar_id, :beer_id, :date)
+    params.require(:bar_beer).permit(:bar_id, :beer_id, :date, :name)
   end
 end

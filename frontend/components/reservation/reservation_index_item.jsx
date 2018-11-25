@@ -13,8 +13,8 @@ const ReservationIndexItem = (props) => {
   console.log(resDate);
   let beerPic;
   switch (beer.image_url) {
-    case "guiness.png":
-      beerPic = window.guiness_img;
+    case "guinness.png":
+      beerPic = window.guinness_img;
       break;
     case "corona.jpg":
       beerPic = window.corona_img;

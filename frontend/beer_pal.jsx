@@ -6,6 +6,7 @@ import Root from './components/root';
 import * as ReservationActions from './actions/reservation_actions';
 import * as BarActions from './actions/bar_actions';
 import * as CityActions from './actions/city_actions';
+import * as DealActions from './actions/deal_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchReservation = ReservationActions.fetchReservation;
   window.createReservation = ReservationActions.createReservation;
   window.updateReservation = ReservationActions.updateReservation;
-  window.deleteReservation = ReservationActions.deleteReservation;
+  window.fetchDealsByBeerSearch = DealActions.fetchDealsByBeerSearch;
   // TESTING END
   const root = document.getElementById('root');
 

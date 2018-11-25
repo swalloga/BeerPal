@@ -26,7 +26,7 @@ const mdp = dispatch => {
     setCurrentCity: (currentCityId) => {
       dispatch(setCurrentCity(currentCityId));
     },
-    fetchDeals: (date, cityId) => dispatch(fetchDeals(date, cityId)),
+    fetchDeals: (cityId) => dispatch(fetchDeals(cityId)),
     createReservation: (reservation) => dispatch(createReservation(reservation)),
     deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId))
   };

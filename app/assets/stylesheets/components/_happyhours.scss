@@ -36,9 +36,7 @@
 .bar-search, .beer-search {
   background: #fff;
   border: 1px solid #c0bcbb;
-  height: 25px;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  height: 30px;
   text-align: left;
   font-size: 14px;
   text-overflow: ellipsis;
@@ -48,6 +46,15 @@
   font-weight: 700;
   width: 100%;
   margin: 0 20px;
+}
+
+.search-form {
+  height: 100%;
+}
+
+.search-form > input {
+  height: 22px;
+  width: 100%;
 }
 .bar-search {
   margin-right: 25%;
