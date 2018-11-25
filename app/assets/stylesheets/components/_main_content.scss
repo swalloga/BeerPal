@@ -200,6 +200,10 @@ body {
    display: flex;
    flex-direction: row;
  }
+
+ .map-location > p {
+   margin: 0 20px;
+ }
 .map {
   height: 500px;
   width: 100%;

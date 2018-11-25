@@ -71,10 +71,11 @@ class MainContent extends React.Component {
           <span className="section-title">Bubbly and Delicious.</span>
           <div className="map-column">
             <div className="map-location">
-              <span>I'm in:</span>
-              <span className="city-selector">
+              <p>I'm in: </p>
+              <br/>
+              <p className="city-selector">
                 < CityDropdownContainer />
-            </span>
+            </p>
           </div>
           <div className="map">
             <MapContainer />
