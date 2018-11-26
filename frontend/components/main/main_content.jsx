@@ -14,6 +14,13 @@ class MainContent extends React.Component {
     this.props.fetchDeals(cityId);
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentCityId !== this.props.currentCityId) {
+      let cityId = this.props.currentCityId;
+      this.props.fetchDeals(cityId);
+    }
+  }
+
   render(){
     const inviteForm = (
       <form className="invite-form">
@@ -73,9 +80,9 @@ class MainContent extends React.Component {
             <div className="map-location">
               <p>I'm in: </p>
               <br/>
-              <p className="city-selector">
-                < CityDropdownContainer />
-            </p>
+              <div className="city-selector">
+                <CityDropdownContainer />
+            </div>
           </div>
           <div className="map">
             <MapContainer />

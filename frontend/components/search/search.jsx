@@ -28,7 +28,7 @@ const Search = (props) => {
           <DealIndexContainer />
         </div>
         <div className="map-side">
-          <BarMapContainer deals={props.deals} />
+          <BarMapContainer />
         </div>
       </div>
     </div>

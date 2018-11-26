@@ -4,6 +4,11 @@ import { withRouter } from 'react-router-dom';
 import { fetchDeals } from '../../actions/deal_actions';
 import { fetchAllCities, setCurrentCity } from '../../actions/city_actions';
 
+const msp = state => {
+  const { deals } = state.entities || " ";
+  return { deals };
+};
+
 const mdp = dispatch => {
   return({
     fetchAllCities: () => dispatch(fetchAllCities()),
@@ -14,4 +19,4 @@ const mdp = dispatch => {
   }
   );
 };
-export default withRouter(connect(null, mdp)(MainContent));
+export default withRouter(connect(msp, mdp)(MainContent));
