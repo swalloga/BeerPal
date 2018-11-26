@@ -23,10 +23,10 @@ Before even signing up or logging in, site visitors can navigate a beautiful (an
  ### Happy Hour Page
 * When a user does sign up or log in, they are redirected to the main page of the app: HAPPY HOURS. This is where they can see all available happy hour deals in their selected city, which they can adjust with a filter bar drop down.
 * When the city dropdown is changed, our user will see the deals and map component update accordingly!
-
+* Users also have the ability to search for a beer or bar using input fields at the top of the happy hour index page.
 
  #### Deals
-Once our user has browsed the available happy hour deals and decided on a deal they want to purchase, they can just hover over that deal to reveal some more details and a "Reserve" button. If they click it, that deal gets added to their happy hour index and the option to reserve deals will disappear until the following day or they cancel the reservation for that day.
+Once our user has browsed the available happy hour deals and decided on a deal they want to purchase, they can just hover over that deal to reveal some more details and a "Reserve" button. If they click it, that deal gets added to their reservation index and the option to reserve deals will disappear until the following day or they cancel the reservation for that day.
 
 ![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/deal-index.png)
 
@@ -44,7 +44,6 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 
 
  ## Upcoming Features
-* Search for beers based on beer name or bar name.
 * Search based on the map boundaries.
 * Favorite/unfavorite bars, and filter by favorites.
 * Mobile responsive design.
