@@ -8,6 +8,7 @@ import MainContentContainer from './main/main_content_container';
 import FooterContainer from './footer/footer_container';
 import SearchContainer from './search/search_container';
 import ReservationIndexContainer from './reservation/reservation_index_container';
+import FavoriteIndexContainer from './favorite/favorite_index_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/happyhour" component={SearchContainer} />
       <ProtectedRoute path="/my-account" component={ReservationIndexContainer} />
+      <ProtectedRoute path="/favorites" component={FavoriteIndexContainer} />
     </div>
     <footer>
       <FooterContainer />

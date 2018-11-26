@@ -18,13 +18,14 @@
 
 class User < ApplicationRecord
   validates :username, :email, :name, :beer_allowance, :password_digest, :session_token, presence: true
-  validates :username, uniqueness:true
+  validates :username, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
   after_initialize :ensure_session_token
   attr_reader :password
 
   has_many :reservations
+  has_many :favorites
 
   def find_reservation_by_date(date)
     date = Reservation.first.bar_beer.date

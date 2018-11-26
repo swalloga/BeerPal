@@ -1,6 +1,5 @@
 import React from 'react';
 import ReservationForm from '../reservation/reservation_form';
-// import CancelationForm from '../reservation/cancelation_form';
 
 const DealIndexItem = (props) => {
   const bar = props.bar || {name:"" ,address:""};
@@ -28,13 +27,16 @@ const DealIndexItem = (props) => {
     default:
       beerPic = window.beer_icon;
   }
+  // const favAction = props.favorites.
 
   if (props.reservationForToday === null) {
     return (
       <li className="DealIndexListItem">
         <div className="fadeBox">
           <div id="hover-detail">
-            <img className="heart-icon-o" src={window.heart_icon_o} />
+            <button className="fav-button" onClick={() => props.createFavorite({bar_id: bar.id})}>
+              <img className="heart-icon-o" src={window.heart_icon_o} />
+            </button>
             <div className="deal-details">
               <div className="deal-beer-name">{beer.name}</div>
               <div className="deal-beer-description">{beer.description},  {beer.abv}%</div>

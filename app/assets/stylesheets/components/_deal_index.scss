@@ -102,10 +102,13 @@
   align-content: space-between;
 }
 
+.fav-button {
+  align-self: flex-end;
+}
+
 .heart-icon {
   height: 20px;
   width: 20px;
-  align-self: flex-end;
 }
 
 .heart-icon-o {

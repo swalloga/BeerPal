@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as ReservationActions from './actions/reservation_actions';
-import * as BarActions from './actions/bar_actions';
-import * as CityActions from './actions/city_actions';
-import * as DealActions from './actions/deal_actions';
+import * as FavoriteActions from './actions/favorite_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -29,11 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchReservations = ReservationActions.fetchReservations;
-  window.fetchReservation = ReservationActions.fetchReservation;
-  window.createReservation = ReservationActions.createReservation;
-  window.updateReservation = ReservationActions.updateReservation;
-  window.fetchDealsByBeerSearch = DealActions.fetchDealsByBeerSearch;
+  window.fetchFavorites = FavoriteActions.fetchFavorites;
+  window.fetchFavorite = FavoriteActions.fetchFavorite;
+  window.createFavorite = FavoriteActions.createFavorite;
+  window.deleteFavorite = FavoriteActions.deleteFavorite;
   // TESTING END
   const root = document.getElementById('root');
 

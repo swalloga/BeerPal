@@ -12,6 +12,8 @@
 
 class Bar < ApplicationRecord
   validates :name, :address, :city_id, presence: true
+
+  has_many :favorites
   has_many :bar_beers,
     foreign_key: :bar_id,
     class_name: :BarBeer

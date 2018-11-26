@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :bar_beers
     resources :cities
     resources :reservations
+    resources :favorites, only: [:create, :index, :destroy]
   end
 end

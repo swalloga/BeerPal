@@ -1,0 +1,62 @@
+.favorites-index {
+  margin: 0 auto;
+  width: 50%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.favorites-label {
+  color: #FE422D;
+  text-align: center;
+  font-weight: normal;
+  font-size: 28px;
+  text-align: center;
+}
+
+.favorites-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fav-bar-name, .fav-bar-address {
+  text-align: center;
+  margin: 10px 0;
+  text-transform: none;
+}
+
+.fav-bar-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fav-bar-address {
+  font-weight: normal;
+}
+
+.fav-list-item {
+  margin: 20px 0;
+  color: grayscale(gray);
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 8px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fav-info {
+  margin-left: 30px;
+}
+
+.heart-icon-fav {
+  height: 60px;
+  width: 60px;
+  align-self: center;
+}
