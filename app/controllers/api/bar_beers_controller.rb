@@ -35,8 +35,8 @@ class Api::BarBeersController < ApplicationController
   end
 
   def index_by_beer
-    beer_id = Beer.find_by(name: params[:name])
-    @barbeers = BarBeer.find_current_deals(params[:city_id]).where(beer_id: beer_id).includes(:beer, :bar)
+    beer_ids = Beer.where("name ILIKE ?", "%#{params[:name]}%")
+    @barbeers = BarBeer.find_current_deals(params[:city_id]).where(beer_id: beer_ids).includes(:beer, :bar)
     render 'api/bar_beers/index'
   end
 
