@@ -12,6 +12,11 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+.filter-wrapper {
+  background-color: #dfd9d8;
+  width: 100%;
+  padding: 0 5px;
+}
 
 .filter-bar {
   background-color: #dfd9d8;
@@ -19,12 +24,25 @@
   height: 30px;
   display: flex;
   display: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.search-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-filters {
+  width: 80%;
+  height: 35px;
 }
 
 .filter-bar input {
   padding: 4px 7px;
   width: 80%;
+  height: 100%;
   border: none;
   text-transform: none;
 }
@@ -53,9 +71,9 @@
 }
 
 .search-form > input {
-  height: 22px;
-  width: 100%;
+  height: calc(100% - 8px);
+  width: calc(100% - 14px);
 }
-.bar-search {
-  margin-right: 25%;
+.bar-search, .beer-search {
+  height: 100%;
 }

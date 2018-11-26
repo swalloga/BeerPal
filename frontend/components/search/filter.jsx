@@ -10,17 +10,8 @@ export const FilterBar = (props) => {
       <div className="city-filter">
         <CityDropdownContainer />
       </div>
-      <div className="beer-search">
+      <div className="search-filters">
         <SearchFieldContainer />
-      </div>
-      <div className="bar-search">
-        <form className="search-form">
-          <input
-            type="text"
-            className="bar-search-field"
-            placeholder="search by bar"
-            ></input>
-        </form>
       </div>
     </div>
   );

@@ -45,3 +45,9 @@ export const fetchDealsByBeerSearch = (beerName, cityId) => dispatch => {
     (payload) => dispatch(receiveDeals(payload)),
     err => dispatch(receiveDealErrors(err.responseJSON)));
 };
+
+export const fetchDealsByBarSearch = (barName, cityId) => dispatch => {
+  return DealAPIUtil.fetchDealsByBarSearch(barName, cityId).then(
+    (payload) => dispatch(receiveDeals(payload)),
+    err => dispatch(receiveDealErrors(err.responseJSON)));
+};

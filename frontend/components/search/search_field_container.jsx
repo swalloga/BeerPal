@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SearchFieldComponent from './search_field';
 
-import { fetchDealsByBeerSearch, fetchDeals } from '../../actions/deal_actions';
+import { fetchDealsByBeerSearch, fetchDealsByBarSearch, fetchDeals } from '../../actions/deal_actions';
 
 const msp = (state) => {
   const { bars, beers, deals } = state.entities || [];
@@ -18,6 +18,7 @@ const msp = (state) => {
 const mdp = dispatch => {
   return {
     fetchDealsByBeerSearch: (beerName, cityId) => dispatch(fetchDealsByBeerSearch(beerName, cityId)),
+    fetchDealsByBarSearch: (barName, cityId) => dispatch(fetchDealsByBarSearch(barName, cityId)),
     fetchDeals: (cityId) => dispatch(fetchDeals(cityId)),
   };
 };
