@@ -26,7 +26,7 @@ class FavoriteIndexComponent extends React.Component {
             const favoriteId = favorite.id;
             return (<li className="fav-list-item" key={favorite.id}>
               <button className="fav-heart-button" onClick={() => this.props.deleteFavorite(favoriteId)}>
-                <img className="heart-icon-fav" src={window.heart_icon_o} />
+                <img className="heart-icon-fav" src={window.heart_icon_f} />
               </button>
               <div className="fav-info">
                 <h3 className="fav-bar-name">{favorite.bar_name}</h3>

@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchFavorites = FavoriteActions.fetchFavorites;
-  window.fetchFavorite = FavoriteActions.fetchFavorite;
   window.createFavorite = FavoriteActions.createFavorite;
   window.deleteFavorite = FavoriteActions.deleteFavorite;
   // TESTING END
