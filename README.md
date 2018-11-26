@@ -31,6 +31,9 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 ![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/deal-index.png)
 
 
+ #### Favorites
+ Conveniently located on the hover detail of each deal is a heart icon, allowing users to "favorite" a bar. Once the heart is clicked, that bar gets added to the favorites list, which is private to each user. It can be found in the dropdown menu. On the favorites index page, users can remove bars if they decide they don't belong on the favorites list by simply clicking the heart icon again.
+
  ### My Account Page
 * Each user has their own account page, which is only visible to that user.
 * Information about the account is displayed, including username, # of beers left on the account and an option to "pick up another six pack", which would ideally charge the card on file $30 and add 6 beers to the beer allowance on the account.
@@ -45,5 +48,5 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 
  ## Upcoming Features
 * Search based on the map boundaries.
-* Favorite/unfavorite bars, and filter by favorites.
+* Filter deals by favorite bars.
 * Mobile responsive design.
