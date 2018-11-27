@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
+
   componentWillUnmount(){
     this.props.clearErrors();
   }
@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="error-messages" key={`error-${i}`}>
             {error}
           </li>
         ))}
