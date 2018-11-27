@@ -24,6 +24,7 @@ node_modules
 
 /public/assets
 .byebug_history
+.ds_store
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

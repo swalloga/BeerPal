@@ -10,12 +10,6 @@ class FavoriteIndexComponent extends React.Component {
     this.props.fetchFavorites();
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (Object.keys(prevProps.favorites) !== Object.keys(this.props.favorites)) {
-  //     this.props.fetchFavorites();
-  //   }
-  // }
-
   render() {
     const favorites = Object.values(this.props.favorites);
     return (

@@ -7,7 +7,7 @@ class DealIndexItem extends React.Component {
   }
 
   render() {
-    const bar = this.props.bar || {name:"" ,address:"", id:""};
+    const bar = this.props.bar || {name:"" ,address:"", id:null };
     const beer = this.props.beer || {name:"" ,description:"", abv:""};
     let favBarIds = [];
     let favorites = Object.values(this.props.favorites);
@@ -17,6 +17,15 @@ class DealIndexItem extends React.Component {
     });
     const heartIcon = favBarIds.some((bar_id) => bar_id === bar.id) ? window.heart_icon_f : window.heart_icon_o;
     const whiteHeart = favBarIds.some((bar_id) => bar_id === bar.id) ? window.heart_icon_fw : window.heart_icon;
+    let heartAction, currentFav;
+    if (favorites.length > 0) {
+      currentFav = favorites.find((fav) => { return fav.bar_id === bar.id;});
+    }
+    if (currentFav) {
+        heartAction = () => this.props.deleteFavorite(currentFav.id);
+      } else {
+      heartAction = () => this.props.createFavorite({bar_id: bar.id});
+    }
 
     let beerPic;
     switch (beer.image_url) {
@@ -47,7 +56,7 @@ class DealIndexItem extends React.Component {
         <li className="DealIndexListItem">
           <div className="fadeBox">
             <div id="hover-detail">
-              <button className="fav-button" onClick={() => this.props.createFavorite({bar_id: bar.id})}>
+              <button className="fav-button" onClick={heartAction}>
                 <img className="heart-icon-o" src={heartIcon} />
               </button>
               <div className="deal-details">

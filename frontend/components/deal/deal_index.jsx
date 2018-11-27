@@ -39,6 +39,7 @@ class DealIndex extends React.Component {
             reservations = {this.props.reservations}
             reservationForToday = {this.props.reservationForToday}
             createFavorite = {this.props.createFavorite}
+            deleteFavorite = {this.props.deleteFavorite}
             favorites = {this.props.favorites}
              />
             )}
