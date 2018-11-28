@@ -28,8 +28,6 @@ class MarkerManager {
       dealId: deal.id
     });
 
-    console.log(marker);
-
     marker.addListener('click', () => this.handleClick(deal));
     this.markers[marker.dealId] = marker;
   }

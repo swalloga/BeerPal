@@ -39,13 +39,6 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 * Information about the account is displayed, including username, # of beers left on the account and an option to "pick up another six pack", which would ideally charge the card on file $30 and add 6 beers to the beer allowance on the account.
 * Each account page also includes a list of reservations(past and present) including useful info like the bar name, beer name and date.
 
-
- ## Technical Challenges
-* Date conversions
-* Associations/database queries
-* Google Maps
-
-
  ## Upcoming Features
 * Search based on the map boundaries.
 * Filter deals by favorite bars.

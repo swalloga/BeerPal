@@ -9,8 +9,6 @@ const ReservationIndexItem = (props) => {
   currentDate = new Date(currentDate.getTime() - currentDate.getTimezoneOffset() * 60000);
   let resDate = (props.reservation === null) ? null : new Date(props.reservation.date);
 
-  console.log(currentDate);
-  console.log(resDate);
   let beerPic;
   switch (beer.image_url) {
     case "guinness.png":
