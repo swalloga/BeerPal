@@ -38,11 +38,6 @@ newyork =  City.create! ({id: 1, name: "New York" , latitude:40.7514, longitude:
 chicago =  City.create! ({id: 2, name: "Chicago" , latitude:41.8781, longitude:-87.6298})
 scranton =  City.create! ({id: 3, name: "Scranton" , latitude:41.409, longitude:-75.6624})
 sanfran =  City.create! ({id: 4, name: "San Francisco" , latitude:37.7749, longitude:-122.4194})
-houston =  City.create! ({id: 5, name: "Houston" , latitude:29.7604, longitude:-95.3698})
-dallas =  City.create! ({id: 6, name: "Dallas" , latitude:32.7767, longitude:-96.797})
-philly =  City.create! ({id: 7, name: "Philadelphia" , latitude:39.9526, longitude:-75.1652})
-seattle =  City.create! ({id: 8, name: "Seattle" , latitude:47.6062, longitude:-122.3321})
-
 
 puts "cities successful"
 
