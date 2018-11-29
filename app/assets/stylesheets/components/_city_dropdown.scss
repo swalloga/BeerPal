@@ -12,8 +12,13 @@
   overflow-x: auto;
   padding: 0;
   text-align: left;
-  top: 35px;
   width: 240px;
+}
+
+.city-selector > .city-dropdown {
+  position: relative;
+  top: 75px;
+
 }
 
 .city-dropdown-item {
