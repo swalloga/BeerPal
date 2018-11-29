@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import MapContainer from '../map/map_container';
 import CityDropdownContainer from '../search/city_dropdown_container';
 
@@ -24,10 +24,12 @@ class MainContent extends React.Component {
   render(){
     const inviteForm = (
       <form className="invite-form">
-        <input type="text" placeholder="your email"></input>
+        <input type="text" placeholder="your email"/>
         <div>
-          <input type="text" placeholder="zip code"></input>
-          <button>Browse Bars</button>
+          <input type="text" placeholder="zip code"/>
+          <Link to="/signup">
+            <button type="submit">Browse Bars</button>
+          </Link>
         </div>
       </form>
     );
@@ -97,8 +99,8 @@ class MainContent extends React.Component {
         <img className="robot-img icon" src={window.bluerobot_img} />
       </div>
     </div>
-  );
+    );
   }
-  };
+}
 
 export default MainContent;
