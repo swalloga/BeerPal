@@ -14,10 +14,10 @@
   text-align: left;
   top: 35px;
   width: 240px;
-  z-index: 38;
 }
 
 .city-dropdown-item {
+  z-index: 1;
   padding: 10px 0px;
   width: calc(100% - 80px);
   font-weight: 600;
