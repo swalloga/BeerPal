@@ -1,7 +1,6 @@
 import React from 'react';
 import CityDropdownContainer from './city_dropdown_container';
 import SearchFieldContainer from './search_field_container';
-import { withRouter } from 'react-router-dom';
 
 export const FilterBar = (props) => {
 
@@ -18,4 +17,3 @@ export const FilterBar = (props) => {
 };
 
 export default FilterBar;
-// <button><img className="mag-icon" src={window.mag_icon} /></button>
