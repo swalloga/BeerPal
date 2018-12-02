@@ -22,9 +22,7 @@ class SearchFieldComponent extends React.Component {
   }
 
   handleBeerKeyPress(e) {
-    if (e.key === "Enter"){
-      this.handleBeerSubmit(e);
-    }
+    this.handleBeerSubmit(e);
   }
 
   handleBarSubmit(e) {
@@ -39,9 +37,7 @@ class SearchFieldComponent extends React.Component {
   }
 
   handleBarKeyPress(e) {
-    if (e.key === "Enter"){
-      this.handleBarSubmit(e);
-    }
+    this.handleBarSubmit(e);
   }
 
   render(){
@@ -53,7 +49,7 @@ class SearchFieldComponent extends React.Component {
               type="text"
               className="beer-search-field"
               placeholder="search by beer"
-              onKeyPress={this.handleBeerKeyPress}
+              onChange={this.handleBeerKeyPress}
               ></input>
           </form>
         </div>
@@ -63,7 +59,7 @@ class SearchFieldComponent extends React.Component {
               type="text"
               className="bar-search-field"
               placeholder="search by bar"
-              onKeyPress={this.handleBarKeyPress}
+              onChange={this.handleBarKeyPress}
               ></input>
           </form>
         </div>
