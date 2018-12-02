@@ -52,7 +52,7 @@ class CityDropdown extends React.Component{
         );
       } else {
         return(
-          <div className="city-dropdown">
+          <div className="city-dropdown" onClick={this.toggleList}>
             <div className="city-filter-header">
               <button id="dropdown-button" onClick={this.toggleList}>
                 <label>{this.props.currentCityName}</label>

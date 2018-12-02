@@ -6,7 +6,10 @@ import { fetchAllCities, setCurrentCity } from '../../actions/city_actions';
 
 const msp = state => {
   const { deals } = state.entities || " ";
-  return { deals };
+  return {
+    deals,
+    currentCityId: state.ui.currentCityId,
+  };
 };
 
 const mdp = dispatch => {

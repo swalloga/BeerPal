@@ -42,6 +42,7 @@
 .DealIndexItem > div> p {
   text-align: center;
 }
+
 .beer-description, .barName, .barAddress{
   text-align: left;
   text-transform: none;
@@ -91,7 +92,7 @@
   background: linear-gradient(180,hsla(0,0%,100%,.99), hsla(0,0%,100%,.5));
   color: #4a4a4a;
   border-radius: 5px;
-  z-index: 5;
+  z-index: -1;
 }
 
 #hover-detail {
