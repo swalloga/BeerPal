@@ -1,17 +1,16 @@
 class MarkerManager {
-  constructor(map, handleClick){
+  constructor(map){
     this.map = map;
-    this.handleClick = handleClick;
     this.markers = {};
+    this.handleHoverOn = this.handleHoverOn.bind(this);
+    this.handleHoverOff = this.handleHoverOff.bind(this);
   }
 
   updateMarkers(deals, bars){
     const dealsArray = Object.values(deals);
-
     dealsArray
       .filter(deal => !this.markers[deal.id])
       .forEach(newdeal => this.createMarkerFromdeal(newdeal, bars[newdeal.bar_id], this.handleClick));
-
     Object.keys(this.markers)
       .filter(dealId => !deals[dealId])
       .forEach((dealId) => this.removeMarker(this.markers[dealId]));
@@ -28,8 +27,21 @@ class MarkerManager {
       dealId: deal.id
     });
 
-    marker.addListener('click', () => this.handleClick(deal));
+    marker.addListener('mouseover', () => this.handleHoverOn(marker));
+    marker.addListener('mouseout', () => this.handleHoverOff(marker));
     this.markers[marker.dealId] = marker;
+  }
+
+  handleHoverOn(marker) {
+    let fadeboxId = `fade-${marker.dealId.toString()}`;
+    document.getElementById(marker.dealId).style.display = "none";
+    document.getElementById(fadeboxId).style.display = "block";
+  }
+
+  handleHoverOff(marker) {
+    let fadeboxId = `fade-${marker.dealId.toString()}`;
+    document.getElementById(marker.dealId).style.display = "block";
+    document.getElementById(fadeboxId).style.display = "none";
   }
 
   removeMarker(marker) {
