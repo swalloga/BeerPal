@@ -30,6 +30,10 @@ class MarkerManager {
     marker.addListener('mouseover', () => this.handleHoverOn(marker));
     marker.addListener('mouseout', () => this.handleHoverOff(marker));
     this.markers[marker.dealId] = marker;
+    let dealItem = document.getElementById(`outer-${marker.dealId.toString()}`);
+    dealItem.addEventListener('mouseover', () => marker.setAnimation(google.maps.Animation.BOUNCE));
+    dealItem.addEventListener('mouseout', () => marker.setAnimation(null));
+
   }
 
   handleHoverOn(marker) {

@@ -53,7 +53,7 @@ class DealIndexItem extends React.Component {
 
     if (this.props.reservationForToday === null) {
       return (
-        <li className="DealIndexListItem">
+        <li id={`outer-${this.props.deal.id.toString()}`} className="DealIndexListItem">
           <div id={`fade-${this.props.deal.id.toString()}`} className="fadeBox">
             <div id="hover-detail">
               <button className="fav-button" onClick={heartAction}>
@@ -98,7 +98,7 @@ class DealIndexItem extends React.Component {
       );
     } else {
       return (
-        <li className="DealIndexListItem">
+        <li id={`outer-${this.props.deal.id.toString()}`} className="DealIndexListItem">
           <div id={`fade-${this.props.deal.id.toString()}`} className="fadeBox">
             <div id="hover-detail">
               <img className="heart-icon-o" src={heartIcon} />
