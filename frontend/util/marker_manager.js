@@ -31,8 +31,10 @@ class MarkerManager {
     marker.addListener('mouseout', () => this.handleHoverOff(marker));
     this.markers[marker.dealId] = marker;
     let dealItem = document.getElementById(`outer-${marker.dealId.toString()}`);
-    dealItem.addEventListener('mouseover', () => marker.setAnimation(google.maps.Animation.BOUNCE));
-    dealItem.addEventListener('mouseout', () => marker.setAnimation(null));
+    if (dealItem) {
+      dealItem.addEventListener('mouseover', () => marker.setAnimation(google.maps.Animation.BOUNCE));
+      dealItem.addEventListener('mouseout', () => marker.setAnimation(null));
+    }
 
   }
 
@@ -40,12 +42,13 @@ class MarkerManager {
     let fadeboxId = `fade-${marker.dealId.toString()}`;
     document.getElementById(marker.dealId).style.display = "none";
     document.getElementById(fadeboxId).style.display = "block";
+
   }
 
   handleHoverOff(marker) {
     let fadeboxId = `fade-${marker.dealId.toString()}`;
-    document.getElementById(marker.dealId).style.display = "block";
-    document.getElementById(fadeboxId).style.display = "none";
+    document.getElementById(marker.dealId).style.display = "";
+    document.getElementById(fadeboxId).style.display = "";
   }
 
   removeMarker(marker) {
