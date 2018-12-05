@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import MapContainer from '../map/map_container';
 import CityDropdownContainer from '../search/city_dropdown_container';
+import SpotlightCarousel from './spotlight_content_container';
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -98,6 +99,7 @@ class MainContent extends React.Component {
             <div className="spotlight-detail">
               <h3>Test Beer</h3>
               <p>Test description</p>
+              <SpotlightCarousel />
             </div>
           </div>
         </div>
