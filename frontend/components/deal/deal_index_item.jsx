@@ -101,7 +101,9 @@ class DealIndexItem extends React.Component {
         <li id={`outer-${this.props.deal.id.toString()}`} className="DealIndexListItem">
           <div id={`fade-${this.props.deal.id.toString()}`} className="fadeBox">
             <div id="hover-detail">
-              <img className="heart-icon-o" src={heartIcon} />
+              <button className="fav-button" onClick={heartAction}>
+                <img className="heart-icon-o" src={heartIcon} />
+              </button>
               <div className="deal-details">
                 <div className="deal-beer-name">{beer.name}</div>
                 <div className="deal-beer-description">{beer.description},  {beer.abv}%</div>
