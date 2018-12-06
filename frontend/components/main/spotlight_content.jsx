@@ -6,10 +6,12 @@ class SpotlightCarousel extends React.Component {
   constructor(props) {
     super(props);
     this.spotlightDeals = [];
+    this.interval;
   }
 
   componentDidUpdate(prevProps) {
     if (Object.values(this.props.deals).length === 0) {
+      this.spotlightDeals = [];
     } else if(this.spotlightDeals.length > 0 && this.spotlightDeals.length < 3) {
       this.spotlightDeals[0].style.display = "flex";
     } else if (this.spotlightDeals.length > 3){
@@ -17,6 +19,10 @@ class SpotlightCarousel extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  
   rotateSpotlight() {
     let i;
     let x = document.getElementsByClassName("carousel-item");
@@ -26,7 +32,7 @@ class SpotlightCarousel extends React.Component {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1;}
     x[slideIndex-1].style.display = "flex";
-    setInterval(this.rotateSpotlight, 4000);
+    this.interval = setInterval(this.rotateSpotlight, 4000);
   }
 
   render() {
