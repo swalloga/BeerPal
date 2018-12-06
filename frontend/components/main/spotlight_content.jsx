@@ -9,7 +9,8 @@ class SpotlightCarousel extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(this.spotlightDeals.length > 0 && this.spotlightDeals.length < 3) {
+    if (Object.values(this.props.deals).length === 0) {
+    } else if(this.spotlightDeals.length > 0 && this.spotlightDeals.length < 3) {
       this.spotlightDeals[0].style.display = "flex";
     } else if (this.spotlightDeals.length > 3){
       this.rotateSpotlight();
@@ -30,7 +31,22 @@ class SpotlightCarousel extends React.Component {
 
   render() {
     if (Object.values(this.props.deals).length === 0) {
-      return <div></div>;
+      return (
+        <div>
+          <li
+            id={`spotlight-0`}
+            className="carousel-item"
+            >
+            <div className="spotlight-header">
+              <img id="spotlight-robot" className="robot-orange icon" src={window.orangerobot_img} />
+              <div className="spotlight-top-info">
+                <h3>Coming soon!</h3>
+              </div>
+            </div>
+            <br/>
+            <img className="carousel-image" src={window.beer_icon} />
+          </li>
+        </div>);
     } else {
       if (this.props.deals.length > 0 && this.props.deals.length < 3) {
         this.spotlightDeals = _.sampleSize(Object.values(this.props.deals));
