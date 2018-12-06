@@ -27,10 +27,10 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :favorites
 
-  def find_reservation_by_date(date)
-    date = Reservation.first.bar_beer.date
-    Reservation.joins(:bar_beer).where(bar_beers:{date: date}).find_by({user_id: id})
-  end
+  # def find_reservation_by_date(date)
+  #   date = Reservation.first.bar_beer.date
+  #   Reservation.joins(:bar_beer).where(bar_beers:{date: date}).find_by({user_id: id})
+  # end
 
   def get_res_info
     Reservation.all.includes(:bar, :beer).where(user_id: id)
