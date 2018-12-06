@@ -17,7 +17,6 @@ class SpotlightCarousel extends React.Component {
   }
 
   rotateSpotlight() {
-    // let slideIndex = slideIndex;
     let i;
     let x = document.getElementsByClassName("carousel-item");
     for (i = 0; i < x.length; i++) {
@@ -33,7 +32,6 @@ class SpotlightCarousel extends React.Component {
     if (Object.values(this.props.deals).length === 0) {
       return <div></div>;
     } else {
-      // let spotlightDeals;
       if (this.props.deals.length > 0 && this.props.deals.length < 3) {
         this.spotlightDeals = _.sampleSize(Object.values(this.props.deals));
       } else {
