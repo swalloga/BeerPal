@@ -225,24 +225,29 @@ body {
 }
 
 .spotlight-header {
-  width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f2f0ef;
-  border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
+.spotlight-carousel {
+  padding: 0;
+  margin: 0;
+}
+
 .spotlight-detail {
+  padding: 20px;
+  border-radius: 5px;
+  background: #f2f0ef;
+  width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.spotlight-detail > h3 {
-  text-align: left;
+.spotlight-detail  h3 {
+  text-align: center;
   color: #FF4338;
   line-height: 30px;
   font-weight: 600;
@@ -250,9 +255,40 @@ body {
   letter-spacing: 3px;
 }
 
+.spotlight-detail h4 {
+  text-align: center;
+  color: #5D5A58;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  margin: 5px auto;
+  line-height: 1.5;
+  border-bottom: 5px solid #57C6E8;
+}
+
+.spotlight-detail p {
+  color: #5D5A58;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 10px auto;
+  line-height: 1.5;
+}
+
 #spotlight-robot {
   height: 65px;
   width: 60px;
+}
+
+.carousel-item {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-image {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
 }
 .plans-container {
   height: 555px;

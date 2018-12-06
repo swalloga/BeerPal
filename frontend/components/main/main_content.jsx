@@ -93,16 +93,9 @@ class MainContent extends React.Component {
         </div>
       </div>
       <div className="spotlight-content">
-        <div className="spotlight-description">
-          <div className="spotlight-header">
-            <img id="spotlight-robot" className="robot-orange icon" src={window.orangerobot_img} />
             <div className="spotlight-detail">
-              <h3>Test Beer</h3>
-              <p>Test description</p>
               <SpotlightCarousel />
             </div>
-          </div>
-        </div>
       </div>
       <div className="bottom-invite">
         <div className="bottom-invite-form">{inviteForm}</div>
