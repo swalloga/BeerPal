@@ -42,10 +42,10 @@ export const signup = (user) => {
   };
 };
 
-export const demoSignUp = () => {
+export const demoSignIn = () => {
   return (dispatch) => {
-    let demoUser = generateDemoUser();
-    return APIUtil.signup(demoUser).then((user) => dispatch(receiveCurrentUser(user)),
+    let demoUser = {username:"Demo", password: "starwars"};
+    return APIUtil.login(demoUser).then((user) => dispatch(receiveCurrentUser(user)),
     err => dispatch(receiveErrors(err.responseJSON)));
   };
 };

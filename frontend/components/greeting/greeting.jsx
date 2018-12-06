@@ -43,7 +43,7 @@ const Greeting = props => {
         <div className={`nav-bar ${navColor}`}>
           <h1><Link to="/">beerpal</Link></h1>
           <div className="loggedOut-nav">
-            <button className={`${navColor}`} onClick={ props.demoSignUp } >
+            <button className={`${navColor}`} onClick={ props.demoSignIn } >
               Demo Log In
             </button>
             <Link to="/login">Log In</Link>

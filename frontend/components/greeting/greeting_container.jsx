@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting';
-import { logout, demoSignUp} from '../../actions/session_actions';
+import { logout, demoSignIn} from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = (state, ownProps) => {
@@ -13,7 +13,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    demoSignUp: () => dispatch(demoSignUp())
+    demoSignIn: () => dispatch(demoSignIn())
   };
 };
 
