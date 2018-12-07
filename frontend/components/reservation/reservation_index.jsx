@@ -36,15 +36,21 @@ class ReservationIndexComponent extends React.Component {
     });
     const sortedReservations = mapped.map( (el) => reservations[el.index]);
     const currentUser = this.props.users[this.props.currentUserId];
-    const addSixBeers = () => this.props.updateUser(currentUser, 6);
+    const addSixBeers = () => {
+      this.props.updateUser(currentUser, 6);
+      $("#undo").toggleClass("hide");
+      $("#plan-info").toggleClass("hide");
+    };
+    const removeSixBeers = () => {
+      this.props.updateUser(currentUser, -6);
+      $("#undo").toggleClass("hide");
+      $("#plan-info").toggleClass("hide");
+    };
     return(
       <div className="my-account-page">
         <div className="my-account-info">
-          <h3 id="my-res-header">
-            My Account Info
-          </h3>
           <div className="my-account-details">
-            <p id="name-info">Hey {currentUser.name}!</p>
+            <h4 id="name-info">Hey {currentUser.name}!</h4>
             <p className="beersleft-info">
               You have <span>{currentUser.beer_allowance} beers left </span>on your account.
             </p>
@@ -52,6 +58,9 @@ class ReservationIndexComponent extends React.Component {
               <p className="beersleft-info">Need to pick up another six pack?</p>
               <button className="plan-button" id="plan-info" onClick={addSixBeers}>
                 Buy 6 more
+              </button>
+              <button className="plan-button hide" id="undo" onClick={removeSixBeers}>
+                Oops! Undo that, please.
               </button>
             </div>
           </div>

@@ -3,7 +3,9 @@ import { withRouter } from 'react-router-dom';
 import SpotlightCarousel from './spotlight_content';
 
 const msp = state => {
-  const { deals, bars, beers } = state.entities || " ";
+  const { deals } = state.entities || " ";
+  const { bars } = state.entities || " ";
+  const { beers } = state.entities || " ";
   return {
     deals,
     bars,

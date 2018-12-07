@@ -1,5 +1,6 @@
 import React from 'react';
 import { sampleSize } from 'lodash';
+import { withRouter } from 'react-router-dom';
 
 let slideIndex = 0;
 class SpotlightCarousel extends React.Component {
@@ -7,6 +8,7 @@ class SpotlightCarousel extends React.Component {
     super(props);
     this.spotlightDeals = [];
     this.interval;
+    this.initialRender = true;
   }
 
   componentDidUpdate(prevProps) {
@@ -22,7 +24,7 @@ class SpotlightCarousel extends React.Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
-  
+
   rotateSpotlight() {
     let i;
     let x = document.getElementsByClassName("carousel-item");
@@ -36,7 +38,8 @@ class SpotlightCarousel extends React.Component {
   }
 
   render() {
-    if (Object.values(this.props.deals).length === 0) {
+    if (this.initialRender || Object.values(this.props.deals).length === 0) {
+      this.initialRender = false;
       return (
         <div>
           <li
@@ -54,15 +57,17 @@ class SpotlightCarousel extends React.Component {
           </li>
         </div>);
     } else {
-      if (this.props.deals.length > 0 && this.props.deals.length < 3) {
-        this.spotlightDeals = _.sampleSize(Object.values(this.props.deals));
+      let deals = this.props.deals;
+      let bars = this.props.bars;
+      let beers = this.props.beers;
+      if (Object.values(deals).length > 0 && Object.values(deals).length < 3) {
+        this.spotlightDeals = _.sampleSize(Object.values(deals));
       } else {
-        this.spotlightDeals = _.sampleSize(Object.values(this.props.deals), 4);
+        this.spotlightDeals = _.sampleSize(Object.values(deals), 4);
       }
       let spotlightElements = this.spotlightDeals.map( (deal, idx) => {
-        const bar = this.props.bars[deal.bar_id];
-        const beer = this.props.beers[deal.beer_id];
-
+        const bar = bars[deal.bar_id];
+        const beer = beers[deal.beer_id];
         let beerPic;
         switch (beer.image_url) {
           case "guinness.png":
@@ -86,7 +91,6 @@ class SpotlightCarousel extends React.Component {
           default:
           beerPic = window.beer_icon;
         }
-
         return (
           <li
             id={`spotlight-${idx}`}
