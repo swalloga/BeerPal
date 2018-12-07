@@ -10,6 +10,15 @@ class ReservationIndexComponent extends React.Component {
 
   componentDidMount() {
     this.props.fetchReservations();
+    this.props.getCurrentUserInfo(this.props.currentUserId);
+  }
+
+  componentDidUpdate(prevProps) {
+    let prevReservations = JSON.stringify(Object.keys(prevProps.reservations));
+    let currentReservtions = JSON.stringify(Object.keys(this.props.reservations));
+    if (prevReservations !== currentReservtions) {
+      this.props.getCurrentUserInfo(this.props.currentUserId);
+    }
   }
 
   render() {

@@ -26,3 +26,12 @@ export const logout = () => {
     })
   );
 };
+
+export const getCurrentUserInfo = (currentUserId) => {
+  return (
+    $.ajax({
+      method: "GET",
+      url: `api/users/${currentUserId}`
+    })
+  );
+};

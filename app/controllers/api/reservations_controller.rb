@@ -5,6 +5,7 @@ class Api::ReservationsController < ApplicationController
   def create
     @reservation = current_user.reservations.new(reservation_params)
     if @reservation.save
+      current_user.update_beer_allowance(-1)
       render json: @reservation
     else
       render json: @reservation.errors.full_messages, status: 422
@@ -35,6 +36,7 @@ class Api::ReservationsController < ApplicationController
   def destroy
     @reservation = current_user.reservations.find_by(id: params[:id])
     if @reservation
+      current_user.update_beer_allowance(1)
       @reservation.destroy!
     else
       render json: ['Reservation does not exist'], status: 422

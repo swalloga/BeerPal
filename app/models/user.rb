@@ -21,8 +21,9 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
-  after_initialize :ensure_session_token
   attr_reader :password
+  # attr_accessor :beer_allowance
+  after_initialize :ensure_session_token
 
   has_many :reservations
   has_many :favorites
@@ -34,6 +35,11 @@ class User < ApplicationRecord
 
   def get_res_info
     Reservation.all.includes(:bar, :beer).where(user_id: id)
+  end
+
+  def update_beer_allowance(val)
+    self.beer_allowance += val
+    self.save
   end
 
   def self.find_by_credentials(username,password)
