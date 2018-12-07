@@ -13,7 +13,19 @@ class ReservationIndexComponent extends React.Component {
   }
 
   render() {
-    const reservations = Object.values(this.props.reservations);
+    let reservations = Object.values(this.props.reservations);
+    let mapped = reservations.map((el, i) => {
+      return {index: i, value: el};
+    });
+    mapped.sort( (a, b) => {
+      if (a.value.date < b.value.date) {
+        return 1;
+      } else if (a.value.date > b.value.date) {
+        return -1;
+      }
+      return 0;
+    });
+    const sortedReservations = mapped.map( (el) => reservations[el.index]);
     const currentUser = this.props.users[this.props.currentUserId];
     return(
       <div className="my-account-page">
@@ -33,7 +45,7 @@ class ReservationIndexComponent extends React.Component {
             My Happy Hours
           </h3>
           <ul className="happy-hour-list">
-            {reservations.map(
+            {sortedReservations.map(
               reservation => <ReservationIndexItem key={reservation.id}
               reservation = {reservation}
               bar = {this.props.bars[reservation.bar_id]}
