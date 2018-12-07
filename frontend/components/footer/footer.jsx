@@ -9,27 +9,29 @@ const Footer = props => {
     footerColor ="white-footer";
   }
   return(
-    <div className={`footer-container  ${footerColor}`}>
-      <div className="footer-info">© BEERPAL, INC.</div>
+    <div className="footer">
+      <div className={`footer-container  ${footerColor}`}>
+        <div className="footer-social">
+          <li class="contact-icon-item">
+            <a href="https://github.com/swalloga"><i class="fab fa-github fa-3x"></i></a>
+          </li>
+          <li class="contact-icon-item">
+            <a href="https://www.linkedin.com/in/sarahwalloga/"><i class="fab fa-linkedin fa-3x"></i></a>
+          </li>
+          <li class="contact-icon-item">
+            <a href="https://angel.co/sarah-walloga?al_content=view+your+profile&al_source=transaction_feed%2Fnetwork_sidebar"><i class="fab fa-angellist fa-3x"></i></a>
+          </li>
+          <li class="contact-icon-item">
+            <a href="https://www.sarahwalloga.com/"><i class="fas fa-home fa-3x"></i></a>
+          </li>
+          <li class="contact-icon-item">
+            <a href="mailto:swalloga@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
+          </li>
+        </div>
+        <div className="footer-info">© BEERPAL, INC.</div>
+      </div>
     </div>
   );
 };
 
 export default Footer;
-
-// <div className="footer-social">
-//   <img id="social-icon" className="icon" src={window.social_icons} />
-// </div>
-// <div className="footer-links">
-//   <ul className="footer-link-list">
-//     <li>FAQS</li>
-//     <span className="separator">•</span>
-//     <li>HELLO@BEERPAL.COM</li>
-//     <span className="separator">•</span>
-//     <li>TERMS OF USE</li>
-//     <span className="separator">•</span>
-//     <li>PRIVACY POLICY</li>
-//     <span className="separator">•</span>
-//     <li>WE'RE HIRING!</li>
-//   </ul>
-// </div>
