@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ReservationIndexComponent from './reservation_index';
 import { getCurrentUserInfo } from '../../actions/session_actions';
+import { updateUser } from '../../actions/account_actions';
 import {
   fetchReservations,
   deleteReservation
@@ -23,6 +24,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
   return {
+    updateUser: (user, beerQty) => dispatch(updateUser(user, beerQty)),
     getCurrentUserInfo: (id) => dispatch(getCurrentUserInfo(id)),
     fetchReservations: () => dispatch(fetchReservations()),
     deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId))

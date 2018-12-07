@@ -15,6 +15,12 @@ class Api::UsersController < ApplicationController
     render "api/users/show"
   end
 
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.update_beer_allowance(params[:beerQty].to_i)
+    render :show
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :name, :email, :password, :beer_allowance)

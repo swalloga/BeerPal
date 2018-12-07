@@ -36,6 +36,7 @@ class ReservationIndexComponent extends React.Component {
     });
     const sortedReservations = mapped.map( (el) => reservations[el.index]);
     const currentUser = this.props.users[this.props.currentUserId];
+    const addSixBeers = () => this.props.updateUser(currentUser, 6);
     return(
       <div className="my-account-page">
         <div className="my-account-info">
@@ -45,7 +46,9 @@ class ReservationIndexComponent extends React.Component {
           <div className="my-account-details">
             <p id="name-info">Name: {currentUser.name}</p>
             <p id="beersleft-info"># of beers left: {currentUser.beer_allowance}</p>
-            <button id="plan-info">Pick up another six pack.</button>
+            <button id="plan-info" onClick={addSixBeers}>
+              Pick up another six pack.
+            </button>
           </div>
         </div>
 
