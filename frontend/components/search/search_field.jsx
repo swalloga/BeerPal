@@ -8,11 +8,11 @@ class SearchFieldComponent extends React.Component {
     this.handleBeerKeyPress = this.handleBeerKeyPress.bind(this);
     this.handleBarSubmit = this.handleBarSubmit.bind(this);
     this.handleBarKeyPress = this.handleBarKeyPress.bind(this);
+    this.state = { beerStr: "", barStr:"" };
   }
 
-  handleBeerSubmit(e) {
-    e.preventDefault();
-    const beerName = e.currentTarget.value;
+  handleBeerSubmit() {
+    const beerName = this.state.beerStr;
     const cityId = this.props.cityId;
     if (beerName.length === 0) {
       this.props.fetchDeals(cityId);
@@ -22,12 +22,20 @@ class SearchFieldComponent extends React.Component {
   }
 
   handleBeerKeyPress(e) {
-    this.handleBeerSubmit(e);
+    e.preventDefault();
+    this.setState({ beerStr: e.target.value });
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      this.timeout = null;
+    }
+    this.timeout = setTimeout(() => {
+      this.handleBeerSubmit();
+      clearTimeout(this.timeout);
+    }, 350);
   }
 
-  handleBarSubmit(e) {
-    e.preventDefault();
-    const barName = e.currentTarget.value;
+  handleBarSubmit() {
+    const barName = this.state.barStr;
     const cityId = this.props.cityId;
     if (barName.length === 0) {
       this.props.fetchDeals(cityId);
@@ -37,7 +45,16 @@ class SearchFieldComponent extends React.Component {
   }
 
   handleBarKeyPress(e) {
-    this.handleBarSubmit(e);
+    e.preventDefault();
+    this.setState({ barStr: e.target.value });
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      this.timeout = null;
+    }
+    this.timeout = setTimeout(() => {
+      this.handleBarSubmit();
+      clearTimeout(this.timeout);
+    }, 350);
   }
 
   render(){
@@ -49,6 +66,7 @@ class SearchFieldComponent extends React.Component {
               type="text"
               className="beer-search-field"
               placeholder="search by beer"
+              value={this.state.beerStr}
               onChange={this.handleBeerKeyPress}
               ></input>
           </form>
@@ -59,6 +77,7 @@ class SearchFieldComponent extends React.Component {
               type="text"
               className="bar-search-field"
               placeholder="search by bar"
+              value={this.state.barStr}
               onChange={this.handleBarKeyPress}
               ></input>
           </form>
