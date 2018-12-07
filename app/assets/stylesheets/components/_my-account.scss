@@ -70,9 +70,30 @@
   border-radius: 0 0 6px 6px;
 }
 
-#name-info, #beersleft-info, #plan-info {
+#name-info, .beersleft-info, #plan-info {
   text-transform: none;
-  padding: 10px 0;
+  padding: 5px 0;
+  font-size: 20px;
+}
+
+.beersleft-info > span {
+  font-weight: 700;
+  color: #FE422D;
+}
+
+#name-info {
+  font-weight: 700;
+}
+.plan-button {
+  width: 186px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  background-color: #430098;
+  margin: 20px;
+  color: white;
+  font-weight: 700;
 }
 
 .my-account-page {

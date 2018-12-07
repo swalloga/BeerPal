@@ -44,11 +44,16 @@ class ReservationIndexComponent extends React.Component {
             My Account Info
           </h3>
           <div className="my-account-details">
-            <p id="name-info">Name: {currentUser.name}</p>
-            <p id="beersleft-info"># of beers left: {currentUser.beer_allowance}</p>
-            <button id="plan-info" onClick={addSixBeers}>
-              Pick up another six pack.
-            </button>
+            <p id="name-info">Hey {currentUser.name}!</p>
+            <p className="beersleft-info">
+              You have <span>{currentUser.beer_allowance} beers left </span>on your account.
+            </p>
+            <div className="plan-update">
+              <p className="beersleft-info">Need to pick up another six pack?</p>
+              <button className="plan-button" id="plan-info" onClick={addSixBeers}>
+                Buy 6 more
+              </button>
+            </div>
           </div>
         </div>
 
