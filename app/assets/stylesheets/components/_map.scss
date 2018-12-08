@@ -9,13 +9,15 @@
   justify-content: space-between;
 }
 .map-side {
-  display: inline-block;
-  max-width: 25%;
+  max-width: 30%;
+}
+
+.hide {
+  display: none;
 }
 
 .deal-side {
   display: inline-block;
-  max-width: calc(75% - 20px;);
 }
 
 .browse-pane {
@@ -25,5 +27,25 @@
 .happyhour-map {
   position: sticky;
   top: 60px;
+}
 
+.map-hide-div {
+  position: sticky;
+  top: 60px;
+  height: 704px;
+  border-left: 1px solid #dfd9d8;
+  border-right: 1px solid #dfd9d8;
+}
+
+.map-hide-button {
+  height: 100%;
+  width: 25px;
+  text-align: center;
+  color: #57C6E8;
+  font-size: 20px;
+}
+
+.hidden {
+  transform: rotate(180deg);
+  transition: all .5s ease;
 }

@@ -28,7 +28,7 @@
 }
 
 .footer-social {
-  margin: 30px 20%;
+  margin: 15px 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,4 +37,8 @@
 .contact-icon-item:hover {
   transform: scale(1.2);
   transition: all .3s ease;
+}
+
+.created-by {
+  text-transform: none;
 }

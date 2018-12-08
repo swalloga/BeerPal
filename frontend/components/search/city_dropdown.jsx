@@ -58,7 +58,7 @@ class CityDropdown extends React.Component{
                 <label>{this.props.currentCityName}</label>
               </button>
             </div>
-            <ul className="city-filter-list">
+            <ul className="city-filter-list" id="city-list">
               {cities.map( city => <CityDropdownItem key={city.id} city={city}
                 setCurrentCity={this.props.setCurrentCity}/> )}
               </ul>

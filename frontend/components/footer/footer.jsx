@@ -11,6 +11,7 @@ const Footer = props => {
   return(
     <div className="footer">
       <div className={`footer-container  ${footerColor}`}>
+        <p className="created-by">Created by: Sarah Walloga</p>
         <div className="footer-social">
           <li class="contact-icon-item">
             <a href="https://github.com/swalloga"><i class="fab fa-github fa-3x"></i></a>
