@@ -19,6 +19,8 @@
  ### Splash Page
 Before even signing up or logging in, site visitors can navigate a beautiful (and informative!) page, which includes spotlight content, a map with available deals in the selected city(which defaults to New York) and several invite forms that urge our new pal to submit their email address to learn more. Presumably, the BeerPal marketing team would pick up the baton and ensure no pal gets left behind through friendly reminder emails and special offers.
 
+![splash-page](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/splash-page.png)
+
  #### Spotlight Content
  To achieve rotating spotlight content, I first check the number of deals that exist in the selected city to ensure the rotating quantity isn't greater than the existing quantity. Then I take a random sample from the existing deals to display. I set a timer to update the classes every four seconds to show one spotlight deal and hide the rest.
  ```javascript
@@ -41,12 +43,15 @@ Before even signing up or logging in, site visitors can navigate a beautiful (an
      }
  ```
 
+![spotlight](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/spotlight.png)
 
  ### Happy Hour Page
 * When a user does sign up or log in, they are redirected to the main page of the app: HAPPY HOURS. This is where they can see all available happy hour deals in their selected city, which they can adjust with a filter bar drop down.
 * When the city dropdown is changed, our user will see the deals and map component update accordingly!
 * The map component (which is reused on the splash page) can be hidden or shown by clicking a button to its left.
 * Users also have the ability to search for a beer or bar using input fields at the top of the happy hour index page.
+
+![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/happy-hour-page.png)
 
  #### Deals
 Once our user has browsed the available happy hour deals and decided on a deal they want to purchase, they can just hover over that deal to reveal some more details and a "Reserve" button. If they click it, we first validate that the current user has at least one beer left on their account.
@@ -68,7 +73,6 @@ Once our user has browsed the available happy hour deals and decided on a deal t
      end
  ```
 
-![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/deal-index.png)
 
  #### Favorites
  Conveniently located on the hover detail of each deal is a heart icon, allowing users to "favorite" a bar. Once the heart is clicked, that bar gets added to the favorites list, which is private to each user. It can be found in the dropdown menu. On the favorites index page or the happy hour page, users can remove bars if they decide they don't belong on the favorites list by simply clicking the heart icon again.
@@ -86,7 +90,7 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 ```
 * Each account page also includes a list of reservations(past and present) including useful info like the bar name, beer name and date.
 
-![my-account](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/my-account.png)
+![my-account](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/my-account-page.png)
 
  ## Future direction
 * Update search based on the map boundaries.
