@@ -23,13 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // TESTING
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchFavorites = FavoriteActions.fetchFavorites;
-  window.createFavorite = FavoriteActions.createFavorite;
-  window.deleteFavorite = FavoriteActions.deleteFavorite;
-  // TESTING END
+  
   const root = document.getElementById('root');
 
   ReactDOM.render(<Root store={store}/>, root);

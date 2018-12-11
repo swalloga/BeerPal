@@ -45,7 +45,7 @@ class Search extends React.Component {
               className="map-hide-button"
               onClick={this.handleMapButtonClick}
               >
-              <span><i id="angle-bracket" class="fas fa-angle-right"></i></span>
+              <span><i id="angle-bracket" className="fas fa-angle-right"></i></span>
             </button>
           </div>
           <div id="map-side" className="map-side">
