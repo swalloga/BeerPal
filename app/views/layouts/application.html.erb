@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130765429-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-130765429-2');
+      gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    </script>
     <%= favicon_link_tag asset_path('bpfavicon.png') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

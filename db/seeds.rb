@@ -59,7 +59,7 @@ puts "Creating Beers..."
 guinness = Beer.create! ({id: 1, name: "Guinness", description: "Stout", price: 8, abv: 4.2, image_url: "guinness.png"})
 stella = Beer.create! ({id: 2, name: "Stella", description: "Lager", price: 8, abv: 4.2, image_url: "stella.png"})
 budweiser = Beer.create! ({id: 3, name: "Budweiser", description: "Lager", price: 8, abv: 4.2, image_url: "budweiser.jpg"})
-heinken = Beer.create! ({id: 4, name: "Heinken", description: "Lager", price: 8, abv: 3, image_url: "heineken.jpg"})
+heineken = Beer.create! ({id: 4, name: "Heineken", description: "Lager", price: 8, abv: 3, image_url: "heineken.jpg"})
 brooklyn = Beer.create! ({id: 5, name: "Brooklyn Lager", description: "Lager", price: 8, abv: 4, image_url: "brooklyn.jpg"})
 corona = Beer.create! ({id: 6, name: "Corona", description: "Lager", price: 8, abv: 5, image_url: "corona.jpg"})
 bluemoon = Beer.create! ({id: 7, name: "Bluemoon", description: "Wheat", price: 8, abv: 5.4, image_url: "bluemoon.jpg"})

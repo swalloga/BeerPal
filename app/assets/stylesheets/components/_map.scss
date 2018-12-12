@@ -6,10 +6,12 @@
 .user-pane {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .map-side {
   max-width: 30%;
+  position: sticky;
+  top: 60px;
 }
 
 .hide {
