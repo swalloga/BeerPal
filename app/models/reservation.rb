@@ -39,7 +39,7 @@ class Reservation < ApplicationRecord
     user = User.find(user_id)
     raise "Invalid entry" unless bar_beer
     if user.beer_allowance < 1
-      errors.add(:account_balance, ": Looks like you don't have any beers left! Pick up another six pack on the 'my account' page.")
+      errors.add(:account_balance, ": Looks like you don't have any beers left! Pick up another six pack ")
     end
   end
 

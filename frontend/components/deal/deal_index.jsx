@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import DealIndexItem from './deal_index_item';
 
 class DealIndex extends React.Component {
@@ -30,10 +30,13 @@ class DealIndex extends React.Component {
     } else {
       return (
       <section className="DealIndex">
-        <ul>{errors.map((error, i) => <li
+        <ul>{errors.map((error, i) =>
+            <li
             key={i}
             className="res-error"
-            >{error}</li>)}
+            >{error}
+            <Link className="res-error-link" to={'/my-account'}>here.</Link>
+        </li>)}
           </ul>
         <ul className="DealIndexList">
           {deals.map(

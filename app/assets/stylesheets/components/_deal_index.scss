@@ -190,5 +190,14 @@
 
 .res-error {
   text-transform: none;
-  
+  color: #4a4a4a;
+}
+
+.res-error-link {
+  color: #FE422D;
+  text-transform: none;
+}
+
+.res-error-link:hover {
+  font-weight: 700;
 }
