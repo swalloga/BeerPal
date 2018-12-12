@@ -1,5 +1,6 @@
 import React from 'react';
 import ReservationForm from '../reservation/reservation_form';
+import { Link } from 'react-router-dom';
 
 class DealIndexItem extends React.Component {
   constructor(props) {
@@ -74,6 +75,10 @@ class DealIndexItem extends React.Component {
                 reservations={this.props.reservations}
                 reservationForToday={this.props.reservationForToday}
                 />
+                <Link
+                  className="my-account-link"
+                  to={"/my-account"}
+                  >My Reservations</Link>
             </div>
           </div>
           <div id={this.props.deal.id} className="DealIndexItem">
@@ -112,6 +117,10 @@ class DealIndexItem extends React.Component {
                 <div className="bar-name">{bar.name}</div>
                 <div className="bar-description">{bar.address}</div>
               </div>
+              <Link
+                className="my-account-link"
+                to={"/my-account"}
+                >My Reservations</Link>
             </div>
           </div>
           <div id={this.props.deal.id} className="DealIndexItem">

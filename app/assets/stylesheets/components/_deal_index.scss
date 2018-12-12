@@ -126,21 +126,24 @@
   margin-top: 10px;
   padding: 10px 0;
   text-transform: uppercase;
-  width: calc(100% - 50px);
   text-align: center;
   font-weight: 700;
+  width: 100%;
 }
 
 .reservation-modal {
-  padding: 40px 25px 16px;
+  padding: 20px 16px;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 32px);
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
+.create-reservation {
+  width: 100%;
+}
 .deal-beer-name{
   font-size: 16px;
   letter-spacing: 1.2px;
@@ -171,4 +174,16 @@
 }
 .bar-description {
   font-size: 12px;
+}
+
+.my-account-link {
+  text-transform: none;
+  padding: 5px 24px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #4a4a4a;
+}
+
+.my-account-link:hover {
+  font-weight: 700;
 }
