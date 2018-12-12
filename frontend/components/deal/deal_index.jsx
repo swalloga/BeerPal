@@ -23,12 +23,18 @@ class DealIndex extends React.Component {
 
   render() {
     const deals= Object.values(this.props.deals);
+    const errors = Object.values(this.props.errors.reservation);
     let bar, beer;
     if (deals.length === 0) {
       return (<div></div>);
     } else {
       return (
       <section className="DealIndex">
+        <ul>{errors.map((error, i) => <li
+            key={i}
+            className="res-error"
+            >{error}</li>)}
+          </ul>
         <ul className="DealIndexList">
           {deals.map(
             deal => <DealIndexItem
