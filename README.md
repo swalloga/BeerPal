@@ -32,18 +32,18 @@ Before even signing up or logging in, site visitors can navigate a beautiful (an
 
      rotateSpotlight() {
        let i;
-       let x = document.getElementsByClassName("carousel-item");
-       for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
+       let spotlightItems = document.getElementsByClassName("carousel-item");
+       for (i = 0; i < spotlightItems.length; i++) {
+         spotlightItems[i].style.display = "none";
        }
        slideIndex++;
-       if (slideIndex > x.length) {slideIndex = 1;}
-       x[slideIndex-1].style.display = "flex";
+       if (slideIndex > spotlightItems.length) {slideIndex = 1;}
+       spotlightItems[slideIndex-1].style.display = "flex";
        this.interval = setInterval(this.rotateSpotlight, 4000);
      }
  ```
 
-![spotlight](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/spotlight.png)
+![spotlight](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/spotlight-img.png)
 
  ### Happy Hour Page
 * When a user does sign up or log in, they are redirected to the main page of the app: HAPPY HOURS. This is where they can see all available happy hour deals in their selected city, which they can adjust with a filter bar drop down.
@@ -60,7 +60,7 @@ Once our user has browsed the available happy hour deals and decided on a deal t
       user = User.find(user_id)
       raise "Invalid entry" unless bar_beer
       if user.beer_allowance < 1
-        errors.add(:account_balance, "you don't have any beers left!")
+        errors.add(:account_balance, ": Looks like you don't have any beers left! Pick up another six pack ")
       end
     end
 ```

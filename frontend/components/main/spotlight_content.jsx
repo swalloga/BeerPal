@@ -27,13 +27,13 @@ class SpotlightCarousel extends React.Component {
 
   rotateSpotlight() {
     let i;
-    let x = document.getElementsByClassName("carousel-item");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+    let spotlightItems = document.getElementsByClassName("carousel-item");
+    for (i = 0; i < spotlightItems.length; i++) {
+      spotlightItems[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1;}
-    x[slideIndex-1].style.display = "flex";
+    if (slideIndex > spotlightItems.length) {slideIndex = 1;}
+    spotlightItems[slideIndex-1].style.display = "flex";
     this.interval = setInterval(this.rotateSpotlight, 4000);
   }
 
