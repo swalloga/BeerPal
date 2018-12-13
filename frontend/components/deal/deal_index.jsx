@@ -26,7 +26,7 @@ class DealIndex extends React.Component {
     const errors = Object.values(this.props.errors.reservation);
     let bar, beer;
     if (deals.length === 0) {
-      return (<div></div>);
+      return (<div className="no-result-message">No results found.</div>);
     } else {
       return (
       <section className="DealIndex">
