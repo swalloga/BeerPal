@@ -51,7 +51,7 @@ Before even signing up or logging in, site visitors can navigate a beautiful (an
 * The map component (which is reused on the splash page) can be hidden or shown by clicking a button to its left.
 * Users also have the ability to search for a beer or bar using input fields at the top of the happy hour index page.
 
-![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/happy-hour-page.png)
+![deal-index](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/happyhour-img.png)
 
  #### Deals
 Once our user has browsed the available happy hour deals and decided on a deal they want to purchase, they can just hover over that deal to reveal some more details and a "Reserve" button. If they click it, we first validate that the current user has at least one beer left on their account.
@@ -90,7 +90,7 @@ Once our user has browsed the available happy hour deals and decided on a deal t
 ```
 * Each account page also includes a list of reservations(past and present) including useful info like the bar name, beer name and date.
 
-![my-account](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/my-account-page.png)
+![my-account](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/my-account-img.png)
 
  ## Future direction
 * Update search based on the map boundaries.
