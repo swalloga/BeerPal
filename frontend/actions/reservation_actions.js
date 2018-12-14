@@ -5,14 +5,16 @@ export const RECEIVE_RESERVATION_ERRORS = 'RECEIVE_RESERVATION_ERRORS';
 export const REMOVE_RESERVATION = 'REMOVE_RESERVATION';
 
 // sync actions
-export const receiveReservations = payload => ({
-  type: RECEIVE_RESERVATIONS,
-  data: {
-    reservations: payload.reservations,
-    bars: payload.bars,
-    beers: payload.beers,
-  },
-});
+export const receiveReservations = payload => {
+  return ({
+    type: RECEIVE_RESERVATIONS,
+    data: {
+      reservations: payload.reservations,
+      bars: payload.bars,
+      beers: payload.beers,
+    },
+  });
+};
 
 export const receiveReservation = reservation => ({
   type: RECEIVE_RESERVATION,
@@ -28,6 +30,13 @@ export const receiveReservationErrors = errors => {
   return ({
   type: RECEIVE_RESERVATION_ERRORS,
   errors
+  });
+};
+
+export const clearReservationErrors = () => {
+  return ({
+  type: RECEIVE_RESERVATION_ERRORS,
+  errors: []
   });
 };
 

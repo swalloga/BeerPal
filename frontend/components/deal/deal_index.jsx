@@ -12,6 +12,7 @@ class DealIndex extends React.Component {
     let cityId = this.props.currentCityId;
     this.props.fetchDeals(cityId);
     this.props.fetchFavorites();
+    this.props.clearReservationErrors();
   }
 
   componentDidUpdate(prevProps) {

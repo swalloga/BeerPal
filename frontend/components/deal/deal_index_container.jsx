@@ -10,6 +10,7 @@ import {
   deleteFavorite
  } from '../../actions/favorite_actions';
 import {
+  clearReservationErrors,
   createReservation,
   deleteReservation
  } from '../../actions/reservation_actions';
@@ -36,6 +37,7 @@ const mdp = dispatch => {
       dispatch(setCurrentCity(currentCityId));
     },
     fetchDeals: (cityId) => dispatch(fetchDeals(cityId)),
+    clearReservationErrors: () => dispatch(clearReservationErrors()),
     createReservation: (reservation) => dispatch(createReservation(reservation)),
     deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)),
     fetchFavorites: () => dispatch(fetchFavorites()),
