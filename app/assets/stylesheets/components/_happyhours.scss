@@ -41,6 +41,7 @@
 }
 
 .filter-bar input {
+  font-size: 14px;
   padding: 4px 7px;
   width: 80%;
   height: 100%;
@@ -64,6 +65,7 @@
   letter-spacing: .5px;
   font-weight: 700;
   width: 100%;
+  min-width: 115px;
   margin: 0 20px;
 }
 

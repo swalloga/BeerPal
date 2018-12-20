@@ -11,7 +11,6 @@ const Greeting = props => {
       return(
         <div className={`nav-bar ${navColor}`}>
           <h1><Link to="/happyhour">beerpal</Link></h1>
-          <h3>Hey { props.currentUser.name }</h3>
           <div className="dropdown">
             <button className="dropbtn">
               <img className="menu-icon icon" src={window.menu_icon} />
