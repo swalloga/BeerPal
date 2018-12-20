@@ -45,6 +45,23 @@ Before even signing up or logging in, site visitors can navigate a beautiful (an
 
 ![spotlight](https://github.com/swalloga/BeerPal/blob/master/app/assets/images/spotlight-img.png)
 
+
+ ### Sign Up Emails via Action Mailer
+ * I use rails action mailer functionality to automatically send an email to users upon account creation.
+ ```ruby
+ class UserMailer < ApplicationMailer
+   default from: 'no-reply@beerpal.com'
+
+   def welcome_email
+     @user = params[:user]
+     @url_personal  = 'http://www.sarahwalloga.com'
+     mail(to: @user.email, subject: 'Welcome to BeerPal!')
+   end
+ end
+ ```
+
+* To enable this functionality when deploying through Heroku, I utilized the SendGrid plugin.
+
  ### Happy Hour Page
 * When a user does sign up or log in, they are redirected to the main page of the app: HAPPY HOURS. This is where they can see all available happy hour deals in their selected city, which they can adjust with a filter bar drop down.
 * When the city dropdown is changed, our user will see the deals and map component update accordingly!
