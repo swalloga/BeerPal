@@ -34,6 +34,7 @@ class SpotlightCarousel extends React.Component {
     slideIndex++;
     if (slideIndex > spotlightItems.length) {slideIndex = 1;}
     spotlightItems[slideIndex-1].style.display = "flex";
+    clearInterval(this.interval);
     this.interval = setInterval(this.rotateSpotlight, 4000);
   }
 
@@ -44,6 +45,7 @@ class SpotlightCarousel extends React.Component {
         <div>
           <li
             id={`spotlight-0`}
+            key={`spotlight-0`}
             className="carousel-item"
             >
             <div className="spotlight-header">
@@ -94,6 +96,7 @@ class SpotlightCarousel extends React.Component {
         return (
           <li
             id={`spotlight-${idx}`}
+            key={`spotlight-${idx}`}
             className="carousel-item"
             >
             <div className="spotlight-header">
