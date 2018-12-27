@@ -3,6 +3,7 @@ import MainContent from './main_content';
 import { withRouter } from 'react-router-dom';
 import { fetchDeals } from '../../actions/deal_actions';
 import { fetchAllCities, setCurrentCity } from '../../actions/city_actions';
+import { updateTempEmail } from '../../actions/session_actions';
 
 const msp = state => {
   const { deals } = state.entities || " ";
@@ -18,7 +19,8 @@ const mdp = dispatch => {
     setCurrentCity: (currentCityId) => {
       dispatch(setCurrentCity(currentCityId));
     },
-    fetchDeals: (cityId) => dispatch(fetchDeals(cityId))
+    fetchDeals: (cityId) => dispatch(fetchDeals(cityId)),
+    updateTempEmail: (email) => dispatch(updateTempEmail(email))
   }
   );
 };

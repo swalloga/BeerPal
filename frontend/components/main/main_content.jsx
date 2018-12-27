@@ -7,6 +7,10 @@ import SpotlightCarousel from './spotlight_content_container';
 class MainContent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      email: ''
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -22,14 +26,27 @@ class MainContent extends React.Component {
     }
   }
 
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  handleSubmit(e) {
+    this.props.updateTempEmail(this.state.email);
+  }
+
   render(){
     const inviteForm = (
       <form className="invite-form">
-        <input type="text" placeholder="your email"/>
+        <input type="text"
+          placeholder="your email"
+          value={this.state.email}
+          onChange={this.update('email')}/>
         <div>
           <input type="text" placeholder="zip code"/>
           <Link to="/signup">
-            <button type="submit">Browse Bars</button>
+            <button type="submit" onClick={this.handleSubmit}>Browse Bars</button>
           </Link>
         </div>
       </form>
