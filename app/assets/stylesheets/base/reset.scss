@@ -1,22 +1,19 @@
-//
-// html, body, header, nav, h1, h2, h3, a,
-// ul, li, main, button, i,
-// section, img, div, p, form,
-// fieldset, label, input, textarea,
-// span, article, footer, time {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   outline: 0;
-//   font: inherit;
-//   color: inherit;
-//   text-align: inherit;
-//   text-decoration: inherit;
-//   vertical-align: inherit;
-//   box-sizing: inherit;
-//   background: transparent;
-// }
-//
+html, body, header, nav, h1, h2, h3, a, main, button, i,
+section, img, div, p, form,
+fieldset, textarea,
+span, article, footer, time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
 
 button, a, h3 {
     margin: 0;
