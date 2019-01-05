@@ -24,7 +24,7 @@ const Footer = props => {
             </a>
           </li>
           <li className="contact-icon-item">
-            <a href="https://angel.co/sarah-walloga?al_content=view+your+profile&al_source=transaction_feed%2Fnetwork_sidebar">
+            <a href="https://angel.co/sarah-walloga">
               <i className="fab fa-angellist fa-3x"></i>
             </a>
           </li>
