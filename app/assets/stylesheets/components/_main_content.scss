@@ -79,6 +79,13 @@ body {
   color: white;
   font-weight: 700;
 }
+
+.invite-form button:hover {
+  color: #430098;
+  background-color: white;
+  transition: .1s ease;
+}
+
 .section-title{
   font-size: 40px;
   border-bottom: 4px solid #00b3ec;
