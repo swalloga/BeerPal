@@ -71,7 +71,12 @@ const ReservationIndexItem = (props) => {
               <p className="barAddress">{bar.address}</p>
             </div>
             <div className="delete-reservation">
-              <button onClick={() => props.deleteReservation(props.reservation.id)}>Cancel Reservation</button>
+              <button
+                onClick={() => props.deleteReservation(props.reservation.id)}
+                className="cancel-button"
+                >
+                Cancel Reservation
+              </button>
             </div>
           </div>
         </div>

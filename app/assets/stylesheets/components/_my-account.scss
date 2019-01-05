@@ -8,7 +8,7 @@
   font-weight: 700;
 }
 
-.delete-reservation button {
+.cancel-button {
   background-color: #430098;
   border-radius: 0;
   color: #fff;
@@ -19,6 +19,7 @@
   width: 100%;
   text-align: center;
   font-weight: 700;
+  border: 1px solid #430098;
 }
 
 .reservation-history {
@@ -108,6 +109,13 @@
   font-weight: 700;
   text-transform: none;
   padding: 5px 0;
+  border: 1px solid #430098;
+}
+
+.plan-button:hover, .cancel-button:hover {
+  color:#430098;
+  background-color: white;
+  transition: .2s ease;
 }
 
 .my-account-page {
