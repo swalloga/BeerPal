@@ -11,7 +11,7 @@ const Greeting = props => {
       return(
         <div className={`nav-bar ${navColor}`}>
           <h1><Link to="/happyhour">beerpal</Link></h1>
-          <div className="dropdown">
+          <div id="wide-dropdown" className="dropdown">
             <button className="dropbtn">
               <img className="menu-icon icon" src={window.menu_icon} />
               <p>Menu</p>
@@ -47,6 +47,25 @@ const Greeting = props => {
             </button>
             <Link to="/login">Log In</Link>
             <Link to="/signup">Sign Up</Link>
+          </div>
+          <div className="dropdown loggedOut-nav-mobile">
+            <button className="dropbtn">
+              <img className="menu-icon icon" src={window.menu_icon} />
+              <p>Menu</p>
+            </button>
+            <div className="dropdown-content">
+              <div className="demo-sign-in">
+                <button onClick={ props.demoSignIn } >
+                  Demo Log In
+                </button>
+              </div>
+              <div className="dropdown-login">
+                <Link to="/login">Log In</Link>
+              </div>
+              <div className="dropdown-signup">
+                <Link to="/signup">Sign Up</Link>
+              </div>
+            </div>
           </div>
         </div>
       );
