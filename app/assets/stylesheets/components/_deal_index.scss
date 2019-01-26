@@ -129,6 +129,14 @@
   text-align: center;
   font-weight: 700;
   width: 100%;
+  border: 1px solid #430098;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+}
+
+.reservation-modal button:hover {
+  color:#430098;
+  background-color: white;
+  transition: .2s ease;
 }
 
 .reservation-modal {
