@@ -33,11 +33,6 @@ const Footer = props => {
               <i className="fas fa-home fa-3x"></i>
             </a>
           </li>
-          <li className="contact-icon-item">
-            <a href="mailto:swalloga@gmail.com">
-              <i className="fa fa-envelope fa-3x"></i>
-            </a>
-          </li>
         </div>
         <div className="footer-info">© BEERPAL, INC.</div>
       </div>
