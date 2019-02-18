@@ -34,6 +34,10 @@
   margin: 16px;
 }
 
+.loggedOut-nav {
+  height: 60px;
+}
+
 @media (min-width: 804px) {
   .loggedOut-nav {
     display: flex;
