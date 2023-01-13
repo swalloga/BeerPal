@@ -13,7 +13,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "jasmine": "^3.3.1",
